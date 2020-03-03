@@ -13,11 +13,8 @@ function setup() {
     can.style.position = "fixed";
     can.style.top = "0px";
     can.style.zIndex = "-1";
-    background("rgba(10, 139, 60, 0.5)");
-    textSize(winHeight/2.4);
-    textAlign(CENTER, CENTER);
-    fill('rgba(10, 89, 60, 0.6)');
-    stroke('rgba(10, 49, 60, 0.1)');
+    background("rgba(10, 79, 60, 0.5)");
+    stroke('rgba(110, 239, 160, 0.1)');
     strokeWeight(5);
     angleMode(DEGREES);
 
