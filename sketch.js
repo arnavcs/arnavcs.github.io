@@ -13,8 +13,8 @@ function setup() {
     can.style.position = "fixed";
     can.style.top = "0px";
     can.style.zIndex = "-1";
-    background("rgba(10, 79, 60, 0.5)");
-    stroke('rgba(110, 239, 160, 0.1)');
+    background("rgb(220, 220, 220)");
+    stroke('rgba(255, 255, 255, 0.2)');
     strokeWeight(5);
     angleMode(DEGREES);
 
