@@ -48,6 +48,20 @@ a:visited {
 
 /* styling for the different size viewing modes */
 
+.floating-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.floating-list a {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid DimGray;
+    border-radius: 10px;
+}
+
 @media (min-width: 50em) {
     	.twocol { column-count: 2 ;}
 }
