@@ -26,6 +26,25 @@ header, footer {
     text-align: center;
 }
 
+/* styling for the projects section */
+
+.floating-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.floating-list a {
+    background-color: Lavender;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
 /* the styling for the bullet points in the achievements */
 
 .math {
@@ -46,21 +65,58 @@ a:visited {
     color: LightSlateBlue;
 }
 
+/* styling for the module div */
+
+.module * {
+    margin: 0;
+}
+
+.module {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.module-img {
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+}
+
+.module img {
+    object-fit: contain;
+    width: 120px;
+    height: 120px;
+}
+
+.module-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.module-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.module-title {
+    margin: 0px;
+    font-weight: bold;
+}
+
+.module-date {
+    margin: 0px;
+}
+
 /* styling for the different size viewing modes */
 
-.floating-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-}
-
-.floating-list a {
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid DimGray;
-    border-radius: 10px;
-}
 
 @media (min-width: 50em) {
     	.twocol { column-count: 2 ;}
