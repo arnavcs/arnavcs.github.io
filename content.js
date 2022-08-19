@@ -260,7 +260,7 @@ content =
         title: "Experience",
         content: [
             {
-                logo: "https://media-exp1.licdn.com/dms/image/C560BAQGSySTzVtBHWA/company-logo_100_100/0/1567500390958?e=1669248000&v=beta&t=KhqhHKRTNOANDx8ivHbLtExmSA6GUkDdmmH3UAdUszE",
+                logo: "./img/tektorch-logo.jpg",
                 title: "Tektorch.ai",
                 date: "Apr 2022 - Jul 2022",
                 brief: "Part-time junior programmer",
@@ -273,7 +273,7 @@ content =
                 ]
             },
             {
-                logo: "https://media-exp1.licdn.com/dms/image/C560BAQEmfEFe6s-jRg/company-logo_100_100/0/1595484974374?e=1669248000&v=beta&t=C-H7IRRRFd4k3lA6DPt80CqnEFJgJxhsaINd4SG3zpo",
+                logo: "./img/code-ninjas-logo.jpg",
                 title: "Code Ninjas West Springs",
                 date: "Mar 2022 - Apr 2022",
                 brief: "Part-time code sensei",
@@ -286,7 +286,7 @@ content =
                 ]
             },
             {
-                logo: "https://upload.wikimedia.org/wikipedia/en/9/92/University_of_Alberta_Coat_of_Arms.png?20180207052310",
+                logo: "./img/uofa-logo.jpg",
                 title: "Univeristy of Alberta",
                 date: "Jul 2021 - Aug 2021",
                 brief: "Computing Science High School Intern",
