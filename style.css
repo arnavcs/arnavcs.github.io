@@ -1,4 +1,4 @@
-/* document body styling */
+/* DOCUMENT BODY STYLING */
 
 body {
     background: Snow;
@@ -8,64 +8,11 @@ body {
     font-family: sans-serif;
 }
 
-::selection {
-    background-color: PowderBlue;
-}
-
-/* styling the titles and headers */
-
-h1 {
-    color: SlateBlue;
-}
-
-h2 {
-    color: IndianRed;
-}
-
 header, footer {
     text-align: center;
 }
 
-/* styling for the projects section */
-
-.floating-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-}
-
-.floating-list a {
-    background-color: Lavender;
-    text-decoration: none;
-    text-align: center;
-    margin: 5px;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-/* the styling for the bullet points in the achievements */
-
-.math {
-    color: DimGray;
-}
-
-.science {
-    color: SlateGray;
-}
-
-/* styling for links */
-
-a {
-    color: MediumSlateBlue;
-}
-
-a:visited {
-    color: LightSlateBlue;
-}
-
-/* styling for the module div */
+/* MODULE */
 
 .module * {
     margin: 0px;
@@ -79,19 +26,19 @@ a:visited {
     margin-bottom: 15px;
 }
 
-.module-img {
-    width: 120px;
-    height: 120px;
+.module-img-div {
+    width: 100px;
+    height: 100px;
     margin-right: 10px;
 }
 
 .module img {
     object-fit: contain;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 }
 
-.module-content {
+.module-content-div {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -110,13 +57,29 @@ a:visited {
     font-weight: bold;
 }
 
+.module-date {}
+
 .module-brief {
     font-style: italic;
 }
 
-/* styling for the different size viewing modes */
+.module-full {}
 
+/* BLURB */
+
+.blurb img {
+    float: right;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 5px;
+}
+
+/* LISTING */
 
 @media (min-width: 50em) {
-    	.twocol { column-count: 2 ;}
+    .listing-container {
+        column-count: 2;
+    }
 }
+
