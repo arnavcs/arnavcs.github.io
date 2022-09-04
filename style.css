@@ -1,7 +1,6 @@
 /* DOCUMENT BODY STYLING */
 
 body {
-    background: Snow;
     max-width: 900px;
     margin: auto;
     padding: 0 16px;
@@ -10,6 +9,12 @@ body {
 
 header, footer {
     text-align: center;
+}
+
+/* SECTION CONTAINER */
+
+#section-container hr {
+    border-style: dashed;
 }
 
 /* MODULE */

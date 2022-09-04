@@ -143,10 +143,14 @@ function makeSection (sectionContent) {
 }
 
 function main () {
+    let first = true
     for (let sectionNumber in content) {
         let madeSection = makeSection(content[sectionNumber]);
-        if (madeSection)
+        if (madeSection) {
+            if (!first) document.getElementById("section-container").appendChild(document.createElement("hr"));
+            first = false;
             document.getElementById("section-container").appendChild(madeSection);
+        }
     }
 }
 

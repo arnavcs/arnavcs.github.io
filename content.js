@@ -5,12 +5,13 @@ content =
         content: [
             {
                 text: [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae nunc sed velit dignissim sodales. Amet commodo nulla facilisi nullam vehicula ipsum a. Sed viverra ipsum nunc aliquet bibendum enim. Mauris sit amet massa vitae tortor condimentum lacinia quis. Suspendisse ultrices gravida dictum fusce ut. Imperdiet sed euismod nisi porta. Dignissim suspendisse in est ante in nibh mauris cursus mattis. Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Quis vel eros donec ac. Mi quis hendrerit dolor magna eget est. Tempus quam pellentesque nec nam. Donec ac odio tempor orci. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Eget aliquet nibh praesent tristique magna sit.",
-                    "Sed risus pretium quam vulputate dignissim suspendisse in. Augue neque gravida in fermentum et sollicitudin. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Fringilla urna porttitor rhoncus dolor purus. Vel elit scelerisque mauris pellentesque pulvinar. Sem integer vitae justo eget magna fermentum iaculis eu. At quis risus sed vulputate. Nullam ac tortor vitae purus faucibus ornare. Eget sit amet tellus cras adipiscing. Amet facilisis magna etiam tempor orci. Ornare suspendisse sed nisi lacus sed viverra tellus."
+                    "I am a University of Waterloo Computer Science and Pure Math student who loves problem solving.",
+                    "Currently, I am working through and reading the puzzle book titled 'To Mock a Mocking Bird: Including an Amazing Adventure in Combinatory Logic' authored by Raymond M. Smullyan.\
+                    Additionally, I am preparing for the Putnam contest and self learning special relativity and classical field theory.",
+                    "When I am not working, I like to play the traditional Indian bamboo flute, called the bansuri."
                 ],
                 images: [
-                    "https://upload.wikimedia.org/wikipedia/en/6/6e/University_of_Waterloo_seal.svg",
-                    "https://www.webberacademy.ca/pac/Theatre/Home_files/Webber%20Logo%20Large.png"
+                    "./img/arnav-img.jpg",
                 ]
             }
         ]
@@ -178,81 +179,112 @@ content =
         title: "Achievements",
         content: [
             {
-                title: "2022",
-                points: [
-                    "10th in Canada, Asian Pacific Mathematical Olympiad",
-                    "1st and a perfect score, Alberta High School Math Competition pt. I",
-                    "1st, Alberta High School Math Competition pt. II",
-                    "123 out of 150, American Mathematics Contest 12",
-                    "Qualified, Canadian Mathematics Olympiad",
-                    "Qualified, American Invitational Math Exam",
-                    "11th, Canadian Association of Physicists Contest",
-                    "President's Award, Webber Academy"
-                ]
+                logo: "./img/apmo-logo.gif",
+                title: "Asian Pacific Mathematics Olympiad",
+                date: "2022",
+                brief: "",
+                full: [
+                    "Ranked 10th in Canada"
+                ],
+                links: []
             },
             {
-                title: "2021",
-                points: [
-                    "Top 18 of 90, Canadian Mathematics Olympiad",
-                    "Top in Alberta overall and 72 out of 80 points, Canadian Open Mathematics Challenge",
-                    "1st, Alberta High School Math Competition pt. I",
-                    "7th, Alberta High School Math Competition pt. II",
-                    "Qualified, American Invitational Math Exam",
-                    "1st in Alberta and 27th nationally, Fermat",
-                    "Top 1.5%, Canadian Senior Math Contest",
-                    "Gold medal and Buckley Engineering Award, Calgary Youth Science Fair",
-                    "Bronze Finalist, Canada Wide Science Fair",
-                    "17th globally (12th in Canada), Sir Isaac Newton Exam",
-                    "Maxime Richardson Citizenship Award, Webber Academy"
-                ]
+                logo: "https://www.cap.ca/wp-content/themes/cap/library/images/logo.png",
+                title: "Canadian Association of Physicists High School Exam",
+                date: "2022",
+                brief: "",
+                full: [
+                    "Ranked 11th in Canada"
+                ],
+                links: []
             },
             {
-                title: "2020",
-                points: [
-                    "Alberta silver medalist (Grade 11) and 5th overall, Canadian Open Mathematics Challenge",
-                    "11th in grade 10, American Mathematics Competition 12",
-                    "Qualified, American Invitational Math Exam",
-                    "1th, Alberta High School Math Competition pt. I",
-                    "10th, Alberta High School Math Competition pt. II",
-                    "Top 0.5%, Fermat and Canadian Senior Math Contest",
-                    "1st in Alberta, Michael Smith Science Challenge"
-                ]
+                logo: "./img/cms-logo.png",
+                title: "Canadian Open Mathematics Challenge",
+                date: "2017 - 2022",
+                brief: "",
+                full: [
+                    "Canadian Honour Roll",
+                    "Top in Alberta",
+                    "Gold or Silver Alberta Medalist every year"
+                ],
+                links: []
             },
             {
-                title: "2019",
-                points: [
-                    "Team Captain, Canadian International Mathematics Competition team",
-                    "Silver and Bronze medals, South Africa International Mathematics Competition",
-                    "Alberta silver medalist (Grade 10) and 8th overall, Canadian Open Mathematics Challenge",
-                    "2nd, Caribou Contest",
-                    "Robert Barrington Leigh Memorial Prize, Alberta High School Math Competition",
-                    "1st, Fryer Math Contest",
-                    "7th, Canadian Intermediate Mathematics Contest",
-                    "Top 1.5%, Fermat and Euclid",
-                    "Gold medal and the Senior Pacific Institute of Mathematical Sciences Award, Calgary Youth Science Fair"
-                ]
+                logo: "./img/cms-logo.png",
+                title: "Canadian Mathematical Olympiad",
+                date: "2021 - 2022",
+                brief: "",
+                full: [
+                    "2 time qualifier",
+                    "Ranked 18th in Canada"
+                ],
+                links: []
             },
             {
-                title: "2018",
-                points: [
-                    "Merit, Bulgaria International Mathematics Competition",
-                    "Top 1%, Canadian Intermediate Mathematics Contest",
-                    "10th, Pascal Math Contest",
-                    "23rd, Fryer Math Contest",
-                    "Alberta gold medal (grade 9), Canadian Open Mathematics Challenge"
-                ]
+                logo: "https://upload.wikimedia.org/wikipedia/en/6/6e/University_of_Waterloo_seal.svg",
+                title: "Sir Isaac Newton Physics Exam",
+                date: "2021 - 2022",
+                brief: "",
+                full: [
+                    "2 time book prize winner (top 50)",
+                    "Ranked 12th in Canada",
+                    "Ranked 17th internationally"
+                ],
+                links: []
             },
             {
-                title: "2017",
-                points: [
-                    "Alberta gold medal (grade 8), Canadian Open Mathematics Challenge"
-                ]
+                logo: "https://i1.wp.com/maa-amc.org/wp-content/uploads/2020/09/LOGO-Large-transparent.png?w=512&ssl=1",
+                title: "United States of America Mathematical Olympiad",
+                date: "2022",
+                brief: "",
+                full: [
+                    "Qualifier"
+                ],
+                links: []
             },
             {
-                title: "2016",
-                points: [
-                    "Gold medal and the Junior Pacific Institute of Mathematical Sciences Award, Calgary Youth Science Fair"
-                ]
+                logo: "https://i1.wp.com/maa-amc.org/wp-content/uploads/2020/09/LOGO-Large-transparent.png?w=512&ssl=1",
+                title: "American Invitational Mathematics Examination",
+                date: "2021 - 2022",
+                brief: "",
+                full: [
+                    "2 time qualifier"
+                ],
+                links: []
+            },
+            {
+                logo: "https://www.ualberta.ca/mathematical-and-statistical-sciences/media-library/ahsmc/ahsmc-logo.png",
+                title: "Alberta High School Mathematics Competition",
+                date: "2018 - 2022",
+                brief: "",
+                full: [
+                    "Part II winner and 3 time part I winner",
+                    "Perfect score in part I",
+                    "AHSMC fellow"
+                ],
+                links: []
+            },
+            {
+                logo: "./img/saimc-logo.png",
+                title: "South Africa International Mathematics Competition",
+                date: "2019",
+                brief: "",
+                full: [
+                    "Team captain",
+                    "Silver and bronze medals"
+                ],
+                links: []
+            },
+            {
+                logo: "./img/bimc-logo.png",
+                title: "Bulgaria International Mathematics Competition",
+                date: "2018",
+                brief: "",
+                full: [
+                    "Honour roll"
+                ],
+                links: []
             }
         ]
     },
@@ -324,12 +356,41 @@ content =
                 ]
             },
             {
+                logo: "./img/pitp-logo.jpg",
+                title: "International Summer School for Young Physicists (ISSYP)",
+                date: "2021",
+                brief: "Perimeter Institute for Theoretical Physics",
+                full: [],
+                links: [
+                    {
+                        link: "https://perimeterinstitute.ca/issyp",
+                        text: "website"
+                    }
+                ]
+            },
+            {
+                logo: "./img/qcsys-logo.jpg",
+                title: "Quantum Cryptography School for Young Students (QCSYS)",
+                date: "2020",
+                brief: "University of Waterloo Institute for Quantum Computing",
+                full: [
+                    "Now known as Quantum School for Young Students (QSYS)"
+                ],
+                links: [
+                    {
+                        link: "https://uwaterloo.ca/institute-for-quantum-computing/qsys",
+                        text: "website"
+                    }
+                ]
+            },
+            {
                 logo: "https://www.webberacademy.ca/pac/Theatre/Home_files/Webber%20Logo%20Large.png",
                 title: "Webber Academy",
                 date: "2008 - 2022",
                 brief: "Webber Scholar from grade 6 to 12",
                 full: [
-                    "Annual merit scholarship recipient"
+                    "Annual merit scholarship recipient",
+                    "President of the Student Union"
                 ],
                 links: []
             }
