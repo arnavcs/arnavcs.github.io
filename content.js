@@ -189,7 +189,7 @@ content =
                 links: []
             },
             {
-                logo: "https://www.cap.ca/wp-content/themes/cap/library/images/logo.png",
+                logo: "./img/cap-logo.png",
                 title: "Canadian Association of Physicists High School Exam",
                 date: "2022",
                 brief: "",
@@ -234,7 +234,7 @@ content =
                 links: []
             },
             {
-                logo: "https://i1.wp.com/maa-amc.org/wp-content/uploads/2020/09/LOGO-Large-transparent.png?w=512&ssl=1",
+                logo: "./img/maa-logo.png",
                 title: "United States of America Mathematical Olympiad",
                 date: "2022",
                 brief: "",
@@ -244,7 +244,7 @@ content =
                 links: []
             },
             {
-                logo: "https://i1.wp.com/maa-amc.org/wp-content/uploads/2020/09/LOGO-Large-transparent.png?w=512&ssl=1",
+                logo: "./img/maa-logo.png",
                 title: "American Invitational Mathematics Examination",
                 date: "2021 - 2022",
                 brief: "",
@@ -254,7 +254,7 @@ content =
                 links: []
             },
             {
-                logo: "https://www.ualberta.ca/mathematical-and-statistical-sciences/media-library/ahsmc/ahsmc-logo.png",
+                logo: "./img/ahsmc-logo.png",
                 title: "Alberta High School Mathematics Competition",
                 date: "2018 - 2022",
                 brief: "",
@@ -262,6 +262,16 @@ content =
                     "Part II winner and 3 time part I winner",
                     "Perfect score in part I",
                     "AHSMC fellow"
+                ],
+                links: []
+            },
+            {
+                logo: "./img/ysc-logo.jpg",
+                title: "Canada Wide Science Fair",
+                date: "2021",
+                brief: "",
+                full: [
+                    "Bronze medalist"
                 ],
                 links: []
             },
