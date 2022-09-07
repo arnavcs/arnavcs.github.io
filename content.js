@@ -304,7 +304,7 @@ content =
             {
                 logo: "./img/tektorch-logo.jpg",
                 title: "Tektorch.ai",
-                date: "Apr 2022 - Jul 2022",
+                date: "Apr 2022 - Aug 2022",
                 brief: "Part-time junior programmer",
                 full: [],
                 links: [
