@@ -5,10 +5,10 @@ content =
         content: [
             {
                 text: [
-                    "I am a University of Waterloo Computer Science and Pure Math student who loves problem solving.",
-                    "Currently, I am working through and reading the puzzle book titled 'To Mock a Mocking Bird: Including an Amazing Adventure in Combinatory Logic' authored by Raymond M. Smullyan.\
-                    Additionally, I am preparing for the Putnam contest and self learning special relativity and classical field theory.",
-                    "When I am not working, I like to play the traditional Indian bamboo flute, called the bansuri."
+                    "I am a University of Waterloo Computer Science student who loves problem solving.",
+                    "Currently, I am preparing for the Putnam contest, and I like to work on fun problems that really stretch the way I think. One of my favourite puzzle books have been To Mock a Mockingbird by Raymond Smullyan.",
+                    "When I am not working, I like to play the traditional Indian bamboo flute, called the bansuri.",
+                    "Alongside playing the flute, I also enjoy rhythm games such as A Dance of Fire and Ice, and am always willing to try out a new game, be it a board game or video game."
                 ],
                 images: [
                     "./img/arnav-img.jpg",
@@ -19,6 +19,27 @@ content =
     {
         title: "Projects",
         content: [
+            {
+                logo: "https://user-images.githubusercontent.com/61663933/214231075-ede4477a-a982-49e0-9f65-fc9ca43ea61b.png",
+                title: "InterPlanetary File Explorer",
+                date: "January 2023",
+                brief: "",
+                full: [],
+                links: [
+                    {
+                        link: "https://ipfe.elguindi.xyz/",
+                        text: "website"
+                    },
+                    {
+                        link: "https://github.com/youssefsoli/IPFE",
+                        text: "github"
+                    },
+                    {
+                        link: "https://devpost.com/software/changeme",
+                        text: "devpost"
+                    }
+                ]
+            },
             {
                 logo: "https://upload.wikimedia.org/wikipedia/commons/b/b6/SCD_algebraic_notation.svg",
                 title: "CLI Chess Engine (WIP)",
@@ -178,6 +199,26 @@ content =
     {
         title: "Achievements",
         content: [
+            {
+                logo: "https://www.uofthacks.com/_next/static/media/OfficialLogoBG.25240d13.svg?imwidth=96",
+                title: "UofTHacks X",
+                date: "2023",
+                brief: "",
+                full: [
+                    "Estuary Sponsor Prize Winner"
+                ],
+                links: []
+            },
+            {
+                logo: "./img/maa-logo.png",
+                title: "William Lowell Putnam Mathematical Competiiton",
+                date: "2022",
+                brief: "",
+                full: [
+                    "Ranked 335th with a score of 26"
+                ],
+                links: []
+            },
             {
                 logo: "./img/apmo-logo.gif",
                 title: "Asian Pacific Mathematics Olympiad",
