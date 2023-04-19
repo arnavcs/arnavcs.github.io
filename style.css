@@ -1,90 +1,10 @@
-/* DOCUMENT BODY STYLING */
-
 body {
-    max-width: 900px;
-    margin: auto;
-    padding: 0 16px;
-    font-family: sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0px 10px;
 }
 
-header, footer {
-    text-align: center;
+td p {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
-
-/* SECTION CONTAINER */
-
-#section-container hr {
-    border-style: dashed;
-}
-
-/* MODULE */
-
-.module * {
-    margin: 0px;
-}
-
-.module {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
-}
-
-.module-img-div {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-}
-
-.module img {
-    object-fit: contain;
-    width: 100px;
-    height: 100px;
-}
-
-.module-content-div {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-}
-
-.module-header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.module-title {
-    font-weight: bold;
-}
-
-.module-date {}
-
-.module-brief {
-    font-style: italic;
-}
-
-.module-full {}
-
-/* BLURB */
-
-.blurb img {
-    float: right;
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    margin: 5px;
-}
-
-/* LISTING */
-
-@media (min-width: 50em) {
-    .listing-container {
-        column-count: 2;
-    }
-}
-
