@@ -20,7 +20,7 @@
 
         <slink|https://github.com/arnavcs>
 
-        resume <hlink|[pdf]|./img/resume.pdf>
+        resume <hlink|[pdf]|./assets/resume.pdf>
       </compact>
     </padded-left-aligned>
   </bothlined>>
@@ -50,7 +50,8 @@
   </cell>|<cell|Jan 2023>>|<row|<\cell>
     <\compact>
       Prognosing Idiopathic Pulmonary Fibrosis <hlink|[CWSF
-      paper]|./img/osic-cwsf-paper.pdf> <hlink|[github]|https://github.com/arnavcs/OSIC-IPF>
+      paper]|./assets/osic-cwsf-paper.pdf>
+      <hlink|[github]|https://github.com/arnavcs/OSIC-IPF>
 
       <\indent>
         Several machine learning models written to predict the deterioration
@@ -233,11 +234,11 @@
       and Projects> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Achievements>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Experience>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Experience>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Achievements>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3><vspace|0.5fn>
     </associate>
