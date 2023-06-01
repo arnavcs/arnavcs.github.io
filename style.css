@@ -1,10 +1,99 @@
+
 body {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0px 10px;
+  background-color: #1f1f28;
+  color: #dcd7ba;
+  font-family: monospace;
 }
 
-td p {
-  margin-top: 2px;
-  margin-bottom: 2px;
+::selection {
+  background-color: #223249;
 }
+
+h1 {
+  color: #fc9e65;
+}
+
+h2 {
+  color: #e5c283;
+}
+
+h3 {
+  color: #678b86;
+}
+
+li::marker {
+  color: #b76f88;
+}
+
+a {
+  color: #80a8bf;
+}
+
+nav a {
+  border: 3px ridge #80a8bf;
+  text-decoration: none;
+}
+
+table, table th, table td {
+  border: 1px solid #dcd7ba;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+body {
+  margin: auto;
+  padding: 0px 10px;
+  max-width: 800px;
+}
+
+header * {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  padding: 5px;
+  margin: 0px 10px;
+}
+
+table {
+  margin: auto;
+}
+
+table * {
+  padding: 5px;
+}
+
+.card-container thead th {
+  text-align: left;
+}
+
+.card-container thead td {
+  text-align: right;
+}
+
+.card-container td, .card-container th {
+  border: none;
+}
+
+.card-container table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card-container tr {
+  border: 1px dotted white;
+}
+
+// .card-container thead {
+//   background-color: #54546C;
+// }
+
+
