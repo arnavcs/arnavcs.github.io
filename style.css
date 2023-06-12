@@ -30,12 +30,12 @@ a {
 }
 
 nav a {
-  border: 3px ridge #80a8bf;
+  border: 2px ridge #80a8bf;
   text-decoration: none;
 }
 
 table, table th, table td {
-  border: 1px solid #dcd7ba;
+  border: 1px solid #54546D;
 }
 
 table {
@@ -89,11 +89,6 @@ table * {
 }
 
 .card-container tr {
-  border: 1px dotted white;
+  border: 1px dashed #54546D;
 }
-
-// .card-container thead {
-//   background-color: #54546C;
-// }
-
 
