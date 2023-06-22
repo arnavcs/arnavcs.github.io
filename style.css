@@ -45,7 +45,7 @@ table {
 body {
   margin: auto;
   padding: 0px 10px;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 header * {
@@ -71,6 +71,23 @@ table * {
   padding: 5px;
 }
 
+table caption {
+  font-weight: bold;
+  color: #e5c283;
+}
+
+.table-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.table-container table {
+  margin: 0px;
+}
+
 .card-container thead th {
   text-align: left;
 }
@@ -84,8 +101,8 @@ table * {
 }
 
 .card-container table {
-  width: 100%;
-  margin-bottom: 20px;
+  width: calc(100% - 80px);
+  margin: 20px 40px;
 }
 
 .card-container tr {
