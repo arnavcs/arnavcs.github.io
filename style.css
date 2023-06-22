@@ -80,7 +80,7 @@ table caption {
   display: flex;
   flex-flow: row wrap;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
 }
 
@@ -101,8 +101,8 @@ table caption {
 }
 
 .card-container table {
-  width: calc(100% - 80px);
-  margin: 20px 40px;
+  width: calc(100% - 40px);
+  margin: 20px;
 }
 
 .card-container tr {
