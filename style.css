@@ -67,7 +67,7 @@ table {
   margin: auto;
 }
 
-table * {
+table td, table tr, table th, table caption {
   padding: 5px;
 }
 
@@ -105,7 +105,12 @@ table caption {
   margin: 20px;
 }
 
-.card-container tr {
-  border: 1px dashed #54546D;
+.card-container tbody {
+  border-top: 1px dashed #54546D;
+}
+
+.card-container tbody ul {
+  margin: 0px;
+  padding-left: 15px;
 }
 
