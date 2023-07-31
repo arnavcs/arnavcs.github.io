@@ -1,41 +1,55 @@
+:root {
+  --bg-color: #1F1F28;
+  --fg-color: #DCD7BA;
+  --alt-bg-color: #54546D;
+  --alt-fg-color: #72A7BC;
+
+  --sel-color: #2D4F67;
+
+  --accent-color-1: #c0a36e;
+  --accent-color-2: #c0a36e;
+  --accent-color-3: #c0a36e;
+  --accent-color-4: #c0a36e;
+  --accent-color-5: #c0a36e;
+}
 
 body {
-  background-color: #1f1f28;
-  color: #dcd7ba;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
   font-family: monospace;
 }
 
 ::selection {
-  background-color: #223249;
+  background-color: var(--sel-color);
 }
 
 h1 {
-  color: #fc9e65;
+  color: var(--accent-color-1);
 }
 
 h2 {
-  color: #e5c283;
+  color: var(--accent-color-2);
 }
 
 h3 {
-  color: #678b86;
+  color: var(--accent-color-3);
 }
 
 li::marker {
-  color: #b76f88;
+  color: var(--accent-color-5);
 }
 
 a {
-  color: #80a8bf;
+  color: var(--alt-fg-color);
 }
 
 nav a {
-  border: 2px ridge #80a8bf;
+  border: 2px ridge var(--alt-fg-color);
   text-decoration: none;
 }
 
 table, table th, table td {
-  border: 1px solid #54546D;
+  border: 1px solid var(--alt-bg-color);
 }
 
 table {
@@ -73,7 +87,7 @@ table td, table tr, table th, table caption {
 
 table caption {
   font-weight: bold;
-  color: #e5c283;
+  color: var(--accent-color-4);
 }
 
 .table-container {
@@ -88,8 +102,13 @@ table caption {
   margin: 0px;
 }
 
+.table-container table th, .table-container table td {
+  max-width: 300px;
+}
+
 .card-container thead th {
   text-align: left;
+  color: var(--accent-color-4);
 }
 
 .card-container thead td {
@@ -106,7 +125,7 @@ table caption {
 }
 
 .card-container tbody {
-  border-top: 1px dashed #54546D;
+  border-top: 1px dashed var(--alt-bg-color);
 }
 
 .card-container tbody ul {
