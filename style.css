@@ -6,11 +6,11 @@
 
   --sel-color: #2D4F67;
 
-  --accent-color-1: #c0a36e;
-  --accent-color-2: #c0a36e;
-  --accent-color-3: #c0a36e;
-  --accent-color-4: #c0a36e;
-  --accent-color-5: #c0a36e;
+  --accent-color: #7e9cd8;
+
+  --complete-color: #76946a;
+  --in-progress-color: #c0a36e;
+  --unstarted-color: #c34043;
 }
 
 body {
@@ -24,19 +24,19 @@ body {
 }
 
 h1 {
-  color: var(--accent-color-1);
+  color: var(--accent-color);
 }
 
 h2 {
-  color: var(--accent-color-2);
+  color: var(--accent-color);
 }
 
 h3 {
-  color: var(--accent-color-3);
+  color: var(--accent-color);
 }
 
 li::marker {
-  color: var(--accent-color-5);
+  color: var(--accent-color);
 }
 
 a {
@@ -87,7 +87,7 @@ table td, table tr, table th, table caption {
 
 table caption {
   font-weight: bold;
-  color: var(--accent-color-4);
+  color: var(--accent-color);
 }
 
 .table-container {
@@ -96,6 +96,7 @@ table caption {
   gap: 20px;
   justify-content: space-evenly;
   align-items: flex-start;
+  margin: 20px;
 }
 
 .table-container table {
@@ -108,7 +109,7 @@ table caption {
 
 .card-container thead th {
   text-align: left;
-  color: var(--accent-color-4);
+  color: var(--accent-color);
 }
 
 .card-container thead td {
@@ -133,3 +134,22 @@ table caption {
   padding-left: 15px;
 }
 
+.complete, .in-progress, .unstarted {
+  display: inline-block;
+  width: 1.5ex;
+  height: 1.5ex;
+  border-radius: 0.75ex;
+  margin: 0em 0.25em 0em 0em;
+}
+
+.complete {
+  background-color: var(--complete-color);
+}
+
+.in-progress {
+  background-color: var(--in-progress-color);
+}
+
+.unstarted {
+  background-color: var(--unstarted-color);
+}
