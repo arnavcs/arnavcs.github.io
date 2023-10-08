@@ -106,9 +106,9 @@
 
   <\notation>
     We use <math|<choose|n|k>> (or sometimes <math|<rsub|n>C<rsub|k>>) to
-    notate the number of ways to choose <math|k> objects from a collection of
-    <math|n> distinct objects where selection order does not matter. This is
-    called <with|font-series|bold|<math|n> choose <math|k>>.
+    notate <with|font-series|bold|<math|n> choose <math|k>>, the number of
+    ways to choose <math|k> objects from a collection of <math|n> distinct
+    objects where selection order does not matter.
   </notation>
 
   <\exercise>
