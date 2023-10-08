@@ -58,7 +58,7 @@ table {
 
 body {
   margin: auto;
-  padding: 0px 10px;
+  padding: 0px 10px 50px 10px;
   max-width: 1000px;
 }
 
@@ -110,6 +110,11 @@ table caption {
 .card-container thead th {
   text-align: left;
   color: var(--accent-color);
+}
+
+.location {
+  color: var(--fg-color);
+  font-weight: normal;
 }
 
 .card-container thead td {
