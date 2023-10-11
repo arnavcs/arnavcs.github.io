@@ -132,7 +132,7 @@
   than a recurrence relation.
 
   <\solution*>
-    Lets represent a path as a finite sequence of moves. A move is one of
+    Let's represent a path as a finite sequence of moves. A move is one of
     <math|U> for up or <math|R> for right. Additionally, if <math|S> is a
     path, we define <math|S<around*|(|x,y|)>> to be the point we end up at as
     a result of following the path <math|S> starting at
@@ -216,6 +216,12 @@
     numbers as in the previous exercise, show that we can find an recursive
     formula for <math|C<rsub|n>> of the form
     <math|C<rsub|n>=C<rsub|0>*C<rsub|n-1>+C<rsub|1>*C<rsub|n-2>+\<cdots\>+C<rsub|n-1>*C<rsub|0>=<big|sum><rsub|i=1><rsup|n>C<rsub|i-1>*C<rsub|n-i>>.
+  </exercise>
+
+  <\exercise>
+    <dueto|<math|\<star\>\<star\>>>Show that the number of ways to
+    triangulate a convex <math|<around*|(|n+2|)>>-gon (split it into <math|n>
+    triangles) is <math|C<rsub|n>>.
   </exercise>
 
   <\exercise>
