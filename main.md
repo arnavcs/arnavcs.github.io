@@ -4,6 +4,12 @@ title: Arnav Kumar
 
 # Mathematics Competitions
 
+## Accolades
+
+- 335^th^, score 26; 2022 **William Lowell Putnam Mathematical Competition**
+- 10^th^ in Canada; 2022 **Asian Pacific Mathematics Olympiad**
+- 18^th^ in Canada, 2 time qualifier; 2021-22 **Canadian Mathematical Olympiad**
+
 <hgroup>
 ## Competition Reference
 [[html]](./competition-mathematics/reference.html)
@@ -27,7 +33,7 @@ title: Arnav Kumar
 </hgroup>
 - Several machine learning models written to predict the deterioration of the condition of the lungs over time for patients of Idiopathic Pulmonary Fibrosis and give a level of confidence in the prediction
 
-# Presentations and Lectures
+# Presentations & Lectures
 
 <hgroup>
 ## Streams and Lazy Evaluation

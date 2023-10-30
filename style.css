@@ -63,7 +63,7 @@ table col {
 }
 
 table td, table tr, table th, table caption {
-  padding: 2px 5px;
+  padding: 3px 5px;
 }
 
 table caption {
@@ -155,6 +155,7 @@ article h2, article h3 {
 }
 
 article hgroup {
+  margin-top: 0px;
   position: relative;
 }
 
