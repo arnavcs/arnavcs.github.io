@@ -2,6 +2,11 @@
 title: Competition Mathematics
 ---
 
+Whenever reference is made to "High School level" in this document, it should be noted this implicitly also means "Undergraduate level" since the latter is a superset of the former.
+
+The coloured circles represent:
+<span class="green ball"></span> High School level problems, <span class="orange ball"></span> Undergraduate level problems.
+
 # Algebra
 
 <hgroup>
@@ -16,7 +21,7 @@ title: Competition Mathematics
 [[wolf]](https://mathworld.wolfram.com/RootofUnity.html)
 </hgroup>
 
-UG Problems: Red Book q1
+- <span class="orange ball"></span> Red Book q1
 
 <hgroup>
 ## Vieta's Formula
@@ -40,7 +45,7 @@ UG Problems: Red Book q1
 [[wiki]](https://en.wikipedia.org/wiki/Quadratic_residue)
 </hgroup>
 
-UG Problems: Red Book q1
+- <span class="orange ball"></span> Red Book q1
 
 <hgroup>
 ## Legendre Symbol
@@ -101,7 +106,7 @@ UG Problems: Red Book q1
 [[wolf]](https://mathworld.wolfram.com/OrdinaryLine.html)
 </hgroup>
 
-HS & UG Problems: Proof of Sylvester-Gallai Theorem
+- <span class="green ball"></span> Proof of Sylvester-Gallai Theorem
 
 <hgroup>
 ## Sylvester-Gallai Theorem
@@ -133,7 +138,7 @@ HS & UG Problems: Proof of Sylvester-Gallai Theorem
 [[wiki]](https://en.wikipedia.org/wiki/Euler%27s_theorem_in_geometry)
 </hgroup>
 
-HS & UG Problems: Proof of Sylvester's Problem
+- <span class="green ball"></span> Proof of Sylvester's Problem
 
 <hgroup>
 ## Sylvester's Problem
@@ -150,6 +155,23 @@ HS & UG Problems: Proof of Sylvester's Problem
 [[wiki]](https://en.wikipedia.org/wiki/Japanese_theorem_for_cyclic_polygons)
 </hgroup>
 
+## Ravi's Substitution
+
+- <span class="green ball"></span> Assorted Problem (@geo1)
+
+<hgroup>
+## Kimberling Center
+[[wolf]](https://mathworld.wolfram.com/KimberlingCenter.html)
+</hgroup>
+
+## Barycentric Coordinates
+
+## Isogonal Conjugate
+
+## Miquel's Point
+
+## Steiner Line
+
 # Probability
 
 <hgroup>
@@ -158,6 +180,14 @@ HS & UG Problems: Proof of Sylvester's Problem
 </hgroup>
 
 # Combinatorics
+
+## Case Work
+
+- <span class="green ball"></span> Red Book q2
+
+## Bijective Counting
+
+- <span class="green ball"></span> Red Book q2
 
 <hgroup>
 ## Catalan Numbers
@@ -168,3 +198,45 @@ HS & UG Problems: Proof of Sylvester's Problem
 ## Stirling Numbers
 [[wiki]](https://en.wikipedia.org/wiki/Stirling_number)
 </hgroup>
+
+# Inequalities
+
+## min-HM-GM-AM-RMS-max Inequality
+
+## Muirhead Inequality
+
+## Schur's Inequality
+
+## Karamata's Inequality
+
+## Cauchy-Schwarz Inequality
+
+## Hölder's Inequality
+
+<hgroup>
+## Jensen's Inequality
+[[wiki]](https://en.wikipedia.org/wiki/Jensen%27s_inequality)
+</hgroup>
+
+<hgroup>
+## Minkowski's Inequality
+[[wiki]](https://en.wikipedia.org/wiki/Minkowski_inequality)
+</hgroup>
+
+# Assorted Problems {-}
+
+## High School Level {-}
+
+(@geo1) Let $\triangle ABC$ have inradius $r$ and circumradius $R$. Show that we have $R \ge 2r$ with equality iff $\triangle ABC$ is equilateral. 
+
+## Undergraduate Level {-}
+
+# Sources {-}
+
+## High School Level {-}
+
+## Undergraduate Level {-}
+
+Red Book
+ ~ *The Red Book of Mathematical Problems* by Kenneth S. Williams and Kenneth Hardy
+

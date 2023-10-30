@@ -12,7 +12,7 @@ title: Arnav Kumar
 
 <hgroup>
 ## Competition Reference
-[[html]](./competition-mathematics/reference.html)
+[[html]](./math-comp/reference.html)
 </hgroup>
 
 ## 
@@ -60,44 +60,47 @@ title: Arnav Kumar
 
 # University Courses
 
-## Waterloo Undergraduate Degree
+The coloured circles represent:
+<span class="green ball"></span> officially completed, <span class="yellow ball"></span> currently taking, <span class="aqua ball"></span> audited or self-taught, <span class="red ball"></span> planned to take.
 
-+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Term       | Courses                                                                                                                                                                                                                                                             |
-+============+===========================================+===========================================+===========================================+===========================================+==========================================+==========================================+
-| Fall '22   | <span class="green ball"></span>MATH 145  | <span class="green ball"></span>MATH 147  | <span class="green ball"></span>CS 145    | <span class="green ball"></span>ENGL 109  | <span class="green ball"></span>PHYS 121 |                                          |
-+------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+------------------------------------------+------------------------------------------+
-| Winter '23 | <span class="green ball"></span>MATH 146  | <span class="green ball"></span>MATH 148  | <span class="green ball"></span>CS 146    | <span class="green ball"></span>ENGL 108B | <span class="green ball"></span>PHYS 122 | <span class="green ball"></span>PD 1     |
-+------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+------------------------------------------+------------------------------------------+
-| Spring '23 | <span class="green ball"></span>COOP 1    | <span class="green ball"></span>PD 11     |                                           |                                           |                                          |                                          |
-+------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+------------------------------------------+------------------------------------------+
-| Fall '23   | <span class="yellow ball"></span>MATH 245 | <span class="yellow ball"></span>MATH 247 | <span class="yellow ball"></span>STAT 240 | <span class="yellow ball"></span>CS 245E  | <span class="yellow ball"></span>CS 246E |                                          |
-+------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+------------------------------------------+------------------------------------------+
-| Winter '24 | <span class="red ball"></span>MATH 249    | <span class="red ball"></span>STAT 241    | <span class="red ball"></span>CO 255      | <span class="red ball"></span>CS 240E     | <span class="red ball"></span>CS 241     | <span class="red ball"></span>JAPAN 101R |
-+------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+------------------------------------------+------------------------------------------+
+<hgroup>
+## Waterloo Undergraduate Degree
+: Bachelors of Computer Science
+<p class="date">2022 - Present</p>
+</hgroup>
+
++-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Term  | Courses                                                                                                                                                                                                                                                                                                     |
++=======+===========================================+===========================================+===========================================+===========================================+===========================================+==========================================+======================================+
+| F '22 | <span class="green ball"></span>MATH 145  | <span class="green ball"></span>MATH 147  | <span class="green ball"></span>CS 145    | <span class="green ball"></span>ENGL 109  | <span class="green ball"></span>PHYS 121  |                                          |                                      |
++-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+------------------------------------------+--------------------------------------+
+| W '23 | <span class="green ball"></span>MATH 146  | <span class="green ball"></span>MATH 148  | <span class="green ball"></span>CS 146    | <span class="green ball"></span>CS 136L   | <span class="green ball"></span>ENGL 108B | <span class="green ball"></span>PHYS 122 | <span class="green ball"></span>PD 1 |
++-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+------------------------------------------+--------------------------------------+
+| S '23 | <span class="green ball"></span>COOP 1    | <span class="green ball"></span>PD 11     |                                           |                                           |                                           |                                          |                                      |
++-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+------------------------------------------+--------------------------------------+
+| F '23 | <span class="yellow ball"></span>MATH 245 | <span class="yellow ball"></span>MATH 247 | <span class="yellow ball"></span>STAT 240 | <span class="yellow ball"></span>CS 245E  | <span class="yellow ball"></span>CS 246E  |                                          |                                      |
++-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+------------------------------------------+--------------------------------------+
+| W '24 | <span class="red ball"></span>MATH 249    | <span class="red ball"></span>STAT 241    | <span class="red ball"></span>CO 255      | <span class="red ball"></span>CS 240E     | <span class="red ball"></span>CS 241      | <span class="red ball"></span>JAPAN 101R |                                      |
++-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+------------------------------------------+--------------------------------------+
 
 # Textbooks & Readings
 
+The coloured circles represent:
+<span class="green ball"></span> read, <span class="yellow ball"></span> currently reading, <span class="red ball"></span> planned to read.
+
 ## Computer Science Textbooks
 
-<span class="green ball"></span>*Learn You a Haskell for Great Good!* by Miran Lipovača
-
-<span class="yellow ball"></span>*Concurrency in Go* by Katherine Cox-Buday
-
-<span class="yellow ball"></span>*Specifying Systems* by Leslie Lamport
-
-<span class="yellow ball"></span>*Category Theory for Programmers* by Bartosz Milewski
-
-<span class="yellow ball"></span>*Effective Modern C++* by Scott Meyers
-
-<span class="red ball"></span>*Real World Haskell* by O'Sullivan, Stewart & Goerzen
-
-<span class="red ball"></span>*Structure and Interpretation of Computer Programs* by Abelson, Sussman & Sussman
+- <span class="green ball"></span> *Learn You a Haskell for Great Good!* by Miran Lipovača
+- <span class="yellow ball"></span> *Concurrency in Go* by Katherine Cox-Buday
+- <span class="yellow ball"></span> *Specifying Systems* by Leslie Lamport
+- <span class="yellow ball"></span> *Category Theory for Programmers* by Bartosz Milewski
+- <span class="yellow ball"></span> *Effective Modern C++* by Scott Meyers
+- <span class="red ball"></span> *Real World Haskell* by O'Sullivan, Stewart & Goerzen
+- <span class="red ball"></span> *Structure and Interpretation of Computer Programs* by Abelson, Sussman & Sussman
 
 ## Mathematics Textbooks
 
-<span class="green ball"></span>*To Mock a Mockingbird* by Raymond Smullyan
-
-<span class="yellow ball"></span>*The Red Book of Mathematical Problems* by Williams & Hardy
+- <span class="green ball"></span> *To Mock a Mockingbird* by Raymond Smullyan
+- <span class="yellow ball"></span> *The Red Book of Mathematical Problems* by Williams & Hardy
 
 

@@ -28,7 +28,7 @@ body {
   font-size: medium;
   margin: auto;
   padding: 0px 10px 50px 10px;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 h1, h2 {
@@ -172,6 +172,10 @@ article ul {
   padding-left: 20px;
 }
 
+article ol {
+  padding-left: 30px;
+}
+
 article table {
   margin-top: 10px;
 }
@@ -188,9 +192,9 @@ article .ball {
   border-radius: 0.75ex;
 }
 
-article > p > .ball {
-  margin-left: 7px;
-  margin-right: 5px;
+article li > .ball:first-child {
+  margin-left: -13px;
+  margin-right: 0px;
 }
 
 article .red {
