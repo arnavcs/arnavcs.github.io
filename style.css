@@ -1,88 +1,69 @@
 :root {
   --bg-color: #1F1F28;
   --fg-color: #DCD7BA;
-  --alt-bg-color: #54546D;
-  --alt-fg-color: #72A7BC;
 
+  --border-color: #54546D;
+  --link-color: #72A7BC;
   --sel-color: #2D4F67;
-
   --accent-color: #C0A36E;
-
-  --complete-color: #76946a;
-  --in-progress-color: #c0a36e;
-  --unstarted-color: #c34043;
+  
+  --red: #E46876;
+  --orange: #FFA066;
+  --aqua: #7AA89F;
+  --green: #98BB6C;
+  --yellow: #E6C384;
 }
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* general global formats */
 
 body {
   background-color: var(--bg-color);
   color: var(--fg-color);
   font-family: monospace;
+  font-size: medium;
+  margin: auto;
+  padding: 0px 10px 50px 10px;
+  max-width: 1200px;
 }
 
-::selection {
-  background-color: var(--sel-color);
-}
-
-h1 {
+h1, h2 {
   color: var(--accent-color);
 }
 
-h2 {
-  color: var(--accent-color);
-}
-
-h3 {
-  color: var(--accent-color);
+a, a:visited {
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 li::marker {
   color: var(--accent-color);
 }
 
-a {
-  color: var(--alt-fg-color);
+::selection {
+  background-color: var(--sel-color);
 }
 
-nav a {
-  border: 2px ridge var(--alt-fg-color);
-  text-decoration: none;
-}
-
-table, table th, table td {
-  border: 1px solid var(--alt-bg-color);
+table th, article table td {
+  border: 2px solid var(--border-color);
 }
 
 table {
   border-collapse: collapse;
-}
-
-body {
   margin: auto;
-  padding: 0px 10px 50px 10px;
-  max-width: 1000px;
+  width: auto !important;
 }
 
-header * {
-  text-align: center;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav a {
-  padding: 5px;
-  margin: 0px 10px;
-}
-
-table {
-  margin: auto;
+table col {
+  width: min-content !important;
 }
 
 table td, table tr, table th, table caption {
-  padding: 5px;
+  padding: 2px 5px;
 }
 
 table caption {
@@ -90,71 +71,143 @@ table caption {
   color: var(--accent-color);
 }
 
-.table-container {
+
+/* Header formatting */
+
+header h1 {
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+header {
+  padding: 10px;
+}
+
+header * {
+  text-align: center;
+}
+
+header nav {
   display: flex;
-  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  justify-content: space-evenly;
+}
+
+header nav a {
+  border: 2px ridge var(--link-color);
+  padding: 5px;
+}
+
+/* main formatting */
+
+main {
+  display: flex;
+  justify-content: space-between;
   align-items: flex-start;
-  margin: 20px;
 }
 
-.table-container table {
-  margin: 0px;
+/* toc formatting */
+
+main nav {
+  order: 1;
+  padding: 10px;
+  width: 300px;
+  position: sticky;
+  top: 0px;
+  flex-shrink: 0;
 }
 
-.table-container table th, .table-container table td {
-  max-width: 300px;
+main nav h1 {
+  text-align: center;
+  font-size: medium;
+  margin-bottom: 5px;
 }
 
-.card-container thead th {
-  text-align: left;
-  color: var(--accent-color);
+main nav ul {
+  list-style-type: none;
+  padding-left: 20px;
 }
 
-.location {
-  color: var(--fg-color);
-  font-weight: normal;
+/* injected text formatting */
+
+article {
+  order: 0;
+  flex-grow: 2;
 }
 
-.card-container thead td {
-  text-align: right;
+article * {
+  margin-top: 5px;
 }
 
-.card-container td, .card-container th {
-  border: none;
+article h1 {
+  font-size: x-large;
+  text-decoration: underline;
+  text-underline-position: under;
+  margin-top: 15px;
 }
 
-.card-container table {
-  width: calc(100% - 40px);
-  margin: 20px;
+article h2, article h3 {
+  font-size: medium;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
-.card-container tbody {
-  border-top: 1px dashed var(--alt-bg-color);
+article hgroup {
+  position: relative;
 }
 
-.card-container tbody ul {
-  margin: 0px;
-  padding-left: 15px;
+article hgroup * {
+  display: inline-block;
 }
 
-.complete, .in-progress, .unstarted {
+article hgroup .date {
+  position: absolute;
+  right: 0px;
+}
+
+article ul {
+  padding-left: 20px;
+}
+
+article table {
+  margin-top: 10px;
+}
+
+article table .ball {
+  margin-top: 0px;
+  margin-right: 5px;
+}
+
+article .ball {
   display: inline-block;
   width: 1.5ex;
   height: 1.5ex;
   border-radius: 0.75ex;
-  margin: 0em 0.25em 0em 0em;
 }
 
-.complete {
-  background-color: var(--complete-color);
+article > p > .ball {
+  margin-left: 7px;
+  margin-right: 5px;
 }
 
-.in-progress {
-  background-color: var(--in-progress-color);
+article .red {
+  background-color: var(--red);
 }
 
-.unstarted {
-  background-color: var(--unstarted-color);
+article .aqua {
+  background-color: var(--aqua);
+}
+
+article .green {
+  background-color: var(--green);
+}
+
+article .orange {
+  background-color: var(--orange);
+}
+
+article .yellow {
+  background-color: var(--yellow);
 }

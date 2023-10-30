@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Competition Mathematics</title>
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Competition Mathematics</h1>
+      <nav>
+        <a href="../index.html">Home</a>
+      </nav>
+    </header>
+    <main>
+      <nav>
+        <h1><a href="#title">Competition Mathematics</a></h1>
+        <ul>
+        <li><a href="#algebra" id="toc-algebra"><span
+        class="toc-section-number">1</span> Algebra</a>
+        <ul>
+        <li><a href="#elementary-symmetric-sum"
+        id="toc-elementary-symmetric-sum"><span
+        class="toc-section-number">1.1</span> Elementary Symmetric
+        Sum</a></li>
+        <li><a href="#roots-of-unity" id="toc-roots-of-unity"><span
+        class="toc-section-number">1.2</span> Roots of Unity</a></li>
+        <li><a href="#vietas-formula" id="toc-vietas-formula"><span
+        class="toc-section-number">1.3</span> Vieta’s Formula</a></li>
+        <li><a href="#newton-sums" id="toc-newton-sums"><span
+        class="toc-section-number">1.4</span> Newton Sums</a></li>
+        <li><a href="#field" id="toc-field"><span
+        class="toc-section-number">1.5</span> Field</a></li>
+        </ul></li>
+        <li><a href="#number-theory" id="toc-number-theory"><span
+        class="toc-section-number">2</span> Number Theory</a>
+        <ul>
+        <li><a href="#quadratic-residue"
+        id="toc-quadratic-residue"><span
+        class="toc-section-number">2.1</span> Quadratic Residue</a></li>
+        <li><a href="#legendre-symbol" id="toc-legendre-symbol"><span
+        class="toc-section-number">2.2</span> Legendre Symbol</a></li>
+        <li><a href="#lagranges-theorem"
+        id="toc-lagranges-theorem"><span
+        class="toc-section-number">2.3</span> Lagrange’s
+        Theorem</a></li>
+        <li><a href="#fermats-little-theorem"
+        id="toc-fermats-little-theorem"><span
+        class="toc-section-number">2.4</span> Fermat’s Little
+        Theorem</a></li>
+        <li><a href="#eulers-criterion" id="toc-eulers-criterion"><span
+        class="toc-section-number">2.5</span> Euler’s Criterion</a></li>
+        <li><a href="#quadratic-reciprocity"
+        id="toc-quadratic-reciprocity"><span
+        class="toc-section-number">2.6</span> Quadratic
+        Reciprocity</a></li>
+        <li><a href="#eulers-totient-function"
+        id="toc-eulers-totient-function"><span
+        class="toc-section-number">2.7</span> Euler’s Totient
+        Function</a></li>
+        <li><a href="#möbius-function" id="toc-möbius-function"><span
+        class="toc-section-number">2.8</span> Möbius Function</a></li>
+        <li><a href="#möbius-inversion-formula"
+        id="toc-möbius-inversion-formula"><span
+        class="toc-section-number">2.9</span> Möbius Inversion
+        Formula</a></li>
+        <li><a href="#lifting-the-exponent-lemma"
+        id="toc-lifting-the-exponent-lemma"><span
+        class="toc-section-number">2.10</span> Lifting the Exponent
+        Lemma</a></li>
+        <li><a href="#wilsons-theorem" id="toc-wilsons-theorem"><span
+        class="toc-section-number">2.11</span> Wilson’s Theorem</a></li>
+        </ul></li>
+        <li><a href="#geometry" id="toc-geometry"><span
+        class="toc-section-number">3</span> Geometry</a>
+        <ul>
+        <li><a href="#ordinary-line" id="toc-ordinary-line"><span
+        class="toc-section-number">3.1</span> Ordinary Line</a></li>
+        <li><a href="#sylvester-gallai-theorem"
+        id="toc-sylvester-gallai-theorem"><span
+        class="toc-section-number">3.2</span> Sylvester-Gallai
+        Theorem</a></li>
+        <li><a href="#cevas-theorem" id="toc-cevas-theorem"><span
+        class="toc-section-number">3.3</span> Ceva’s Theorem</a></li>
+        <li><a href="#menelaus-theorem" id="toc-menelaus-theorem"><span
+        class="toc-section-number">3.4</span> Menelaus’ Theorem</a></li>
+        <li><a href="#stewarts-theorem" id="toc-stewarts-theorem"><span
+        class="toc-section-number">3.5</span> Stewart’s Theorem</a></li>
+        <li><a href="#rouths-theorem" id="toc-rouths-theorem"><span
+        class="toc-section-number">3.6</span> Routh’s Theorem</a></li>
+        <li><a href="#eulers-theorem" id="toc-eulers-theorem"><span
+        class="toc-section-number">3.7</span> Euler’s Theorem</a></li>
+        <li><a href="#sylvesters-problem"
+        id="toc-sylvesters-problem"><span
+        class="toc-section-number">3.8</span> Sylvester’s
+        Problem</a></li>
+        <li><a href="#carnots-theorem" id="toc-carnots-theorem"><span
+        class="toc-section-number">3.9</span> Carnot’s Theorem</a></li>
+        <li><a href="#japanese-theorem" id="toc-japanese-theorem"><span
+        class="toc-section-number">3.10</span> Japanese Theorem</a></li>
+        </ul></li>
+        <li><a href="#probability" id="toc-probability"><span
+        class="toc-section-number">4</span> Probability</a>
+        <ul>
+        <li><a href="#bertrands-ballot-theorem"
+        id="toc-bertrands-ballot-theorem"><span
+        class="toc-section-number">4.1</span> Bertrand’s Ballot
+        Theorem</a></li>
+        </ul></li>
+        <li><a href="#combinatorics" id="toc-combinatorics"><span
+        class="toc-section-number">5</span> Combinatorics</a>
+        <ul>
+        <li><a href="#catalan-numbers" id="toc-catalan-numbers"><span
+        class="toc-section-number">5.1</span> Catalan Numbers</a></li>
+        <li><a href="#stirling-numbers" id="toc-stirling-numbers"><span
+        class="toc-section-number">5.2</span> Stirling Numbers</a></li>
+        </ul></li>
+        </ul>
+      </nav>
+      <article>
+        <h1 data-number="1" id="algebra"><span
+        class="header-section-number">1</span> Algebra</h1>
+        <hgroup>
+        <h2 data-number="1.1" id="elementary-symmetric-sum"><span
+        class="header-section-number">1.1</span> Elementary Symmetric
+        Sum</h2>
+        <a
+        href="https://artofproblemsolving.com/wiki/index.php/Elementary_symmetric_sum">[aops]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="1.2" id="roots-of-unity"><span
+        class="header-section-number">1.2</span> Roots of Unity</h2>
+        <a
+        href="https://artofproblemsolving.com/wiki/index.php/Roots_of_unity">[aops]</a>
+        <a href="https://en.wikipedia.org/wiki/Root_of_unity">[wiki]</a>
+        <a
+        href="https://mathworld.wolfram.com/RootofUnity.html">[wolf]</a>
+        </hgroup>
+        <p>UG Problems: Red Book q1</p>
+        <hgroup>
+        <h2 data-number="1.3" id="vietas-formula"><span
+        class="header-section-number">1.3</span> Vieta’s Formula</h2>
+        <a
+        href="https://artofproblemsolving.com/wiki/index.php/Vieta%27s_formulas">[aops]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="1.4" id="newton-sums"><span
+        class="header-section-number">1.4</span> Newton Sums</h2>
+        <a
+        href="https://artofproblemsolving.com/wiki/index.php/Newton%27s_Sums">[aops]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="1.5" id="field"><span
+        class="header-section-number">1.5</span> Field</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Field_(mathematics)">[wiki]</a>
+        </hgroup>
+        <h1 data-number="2" id="number-theory"><span
+        class="header-section-number">2</span> Number Theory</h1>
+        <hgroup>
+        <h2 data-number="2.1" id="quadratic-residue"><span
+        class="header-section-number">2.1</span> Quadratic Residue</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Quadratic_residue">[wiki]</a>
+        </hgroup>
+        <p>UG Problems: Red Book q1</p>
+        <hgroup>
+        <h2 data-number="2.2" id="legendre-symbol"><span
+        class="header-section-number">2.2</span> Legendre Symbol</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Legendre_symbol">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="2.3" id="lagranges-theorem"><span
+        class="header-section-number">2.3</span> Lagrange’s Theorem</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(number_theory)">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="2.4" id="fermats-little-theorem"><span
+        class="header-section-number">2.4</span> Fermat’s Little
+        Theorem</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Fermat%27s_little_theorem">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="2.5" id="eulers-criterion"><span
+        class="header-section-number">2.5</span> Euler’s Criterion</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Euler%27s_criterion">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="2.6" id="quadratic-reciprocity"><span
+        class="header-section-number">2.6</span> Quadratic
+        Reciprocity</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Quadratic_reciprocity">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="2.7" id="eulers-totient-function"><span
+        class="header-section-number">2.7</span> Euler’s Totient
+        Function</h2>
+        <a
+        href="https://artofproblemsolving.com/wiki/index.php/Euler%27s_totient_function">[aops]</a>
+        <a
+        href="https://en.wikipedia.org/wiki/Euler%27s_totient_function">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="2.8" id="möbius-function"><span
+        class="header-section-number">2.8</span> Möbius Function</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/M%C3%B6bius_function">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="2.9" id="möbius-inversion-formula"><span
+        class="header-section-number">2.9</span> Möbius Inversion
+        Formula</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/M%C3%B6bius_inversion_formula">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="2.10" id="lifting-the-exponent-lemma"><span
+        class="header-section-number">2.10</span> Lifting the Exponent
+        Lemma</h2>
+        <a
+        href="https://artofproblemsolving.com/wiki/index.php/Lifting_the_Exponent_Lemma">[aops]</a>
+        <a
+        href="https://en.wikipedia.org/wiki/Lifting-the-exponent_lemma">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="2.11" id="wilsons-theorem"><span
+        class="header-section-number">2.11</span> Wilson’s Theorem</h2>
+        <a
+        href="https://en.m.wikipedia.org/wiki/Wilson%27s_theorem">[wiki]</a>
+        </hgroup>
+        <h1 data-number="3" id="geometry"><span
+        class="header-section-number">3</span> Geometry</h1>
+        <hgroup>
+        <h2 data-number="3.1" id="ordinary-line"><span
+        class="header-section-number">3.1</span> Ordinary Line</h2>
+        <a
+        href="https://mathworld.wolfram.com/OrdinaryLine.html">[wolf]</a>
+        </hgroup>
+        <p>HS &amp; UG Problems: Proof of Sylvester-Gallai Theorem</p>
+        <hgroup>
+        <h2 data-number="3.2" id="sylvester-gallai-theorem"><span
+        class="header-section-number">3.2</span> Sylvester-Gallai
+        Theorem</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Sylvester%E2%80%93Gallai_theorem">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="3.3" id="cevas-theorem"><span
+        class="header-section-number">3.3</span> Ceva’s Theorem</h2>
+        <a
+        href="https://artofproblemsolving.com/wiki/index.php/Ceva%27s_theorem">[aops]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="3.4" id="menelaus-theorem"><span
+        class="header-section-number">3.4</span> Menelaus’ Theorem</h2>
+        <a
+        href="https://artofproblemsolving.com/wiki/index.php/Menelaus%27_theorem">[aops]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="3.5" id="stewarts-theorem"><span
+        class="header-section-number">3.5</span> Stewart’s Theorem</h2>
+        <a
+        href="https://artofproblemsolving.com/wiki/index.php/Stewart%27s_theorem">[aops]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="3.6" id="rouths-theorem"><span
+        class="header-section-number">3.6</span> Routh’s Theorem</h2>
+        <a
+        href="https://artofproblemsolving.com/wiki/index.php/Routh%27s_Theorem">[aops]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="3.7" id="eulers-theorem"><span
+        class="header-section-number">3.7</span> Euler’s Theorem</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Euler%27s_theorem_in_geometry">[wiki]</a>
+        </hgroup>
+        <p>HS &amp; UG Problems: Proof of Sylvester’s Problem</p>
+        <hgroup>
+        <h2 data-number="3.8" id="sylvesters-problem"><span
+        class="header-section-number">3.8</span> Sylvester’s
+        Problem</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Sylvester&#39;s_triangle_problem">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="3.9" id="carnots-theorem"><span
+        class="header-section-number">3.9</span> Carnot’s Theorem</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Carnot%27s_theorem_(inradius,_circumradius)">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="3.10" id="japanese-theorem"><span
+        class="header-section-number">3.10</span> Japanese Theorem</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Japanese_theorem_for_cyclic_polygons">[wiki]</a>
+        </hgroup>
+        <h1 data-number="4" id="probability"><span
+        class="header-section-number">4</span> Probability</h1>
+        <hgroup>
+        <h2 data-number="4.1" id="bertrands-ballot-theorem"><span
+        class="header-section-number">4.1</span> Bertrand’s Ballot
+        Theorem</h2>
+        <a
+        href="https://en.m.wikipedia.org/wiki/Bertrand&#39;s_ballot_theorem">[wiki]</a>
+        </hgroup>
+        <h1 data-number="5" id="combinatorics"><span
+        class="header-section-number">5</span> Combinatorics</h1>
+        <hgroup>
+        <h2 data-number="5.1" id="catalan-numbers"><span
+        class="header-section-number">5.1</span> Catalan Numbers</h2>
+        <a
+        href="https://en.m.wikipedia.org/wiki/Catalan_number">[wiki]</a>
+        </hgroup>
+        <hgroup>
+        <h2 data-number="5.2" id="stirling-numbers"><span
+        class="header-section-number">5.2</span> Stirling Numbers</h2>
+        <a
+        href="https://en.wikipedia.org/wiki/Stirling_number">[wiki]</a>
+        </hgroup>
+      </article>
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>
