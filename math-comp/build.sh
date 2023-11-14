@@ -2,4 +2,4 @@
 #
 # build.sh
 
-pandoc --standalone --toc --template template.html --number-sections main.md -o ./reference.html
+pandoc --standalone --mathml --toc --template template.html --number-sections main.md -o ./reference.html

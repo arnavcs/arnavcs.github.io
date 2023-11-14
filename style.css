@@ -145,7 +145,7 @@ article h1 {
   font-size: x-large;
   text-decoration: underline;
   text-underline-position: under;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 article h2, article h3 {
@@ -168,7 +168,7 @@ article hgroup .date {
   right: 0px;
 }
 
-article ul {
+article ul, article dd {
   padding-left: 20px;
 }
 

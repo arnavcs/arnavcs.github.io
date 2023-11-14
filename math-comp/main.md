@@ -4,9 +4,6 @@ title: Competition Mathematics
 
 Whenever reference is made to "High School level" in this document, it should be noted this implicitly also means "Undergraduate level" since the latter is a superset of the former.
 
-The coloured circles represent:
-<span class="green ball"></span> High School level problems, <span class="orange ball"></span> Undergraduate level problems.
-
 # Algebra
 
 <hgroup>
@@ -21,7 +18,9 @@ The coloured circles represent:
 [[wolf]](https://mathworld.wolfram.com/RootofUnity.html)
 </hgroup>
 
-- <span class="orange ball"></span> Red Book q1
+**High School Problems**
+
+- Red Book q1
 
 <hgroup>
 ## Vieta's Formula
@@ -45,7 +44,9 @@ The coloured circles represent:
 [[wiki]](https://en.wikipedia.org/wiki/Quadratic_residue)
 </hgroup>
 
-- <span class="orange ball"></span> Red Book q1
+**Undergraduate Problems**
+
+- Red Book q1
 
 <hgroup>
 ## Legendre Symbol
@@ -106,7 +107,9 @@ The coloured circles represent:
 [[wolf]](https://mathworld.wolfram.com/OrdinaryLine.html)
 </hgroup>
 
-- <span class="green ball"></span> Proof of Sylvester-Gallai Theorem
+**High School Problems**
+
+- Proof of Sylvester-Gallai Theorem
 
 <hgroup>
 ## Sylvester-Gallai Theorem
@@ -138,7 +141,9 @@ The coloured circles represent:
 [[wiki]](https://en.wikipedia.org/wiki/Euler%27s_theorem_in_geometry)
 </hgroup>
 
-- <span class="green ball"></span> Proof of Sylvester's Problem
+**High School Problems**
+
+- Proof of Sylvester's Problem
 
 <hgroup>
 ## Sylvester's Problem
@@ -157,7 +162,9 @@ The coloured circles represent:
 
 ## Ravi's Substitution
 
-- <span class="green ball"></span> Assorted Problem (@geo1)
+**High School Problems**
+
+- Assorted Problem (@geo1)
 
 <hgroup>
 ## Kimberling Center
@@ -175,19 +182,83 @@ The coloured circles represent:
 # Probability
 
 <hgroup>
+## Conditional Probability
+[[wiki]](https://en.wikipedia.org/wiki/Conditional_probability)
+</hgroup>
+
+**High School Problems**
+
+- Assorted Problem (@pro1)
+
+<hgroup>
+## Bayes' Theorem
+[[wiki]](https://en.wikipedia.org/wiki/Bayes%27_theorem)
+</hgroup>
+
+<hgroup>
 ## Bertrand's Ballot Theorem
 [[wiki]](https://en.m.wikipedia.org/wiki/Bertrand's_ballot_theorem)
 </hgroup>
 
+<hgroup>
+## Principle of Inclusion-Exclusion
+[[aops]](https://artofproblemsolving.com/wiki/index.php/Principle_of_Inclusion-Exclusion)
+[[wiki]](https://en.wikipedia.org/wiki/Inclusion%E2%80%93exclusion_principle#In_probability)
+</hgroup>
+
+## Waring's Theorem
+Let $A_1,A_2,\dots,A_n$ be events, and let $N_k$ be the event that exactly $k$ of the $A_i$ occur. Let
+$$S_j=\sum_{i_1<i_2<...<i_j}{\mathbb{P}(A_{i_1}\cap A_{i_2} \cap \dots \cap A_{i_j})}$$
+Then,
+$$\mathbb{P}(N_k)=\sum_{i=0}^{n-k}{(-1)^i {k+i \choose i} S_{k+i}}$$
+
+<hgroup>
+## Boole's Inequality
+[[wiki]](https://en.wikipedia.org/wiki/Boole%27s_inequality)
+</hgroup>
+
+<hgroup>
+## Bonferroni Inequalities
+[[wiki]](https://en.wikipedia.org/wiki/Boole%27s_inequality#Bonferroni_inequalities)
+</hgroup>
+
+## Kounias' Inequality
+$$\mathbb{P}(\bigcup_{r=1}^{n}{A_r})\le \min_{k}{\left\{ \sum_{r=1}^{n}{\mathbb{P}(A_r)} - \sum_{r \ne k}{\mathbb{P}(A_r \cap A_k)} \right\}}$$
+
+<hgroup>
+## Bernstein's Inequality
+[[wiki]](https://en.wikipedia.org/wiki/Bernstein_inequalities_(probability_theory))
+</hgroup>
+
 # Combinatorics
+
+<hgroup>
+## Principle of Inclusion-Exclusion
+[[aops]](https://artofproblemsolving.com/wiki/index.php/Principle_of_Inclusion-Exclusion)
+[[wiki]](https://en.wikipedia.org/wiki/Inclusion%E2%80%93exclusion_principle)
+</hgroup>
+
+<hgroup>
+## Maximum-Minimums Identity
+[[wiki]](https://en.wikipedia.org/wiki/Maximum-minimums_identity)
+</hgroup>
+
 
 ## Case Work
 
-- <span class="green ball"></span> Red Book q2
+**High School Problems**
+
+- Red Book q2
 
 ## Bijective Counting
 
-- <span class="green ball"></span> Red Book q2
+**High School Problems**
+
+- Red Book q2
+
+## Vandermonde's Identity
+
+## Hockeystick Identity
 
 <hgroup>
 ## Catalan Numbers
@@ -202,6 +273,11 @@ The coloured circles represent:
 # Inequalities
 
 ## min-HM-GM-AM-RMS-max Inequality
+
+<hgroup>
+## Nesbitt's Inequality
+[[aops]](https://artofproblemsolving.com/wiki/index.php/Nesbitt%27s_Inequality)
+</hgroup>
 
 ## Muirhead Inequality
 
@@ -228,6 +304,8 @@ The coloured circles represent:
 ## High School Level {-}
 
 (@geo1) Let $\triangle ABC$ have inradius $r$ and circumradius $R$. Show that we have $R \ge 2r$ with equality iff $\triangle ABC$ is equilateral. 
+(@pro1) **Monty Hall Problem** [[wiki]](https://en.wikipedia.org/wiki/Monty_Hall_problem)
+(@pro2) **Galton's Paradox**: You flip 3 coins. Why is the following reasoning incorrect: At least 2 are alike (suppose WLOG heads) and the third is heads or tails with equal probability. Thus the probability all coins have the same outcome is 0.5.
 
 ## Undergraduate Level {-}
 
