@@ -89,10 +89,10 @@ Italics means self-taught or audited.
 **Completed**
 
 - *Learn You a Haskell for Great Good!* by Miran Lipovača
+- *Concurrency in Go* by Katherine Cox-Buday
 
 **In-Progress**
 
-- *Concurrency in Go* by Katherine Cox-Buday
 - *Specifying Systems* by Leslie Lamport
 - *Category Theory for Programmers* by Bartosz Milewski
 
