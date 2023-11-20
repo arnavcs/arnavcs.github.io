@@ -135,7 +135,7 @@ main nav {
   margin: 10px;
   width: 200px;
   position: sticky;
-  top: 0px;
+  top: 10px;
   flex-shrink: 0;
 }
 
@@ -149,9 +149,14 @@ main nav ul {
   list-style-type: none;
 }
 
+main nav li {
+  margin-top: 5px;
+}
+
 main nav ul ul {
   padding-left: 20px;
 }
+
 
 /* injected text formatting */
 
