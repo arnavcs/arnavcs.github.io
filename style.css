@@ -134,8 +134,10 @@ main nav {
   padding: 20px;
   margin: 10px;
   width: 200px;
+  max-height: calc(100vh - 84px);
+  overflow: scroll;
   position: sticky;
-  top: 10px;
+  top: 20px;
   flex-shrink: 0;
 }
 
