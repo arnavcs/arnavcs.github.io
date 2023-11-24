@@ -72,7 +72,6 @@ table caption {
   color: var(--accent-color);
 }
 
-
 /* Header formatting */
 
 header {
@@ -83,26 +82,14 @@ header {
   margin: 10px;
 }
 
-header * {
-  text-align: center;
+header hgroup * {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 header h1 {
   font-size: xx-large;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-header nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-header nav a {
-  border: 2px ridge var(--link-color);
-  padding: 5px;
+  margin-right: 5px;
 }
 
 /* Footer formatting */
@@ -113,7 +100,6 @@ footer {
   background-color: var(--bg-color);
   padding: 20px;
   margin: 10px;
-  text-align: center;
 }
 
 /* main formatting */
@@ -135,6 +121,10 @@ main nav {
   margin: 10px;
   width: 200px;
   flex-shrink: 0;
+}
+
+main nav > ul > li:first-child {
+  margin-top: 0px;
 }
 
 main nav h1 {
@@ -185,7 +175,6 @@ article * {
 article h1 {
   font-size: x-large;
   text-decoration: underline;
-  text-underline-position: under;
 }
 
 article h2, article h3 {
@@ -219,41 +208,4 @@ article ol {
 
 article table {
   margin-top: 10px;
-}
-
-article table .ball {
-  margin-top: 0px;
-  margin-right: 5px;
-}
-
-article .ball {
-  display: inline-block;
-  width: 1.5ex;
-  height: 1.5ex;
-  border-radius: 0.75ex;
-}
-
-article li > .ball:first-child {
-  margin-left: -13px;
-  margin-right: 0px;
-}
-
-article .red {
-  background-color: var(--red);
-}
-
-article .aqua {
-  background-color: var(--aqua);
-}
-
-article .green {
-  background-color: var(--green);
-}
-
-article .orange {
-  background-color: var(--orange);
-}
-
-article .yellow {
-  background-color: var(--yellow);
 }

@@ -15,8 +15,6 @@ title: Arnav Kumar
 [[html]](./math-comp/reference.html)
 </hgroup>
 
-## 
-
 # Projects
 
 <hgroup>
