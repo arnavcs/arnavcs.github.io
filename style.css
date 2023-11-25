@@ -17,6 +17,8 @@
 * {
   margin: 0px;
   padding: 0px;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 /* general global formats */
