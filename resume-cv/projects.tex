@@ -1,0 +1,71 @@
+\section{Projects}
+
+\begin{resumeItem}
+\projectHead{\href{https://github.com/youssefsoli/IPFE}{InterPlanetary File Explorer (IPFE)}}{Go, Python, Scikit-learn, Estuary, Co:here, Three.js}{Jan 2023}
+\begin{resumeList}
+    \item Created vector embeddings for files with their headers using Co:here's NLP embeddings to facilitate classification of files.
+    \item Performed principal component analysis of the vector embeddings to reduce the dimensionality from 4096 to 3 to be plotted and displayed interactively in 3D space using Three.js.
+\end{resumeList}
+\end{resumeItem}
+
+\begin{resumeItem}
+\projectHead{\href{https://github.com/arnavcs/OSIC-IPF}{Prognosing Idiopathic Pulmonary Fibrosis (IPF)}}{Python, Tensorflow2, Pandas, Scikit-learn}{Dec 2020 - Jun 2021}
+\begin{resumeList}
+    \item Implemented an auto-encoder, linear regression, dense neural network, and bayesian model in order to accurately predict future lung capacity and give a confidence value using initial lung capacity data, age, sex, smoking status, and more.
+    \item Obtained a Laplace Log Likelihood score of $-6.9$ (much better than the baseline score $-8.1$) with $\sigma \approx 200$mL.
+\end{resumeList}
+\end{resumeItem}
+
+\begin{resumeItem}
+\projectHead{\href{https://github.com/arnavcs/quack-stack}{Custom Language Interpreter}}{Haskell}{May 2023 - Present}
+\begin{resumeList}
+    \item Created an expression evaluator for a self-made stack-based language.
+    \item Implemented zipper traversal to determine which part of the stack has already been processed in a followable, stepwise manner.
+\end{resumeList}
+\end{resumeItem}
+
+\ifthenelse{ \equal{\version}{cv} }{
+\begin{resumeItem}
+\projectHead{\href{https://github.com/arnavcs/cli-chess}{CLI Chess}}{Haskell}{Aug 2022 - Present}
+\begin{resumeList}
+    \item Created a local mulitplayer chess clone in Haskell that can be played in the CLI with the Haskell REPL.
+    \item Developed safe and scalable functions to determine the state of the board and indentify check and checkmate.
+    \item Employed lists as applicative functors and monads to write concise, readable code for determining all valid next moves.
+\end{resumeList}
+\end{resumeItem}
+}{}
+
+% \begin{resumeItem}
+% \projectHead{\href{https://github.com/arnavcs/flashcards}{CLI Flashcards}}{Bash}{Apr 2022 - Apr 2022}
+% \begin{resumeList}
+%     \item Built a command line tool to add terms to and practice with a flashcard set that the user can create.
+%     \item Implemented several flag options, including a help option, version option, and script update option.
+% \end{resumeList}
+% \end{resumeItem}
+
+% \begin{resumeItem}
+% \projectHead{\href{https://github.com/arnavcs/ASCII-art}{Braille ASCII Art Generator}}{Python, OpenCV}{Apr 2021 - Jul 2021}
+% \begin{resumeList}
+%     \item Used thresholding in OpenCV to determine which pixels of the output art should be shaded.
+%     \item Transformed the image array into braille characters using 3x2 pixel filters which returned a binary number corresponding to a braille character.
+% \end{resumeList}
+% \end{resumeItem}
+
+\ifthenelse{ \equal{\version}{cv} }{
+\begin{resumeItem}
+\projectHead{\href{https://github.com/arnavcs/black-jack}{Blackjack}}{C++}{Apr 2021 - Jul 2021}
+\begin{resumeList}
+    \item Used object oriented programming to implement a local multiplayer blackjack game with a computer playing as the house.
+    \item Probabilistically optimized the holding value that the computer house uses.
+\end{resumeList}
+\end{resumeItem}
+}{}
+
+% \begin{resumeItem}
+% \projectHead{\href{https://github.com/arnavcs/game-of-life}{Conway's Game of Life}}{Javascript}{Apr 2020 - Mar 2020}
+% \begin{resumeList}
+%     \item Created a javascript web version of Conway's Game of Life where a user-chosen number of generations can be simulated.
+%     \item Enabled the user to choose an initial arrangement of live and dead cells as well as the size of the initial grid.
+% \end{resumeList}
+% \end{resumeItem}
+

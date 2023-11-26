@@ -17,6 +17,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  /* to stop the mobile resizing that occurs normally */
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
@@ -72,6 +73,11 @@ table td, table tr, table th, table caption {
 table caption {
   font-weight: bold;
   color: var(--accent-color);
+}
+
+math, math * {
+  margin-top: 0px !important;
+  font-size: small;
 }
 
 /* Header formatting */
@@ -211,3 +217,4 @@ article ol {
 article table {
   margin-top: 10px;
 }
+

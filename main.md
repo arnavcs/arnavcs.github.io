@@ -12,7 +12,7 @@ title: Arnav Kumar
 
 <hgroup>
 ## Competition Reference
-[[html]](./math-comp/reference.html)
+[[html]](./competition/reference.html)
 </hgroup>
 
 # Projects
