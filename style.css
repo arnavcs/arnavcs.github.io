@@ -80,6 +80,12 @@ math, math * {
   font-size: small;
 }
 
+figure * {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Header formatting */
 
 header {

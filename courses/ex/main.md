@@ -26,3 +26,19 @@ Additionally, there are 3 types of language specific symbols:
 - relations symbols
 - function symbols
 
+Here is a plot
+
+```{.gnuplot}
+plot sin(x), sin(x)/x
+```
+
+And here is some code:
+
+```{.c .numberLines startFrom="100"}
+int main () {
+  int h, w;
+  for (;;) printf("slkdf");
+  return 0;
+}
+```
+

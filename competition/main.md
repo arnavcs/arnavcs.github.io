@@ -20,7 +20,7 @@ Whenever reference is made to "High School level" in this document, it should be
 
 **High School Problems**
 
-- Red Book q1
+- Red Book Q1
 
 <hgroup>
 ## Vieta's Formula
@@ -46,7 +46,7 @@ Whenever reference is made to "High School level" in this document, it should be
 
 **Undergraduate Problems**
 
-- Red Book q1
+- Red Book Q1
 
 <hgroup>
 ## Legendre Symbol
@@ -191,6 +191,15 @@ Whenever reference is made to "High School level" in this document, it should be
 - Assorted Problem (@pro1)
 
 <hgroup>
+## Indicator Function
+[[wiki]](https://en.wikipedia.org/wiki/Indicator_function)
+</hgroup>
+
+**Undergraduate Problems**
+
+- 2023 Putnam B3
+
+<hgroup>
 ## Bayes' Theorem
 [[wiki]](https://en.wikipedia.org/wiki/Bayes%27_theorem)
 </hgroup>
@@ -248,13 +257,13 @@ $$\mathbb{P}(\bigcup_{r=1}^{n}{A_r})\le \min_{k}{\left\{ \sum_{r=1}^{n}{\mathbb{
 
 **High School Problems**
 
-- Red Book q2
+- Red Book Q2
 
 ## Bijective Counting
 
 **High School Problems**
 
-- Red Book q2
+- Red Book Q2
 
 ## Vandermonde's Identity
 
