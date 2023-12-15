@@ -91,13 +91,14 @@ Italics means self-taught or audited.
 
 **In-Progress**
 
+- *Real-Time Rendering* by Akenine-Möller, Haines, Hoffman, Pesce, Iwanicki, & Hillaire
 - *Specifying Systems* by Leslie Lamport
 - *Category Theory for Programmers* by Bartosz Milewski
 
 **Reading List**
 
 - *Real World Haskell* by O'Sullivan, Stewart & Goerzen
-- *Structure and Interpretation of Computer Programs* by Abelson, Sussman & Sussman
+- *Structure and Interpretation of Computer Programs* by Abelson, Sussman, & Sussman
 
 ## Mathematics Textbooks
 

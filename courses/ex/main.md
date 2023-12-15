@@ -4,6 +4,34 @@ title: Example Course Notes
 
 This is some example stuff for if I decide to take notes this way next term.
 
+```{.graphviz}
+digraph overview {
+  node [shape=plaintext colorscheme=pastel24];
+  edge [fontsize="10"]
+  ref [label=<
+  <TABLE>
+    <TR><TD BGCOLOR="1">definition</TD></TR>
+    <TR><TD BGCOLOR="2">property</TD></TR>
+    <TR><TD BGCOLOR="3"></TD></TR>
+    <TR><TD BGCOLOR="4">result</TD></TR>
+  </TABLE>
+  >]
+  concept1 [label=<
+  <TABLE PORT="f">
+    <TR><TD BGCOLOR="1">Object</TD></TR>
+    <TR><TD BGCOLOR="2">dfa</TD></TR>
+  </TABLE>
+  >];
+  concept2 [label=<
+  <TABLE PORT="f">
+    <TR><TD BGCOLOR="1" PORT="g">This</TD></TR>
+    <TR><TD BGCOLOR="2" PORT="h">is</TD></TR>
+  </TABLE>
+  >];
+  concept1:f -> concept2:h [label="Lemma 1"];
+}
+```
+
 # Lecture 14
 
 Propositional logic is weak. It doesn't give us any insight into the inner workings of our statements.
@@ -27,10 +55,6 @@ Additionally, there are 3 types of language specific symbols:
 - function symbols
 
 Here is a plot
-
-```{.gnuplot}
-plot sin(x), sin(x)/x
-```
 
 And here is some code:
 
