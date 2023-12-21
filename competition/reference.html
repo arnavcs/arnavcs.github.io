@@ -119,6 +119,16 @@
         class="toc-section-number">3.15</span> Miquel’s Point</a></li>
         <li><a href="#steiner-line" id="toc-steiner-line"><span
         class="toc-section-number">3.16</span> Steiner Line</a></li>
+        <li><a href="#inversion" id="toc-inversion"><span
+        class="toc-section-number">3.17</span> Inversion</a></li>
+        <li><a href="#inversion-distance-formula"
+        id="toc-inversion-distance-formula"><span
+        class="toc-section-number">3.18</span> Inversion Distance
+        Formula</a></li>
+        <li><a href="#mass-point-geometry"
+        id="toc-mass-point-geometry"><span
+        class="toc-section-number">3.19</span> Mass-Point
+        Geometry</a></li>
         </ul></li>
         <li><a href="#probability" id="toc-probability"><span
         class="toc-section-number">4</span> Probability</a>
@@ -468,6 +478,14 @@
         class="header-section-number">3.15</span> Miquel’s Point</h2>
         <h2 data-number="3.16" id="steiner-line"><span
         class="header-section-number">3.16</span> Steiner Line</h2>
+        <h2 data-number="3.17" id="inversion"><span
+        class="header-section-number">3.17</span> Inversion</h2>
+        <h2 data-number="3.18" id="inversion-distance-formula"><span
+        class="header-section-number">3.18</span> Inversion Distance
+        Formula</h2>
+        <h2 data-number="3.19" id="mass-point-geometry"><span
+        class="header-section-number">3.19</span> Mass-Point
+        Geometry</h2>
         <h1 data-number="4" id="probability"><span
         class="header-section-number">4</span> Probability</h1>
         <hgroup>
@@ -525,9 +543,9 @@
         of the
         <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>i</mi></msub><annotation encoding="application/x-tex">A_i</annotation></semantics></math>
         occur. Let
-        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>j</mi></msub><mo>=</mo><munder><mo>∑</mo><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>&lt;</mo><msub><mi>i</mi><mn>2</mn></msub><mo>&lt;</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo>&lt;</mo><msub><mi>i</mi><mi>j</mi></msub></mrow></munder><mrow><mstyle mathvariant="double-struck"><mi>ℙ</mi></mstyle><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><msub><mi>i</mi><mn>1</mn></msub></msub><mo>∩</mo><msub><mi>A</mi><msub><mi>i</mi><mn>2</mn></msub></msub><mo>∩</mo><mi>…</mi><mo>∩</mo><msub><mi>A</mi><msub><mi>i</mi><mi>j</mi></msub></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">S_j=\sum_{i_1&lt;i_2&lt;...&lt;i_j}{\mathbb{P}(A_{i_1}\cap A_{i_2} \cap \dots \cap A_{i_j})}</annotation></semantics></math>
+        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>j</mi></msub><mo>=</mo><munder><mo>∑</mo><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>&lt;</mo><msub><mi>i</mi><mn>2</mn></msub><mo>&lt;</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo>&lt;</mo><msub><mi>i</mi><mi>j</mi></msub></mrow></munder><mrow><mi>ℙ</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><msub><mi>i</mi><mn>1</mn></msub></msub><mo>∩</mo><msub><mi>A</mi><msub><mi>i</mi><mn>2</mn></msub></msub><mo>∩</mo><mi>…</mi><mo>∩</mo><msub><mi>A</mi><msub><mi>i</mi><mi>j</mi></msub></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">S_j=\sum_{i_1&lt;i_2&lt;...&lt;i_j}{\mathbb{P}(A_{i_1}\cap A_{i_2} \cap \dots \cap A_{i_j})}</annotation></semantics></math>
         Then,
-        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="double-struck"><mi>ℙ</mi></mstyle><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>N</mi><mi>k</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></munderover><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>i</mi></msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mi>k</mi><mo>+</mo><mi>i</mi></mrow><mi>i</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>S</mi><mrow><mi>k</mi><mo>+</mo><mi>i</mi></mrow></msub></mrow></mrow><annotation encoding="application/x-tex">\mathbb{P}(N_k)=\sum_{i=0}^{n-k}{(-1)^i {k+i \choose i} S_{k+i}}</annotation></semantics></math></p>
+        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℙ</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>N</mi><mi>k</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></munderover><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><mi>i</mi></msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mrow><mi>k</mi><mo>+</mo><mi>i</mi></mrow><mi>i</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>S</mi><mrow><mi>k</mi><mo>+</mo><mi>i</mi></mrow></msub></mrow></mrow><annotation encoding="application/x-tex">\mathbb{P}(N_k)=\sum_{i=0}^{n-k}{(-1)^i {k+i \choose i} S_{k+i}}</annotation></semantics></math></p>
         <hgroup>
         <h2 data-number="4.7" id="booles-inequality"><span
         class="header-section-number">4.7</span> Boole’s Inequality</h2>
@@ -544,7 +562,7 @@
         <h2 data-number="4.9" id="kounias-inequality"><span
         class="header-section-number">4.9</span> Kounias’
         Inequality</h2>
-        <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="double-struck"><mi>ℙ</mi></mstyle><mrow><mo stretchy="true" form="prefix">(</mo><munderover><mo>⋃</mo><mrow><mi>r</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>A</mi><mi>r</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><munder><mo>min</mo><mi>k</mi></munder><mrow><mo stretchy="true" form="prefix">{</mo><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mstyle mathvariant="double-struck"><mi>ℙ</mi></mstyle><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mi>r</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mo>−</mo><munder><mo>∑</mo><mrow><mi>r</mi><mo>≠</mo><mi>k</mi></mrow></munder><mrow><mstyle mathvariant="double-struck"><mi>ℙ</mi></mstyle><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mi>r</mi></msub><mo>∩</mo><msub><mi>A</mi><mi>k</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mo stretchy="true" form="postfix">}</mo></mrow></mrow><annotation encoding="application/x-tex">\mathbb{P}(\bigcup_{r=1}^{n}{A_r})\le \min_{k}{\left\{ \sum_{r=1}^{n}{\mathbb{P}(A_r)} - \sum_{r \ne k}{\mathbb{P}(A_r \cap A_k)} \right\}}</annotation></semantics></math></p>
+        <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℙ</mi><mrow><mo stretchy="true" form="prefix">(</mo><munderover><mo>⋃</mo><mrow><mi>r</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>A</mi><mi>r</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>≤</mo><munder><mo>min</mo><mi>k</mi></munder><mrow><mo stretchy="true" form="prefix">{</mo><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mi>ℙ</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mi>r</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mo>−</mo><munder><mo>∑</mo><mrow><mi>r</mi><mo>≠</mo><mi>k</mi></mrow></munder><mrow><mi>ℙ</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>A</mi><mi>r</mi></msub><mo>∩</mo><msub><mi>A</mi><mi>k</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mo stretchy="true" form="postfix">}</mo></mrow></mrow><annotation encoding="application/x-tex">\mathbb{P}(\bigcup_{r=1}^{n}{A_r})\le \min_{k}{\left\{ \sum_{r=1}^{n}{\mathbb{P}(A_r)} - \sum_{r \ne k}{\mathbb{P}(A_r \cap A_k)} \right\}}</annotation></semantics></math></p>
         <hgroup>
         <h2 data-number="4.10" id="bernsteins-inequality"><span
         class="header-section-number">4.10</span> Bernstein’s

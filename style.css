@@ -220,6 +220,10 @@ article ol {
   padding-left: 30px;
 }
 
+article img {
+  max-width: 100%;
+}
+
 article table {
   margin-top: 10px;
 }

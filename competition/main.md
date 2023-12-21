@@ -179,6 +179,12 @@ Whenever reference is made to "High School level" in this document, it should be
 
 ## Steiner Line
 
+## Inversion
+
+## Inversion Distance Formula
+
+## Mass-Point Geometry
+
 # Probability
 
 <hgroup>

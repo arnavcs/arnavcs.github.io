@@ -109,6 +109,5 @@ Italics means self-taught or audited.
 **In-Progress**
 
 - *The Red Book of Mathematical Problems* by Williams & Hardy
-- *Probability and Random Processes* by Grimmet & Stirzaker
-
+- *Probability and Random Processes* [[notes]](./readings/probability-and-random-processes/notes.html) by Grimmet & Stirzaker
 
