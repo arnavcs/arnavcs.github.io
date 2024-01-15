@@ -3,7 +3,7 @@
   --fg-color: #DCD7BA;
 
   --border-color: #54546D;
-  --link-color: #72A7BC;
+  --link-color: #D27E99;
   --sel-color: #2D4F67;
   --accent-color: #C0A36E;
   
@@ -133,7 +133,7 @@ main nav {
   background-color: var(--bg-color);
   padding: 20px;
   margin: 10px;
-  width: 200px;
+  width: 220px;
   flex-shrink: 0;
 }
 
@@ -225,6 +225,12 @@ article img {
 }
 
 article table {
+  margin-top: 10px;
+}
+
+article hr {
+  width: 30%;
+  margin: auto;
   margin-top: 10px;
 }
 

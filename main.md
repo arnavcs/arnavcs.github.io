@@ -87,7 +87,7 @@ Italics means self-taught or audited. Courses where I have typeset notes have li
 **Completed**
 
 - *Learn You a Haskell for Great Good!* by Miran Lipovača
-- *Concurrency in Go* by Katherine Cox-Buday
+- *Concurrency in Go* [[notes]](./readings/concurrency-in-go/notes.pdf) by Katherine Cox-Buday
 
 **In-Progress**
 
@@ -109,5 +109,5 @@ Italics means self-taught or audited. Courses where I have typeset notes have li
 **In-Progress**
 
 - *The Red Book of Mathematical Problems* by Williams & Hardy
-- *Probability and Random Processes* [[notes]](./readings/probability-and-random-processes/notes.html) by Grimmet & Stirzaker
+- *Probability and Random Processes* by Grimmet & Stirzaker
 

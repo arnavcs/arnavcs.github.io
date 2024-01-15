@@ -11,6 +11,6 @@ pandoc --filter pandoc-plot \
        --mathml \
        --toc \
        --template template.html \
-       --number-sections \
        --highlight-style pygments \
        main.md -o ./notes.html
+       # --number-sections \
