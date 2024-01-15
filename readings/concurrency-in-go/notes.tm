@@ -304,7 +304,7 @@
     </enumerate>
   </cell>>>>>
 
-  <section|Golang Features and Building Blocks>
+  <page-break*><section|Golang Features and Building Blocks>
 
   <\padded-center>
     <tabular|<tformat|<cwith|1|1|1|1|cell-background|pastel
@@ -693,7 +693,7 @@
     </verbatim-code>
   </cell>>>>>
 
-  <section|Concurrency Patterns in Golang>
+  <page-break*><section|Concurrency Patterns in Golang>
 
   <\padded-center>
     <tabular|<tformat|<cwith|1|1|1|1|cell-background|pastel
@@ -1545,7 +1545,7 @@
     </enumerate>
   </cell>>>>>
 
-  <section|Concurrency at Scale>
+  <page-break*><section|Concurrency at Scale>
 
   <\padded-center>
     <tabular|<tformat|<cwith|1|1|1|1|cell-background|pastel
@@ -1728,16 +1728,17 @@
 <\initial>
   <\collection>
     <associate|info-flag|none>
+    <associate|page-breaking|professional>
     <associate|page-medium|automatic>
   </collection>
 </initial>
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|1>>
-    <associate|auto-2|<tuple|2|4>>
-    <associate|auto-3|<tuple|3|9>>
-    <associate|auto-4|<tuple|4|19>>
+    <associate|auto-1|<tuple|1|2>>
+    <associate|auto-2|<tuple|2|6>>
+    <associate|auto-3|<tuple|3|11>>
+    <associate|auto-4|<tuple|4|22>>
   </collection>
 </references>
 
