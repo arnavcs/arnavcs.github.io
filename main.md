@@ -2,19 +2,6 @@
 title: Arnav Kumar
 ---
 
-# Mathematics Competitions
-
-## Accolades
-
-- 335^th^, score 26; 2022 **William Lowell Putnam Mathematical Competition**
-- 10^th^ in Canada; 2022 **Asian Pacific Mathematics Olympiad**
-- 18^th^ in Canada, 2 time qualifier; 2021-22 **Canadian Mathematical Olympiad**
-
-<hgroup>
-## Competition Reference
-[[html]](./competition/reference.html)
-</hgroup>
-
 # Projects
 
 <hgroup>
@@ -93,10 +80,10 @@ Asterisks are external resources.
 **In-Progress**
 
 - *Understanding Machine Learning: From Theory to Algorithms* by Shai Shalev-Shwartz, & Shai Ben-David
-- *Real-Time Rendering* by Akenine-Möller, Haines, Hoffman, Pesce, Iwanicki, & Hillaire
 
 **Reading List**
 
+- *Real-Time Rendering* by Akenine-Möller, Haines, Hoffman, Pesce, Iwanicki, & Hillaire
 - *Specifying Systems* by Leslie Lamport
 - *Category Theory for Programmers* by Bartosz Milewski
 - *Real World Haskell* by O'Sullivan, Stewart & Goerzen
@@ -110,6 +97,9 @@ Asterisks are external resources.
 
 **In-Progress**
 
-- *The Red Book of Mathematical Problems* by Williams & Hardy
+- *Essential Statistics for Data Science* by Mu Zhu
+
+**Reading List**
+
 - *Probability and Random Processes* by Grimmet & Stirzaker
 
