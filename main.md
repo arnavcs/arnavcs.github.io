@@ -23,7 +23,7 @@ title: Arnav Kumar
 <hgroup>
 ## Streams and Lazy Evaluation
 @ Webber Academy Programming Club
-[[notes]](./presentations/231013-streams.py)
+[[notes]](./presentations/231013-streams/notes.py)
 <p class="date">Oct 13, 2023</p>
 </hgroup>
 - An introduction to simulating infinite lists with streams and their manipulation
@@ -31,10 +31,16 @@ title: Arnav Kumar
 <hgroup>
 ## On the Catalan Numbers
 @ Webber Academy Math Society
-[[notes]](./presentations/231011-catalan-numbers.pdf)
+[[notes]](./presentations/231011-catalan-numbers/notes.pdf)
 <p class="date">Oct 11, 2023</p>
 </hgroup>
 - A derivation of the closed formula for the Catalan Numbers and examples of well known problems where the Catalan Numbers appear
+
+<hgroup>
+## High School Math Competition Lessons
+<p class="date">Summer 2023</p>
+</hgroup>
+- Covered divisibilty tricks [[01]](./presentations/23S-competition-lessons/01-divisibility-tricks.pdf), writing solutions [[02]](./presentations/23S-competition-lessons/02-writing-solutions.pdf), the pigeonhole principle [[03]](./presentations/23S-competition-lessons/03-pigeonhole-principle.pdf), finite series and products [[04]](./presentations/23S-competition-lessons/04-finite-series-and-products.pdf), introductory geometry [[05]](./presentations/23S-competition-lessons/05-intro-geometry.pdf), number bases and induction [[06]](./presentations/23S-competition-lessons/06-number-bases-and-induction.pdf), special points in a triangle [[07]](./presentations/23S-competition-lessons/07-points-in-a-triangle.pdf), and cyclic quadrilaterals [[08]](./presentations/23S-competition-lessons/08-cyclic-quadrilaterals.pdf)
 
 <hgroup>
 ## Introductory Combinatory Logic
@@ -63,7 +69,7 @@ Asterisks are external resources.
 +-------+----------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | S '23 | COOP 1                                                         | PD 11                                                            |                                                                                            |                                                             |                                                               |                                                                                  |                                                                                                                      |
 +-------+----------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
-| F '23 | MATH 245                                                       | MATH 247 [*](https://www.richardwu.ca/notes/math247-notes.pdf)   | STAT 240                                                                                   | CS 245E                                                     | CS 246E [*](https://notes.sibeliusp.com/pdf/1189/cs246e.pdf)  |                                                                                  |                                                                                                                      |
+| F '23 | MATH 245                                                       | MATH 247 [*](https://www.richardwu.ca/notes/math247-notes.pdf)   | STAT 240                                                                                   | CS 245E [*](https://isbnsearch.org/isbn/0122384520)         | CS 246E [*](https://notes.sibeliusp.com/pdf/1189/cs246e.pdf)  |                                                                                  |                                                                                                                      |
 +-------+----------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | W '24 | MATH 249 [*](https://melczer.ca/249/wagner_239_249_notes.pdf)  | STAT 241 [*](https://doi.org/10.1093/oso/9780192867735.001.0001) | CO 255 [*](https://csclub.uwaterloo.ca/~c2kent/LectureNotes/co255-1191/CO255_CKclass.pdf)  | CS 240 [*](https://cs.uwaterloo.ca/~plragde/flaneries/FDS/) | CS 241                                                        | *CO 330 [*](https://melczer.ca/330/WagnerNotes.pdf)[*](https://enumeration.ca/)* | *CS 485 [*](https://student.cs.uwaterloo.ca/~cs485/)[*](https://cs.uwaterloo.ca/~ppoupart/teaching/cs485-winter16/)* |
 +-------+----------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------+----------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
