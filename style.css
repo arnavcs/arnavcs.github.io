@@ -24,7 +24,8 @@ body {
   font-family: monospace;
   font-size: medium;
   margin: auto;
-  max-width: 900px;
+  min-width: 710px;
+  max-width: 1780px;
 }
 
 .bg-fixed {
@@ -67,7 +68,7 @@ li::marker {
   background-color: var(--sel-color);
 }
 
-table th, article table td {
+table th, table td {
   border: 2px solid var(--border-color);
 }
 
@@ -108,17 +109,19 @@ header {
   border-radius: 10px;
   background-color: var(--bg-color);
   padding: 20px;
-  margin: 20px 10px;
+  margin: 20px;
 }
 
-header hgroup * {
-  display: inline-block;
-  vertical-align: middle;
+header * {
+  text-align: center;
 }
 
 header h1 {
   font-size: xx-large;
-  margin-right: 5px;
+}
+
+header *:not(:first-child) {
+  margin-top: 5px;
 }
 
 /* Footer formatting */
@@ -128,7 +131,11 @@ footer {
   border-radius: 10px;
   background-color: var(--bg-color);
   padding: 20px;
-  margin: 20px 10px;
+  margin: 20px;
+}
+
+footer * {
+  text-align: center;
 }
 
 footer *:not(:first-child) {
@@ -137,77 +144,102 @@ footer *:not(:first-child) {
 
 /* injected text formatting */
 
-article {
+main {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  gap: 20px;
+}
+
+.topicscol {
+  flex-basis: 50%;
+}
+
+.topic {
   border: 2px solid var(--border-color);
   border-radius: 10px;
   background-color: var(--bg-color);
   padding: 20px;
-  margin: 20px 10px;
 }
 
-article h1:first-child {
+.topic:not(:first-child) {
+  margin-top: 20px;
+}
+
+.topic h1:first-child {
   margin-top: 0px;
 }
 
-article h1:not(:first-child) {
+.topic h1:not(:first-child) {
   border-top: 2px solid var(--border-color);
   margin-top: 20px;
   padding-top: 20px;
 }
 
-article * {
+.topic * {
   margin-top: 5px;
 }
 
-article h1 {
+.topic h1 {
   font-size: x-large;
   text-decoration: underline;
 }
 
-article h2, article h3 {
+.topic h2, .topic h3 {
   font-size: medium;
   text-decoration: none;
   margin-top: 15px;
 }
 
-article .wide {
+.topic .wide {
   margin-top: 0px;
   position: relative;
 }
 
-article .wide * {
+.topic .wide * {
   display: inline-block;
 }
 
-article .wide :not(h1,h2,h3,h4,h5,h6) {
+.topic .wide :not(h1,h2,h3,h4,h5,h6) {
   margin: 0px;
 }
 
-article .wide .right {
+.topic .wide .right {
   position: absolute;
   right: 0px;
   bottom: 0px;
 }
 
-article ul, article dd {
+.topic ul, .topic dd {
   padding-left: 20px;
 }
 
-article ol {
+.topic ol {
   padding-left: 30px;
 }
 
-article img {
+.topic img {
   max-width: 100%;
 }
 
-article table {
+.topic table {
   margin-top: 10px;
 }
 
-article hr {
+.topic hr {
   width: 30%;
   margin: auto;
   margin-top: 10px;
+}
+
+/* Media Responsiveness */
+
+@media screen and (max-width: 1400px) {
+  body {
+    max-width: 900px;
+  }
+  main {
+    flex-direction: column;
+  }
 }
 

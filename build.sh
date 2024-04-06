@@ -4,4 +4,4 @@
 
 pandoc --standalone\
        --template template.html\
-       main.md -o ./index.html
+       index.md -o ./index.html

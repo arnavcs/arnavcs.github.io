@@ -2,6 +2,8 @@
 title: Arnav Kumar
 ---
 
+::: topicscol
+::: topic
 # Projects
 
 ::: wide
@@ -17,7 +19,9 @@ title: Arnav Kumar
 <p class="right">Dec 2023 - Jun 2021</p>
 :::
 - Several machine learning models written to predict the deterioration of the condition of the lungs over time for patients of Idiopathic Pulmonary Fibrosis and give a level of confidence in the prediction
+:::
 
+::: topic
 # Presentations & Lectures
 
 ::: wide
@@ -40,11 +44,13 @@ title: Arnav Kumar
 ## High School Math Competition Lessons
 <p class="right">Summer 2023</p>
 :::
-+----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
-| [[1]](./presentations/23S-competition-lessons/01-divisibility-tricks.pdf) divisibilty tricks | [[2]](./presentations/23S-competition-lessons/02-writing-solutions.pdf) writing solutions                 | [[3]](./presentations/23S-competition-lessons/03-pigeonhole-principle.pdf) pigeonhole principle | [[4]](./presentations/23S-competition-lessons/04-finite-series-and-products.pdf) series and products |
-+----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
-| [[5]](./presentations/23S-competition-lessons/05-intro-geometry.pdf) intro geometry          | [[6]](./presentations/23S-competition-lessons/06-number-bases-and-induction.pdf) number bases & induction | [[7]](./presentations/23S-competition-lessons/07-points-in-a-triangle.pdf) points in a triangle | [[8]](./presentations/23S-competition-lessons/08-cyclic-quadrilaterals.pdf) cyclic quadrilaterals    |
-+----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+| [[1]](./presentations/23S-competition-lessons/01-divisibility-tricks.pdf) divisibilty tricks         | [[2]](./presentations/23S-competition-lessons/02-writing-solutions.pdf) writing solutions                 | [[3]](./presentations/23S-competition-lessons/03-pigeonhole-principle.pdf) pigeonhole principle           |
++------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+| [[4]](./presentations/23S-competition-lessons/04-finite-series-and-products.pdf) series and products | [[5]](./presentations/23S-competition-lessons/05-intro-geometry.pdf) intro geometry                       | [[6]](./presentations/23S-competition-lessons/06-number-bases-and-induction.pdf) number bases & induction |
++------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+| [[7]](./presentations/23S-competition-lessons/07-points-in-a-triangle.pdf) points in a triangle      | [[8]](./presentations/23S-competition-lessons/08-cyclic-quadrilaterals.pdf) cyclic quadrilaterals         |                                                                                                           |
++------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
 
 ::: wide
 ## Introductory Combinatory Logic
@@ -52,11 +58,14 @@ title: Arnav Kumar
 <p class="right">Oct 11, 2022</p>
 :::
 - Introduction to combinatory logic; showing numbers and operations on numbers can be expressed as combinators
+:::
+:::
 
+::: topicscol
+::: topic
 # University Courses
 
 Italics means self-taught or audited.
-Repeated audited courses vary by offering.
 Asterisks are external resources.
 
 ::: wide
@@ -80,7 +89,9 @@ Asterisks are external resources.
 +-------+----------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+---------------------------------------------------------------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+
 | S '24 | COOP 2                                                         | PD 10                                                            |  *CO 330 [*](https://melczer.ca/330/WagnerNotes.pdf)[*](https://enumeration.ca/)*          |                                                                                       |                                                               |                                                                          |                                                                          |
 +-------+----------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+---------------------------------------------------------------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+
+:::
 
+::: topic
 # Textbooks & Readings
 
 ## Completed
@@ -130,4 +141,6 @@ Asterisks are external resources.
 **System Design**
 
 - *Specifying Systems* by Leslie Lamport
+:::
+:::
 
