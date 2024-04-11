@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>We Chall Challenges</title>
+        <link rel="stylesheet" href="../../assets/serial.css"/>
+      </head>
+  <body>
+    <div class="bg-fixed"></div>
+    <header>
+      <hgroup>
+        <a href="../../index.html">[Arnav Kumar]</a> /
+        <h1 id="title">We Chall Challenges</h1>
+      </hgroup>
+    </header>
+    <main>
+      <aside>
+        <ul>
+        <li><a href="#score-1" id="toc-score-1">Score 1</a>
+        <ul>
+        <li><a href="#cgx3-binary-encoding"
+        id="toc-cgx3-binary-encoding">CGX#3: Binary Encoding</a></li>
+        <li><a href="#training-get-sourced"
+        id="toc-training-get-sourced">Training: Get Sourced</a></li>
+        <li><a href="#training-ascii" id="toc-training-ascii">Training:
+        ASCII</a></li>
+        <li><a href="#encodings-url" id="toc-encodings-url">Encodings:
+        URL</a></li>
+        <li><a href="#training-stegano-i"
+        id="toc-training-stegano-i">Training: Stegano I</a></li>
+        <li><a href="#training-crypto---caesar-i"
+        id="toc-training-crypto---caesar-i">Training: Crypto - Caesar
+        I</a></li>
+        <li><a href="#training-www-robots"
+        id="toc-training-www-robots">Training: WWW-Robots</a></li>
+        <li><a href="#christmas-hippety" id="toc-christmas-hippety">2021
+        Christmas Hippety</a></li>
+        </ul></li>
+        <li><a href="#score-2" id="toc-score-2">Score 2</a>
+        <ul>
+        <li><a href="#christmas-grampa" id="toc-christmas-grampa">2021
+        Christmas Grampa</a></li>
+        <li><a href="#prime-factory" id="toc-prime-factory">Prime
+        Factory</a></li>
+        <li><a href="#php-0817" id="toc-php-0817">PHP 0817</a></li>
+        </ul></li>
+        </ul>
+      </aside>
+      <article>
+        <p>This contains hints and main ideas of the <a
+        href="https://www.wechall.net/challs">We Chall</a>
+        challenges.</p>
+        <h1 id="score-1">Score 1</h1>
+        <section id="cgx3-binary-encoding" class="wide">
+        <h2>CGX#3: Binary Encoding</h2>
+        <p class="right">
+        06 Apr 2024
+        </p>
+        </section>
+        <ul>
+        <li>Convert binary to decimal.</li>
+        </ul>
+        <section id="training-get-sourced" class="wide">
+        <h2>Training: Get Sourced</h2>
+        <p class="right">
+        06 Apr 2024
+        </p>
+        </section>
+        <ul>
+        <li>Inspect the HTML page source.</li>
+        </ul>
+        <section id="training-ascii" class="wide">
+        <h2>Training: ASCII</h2>
+        <p class="right">
+        06 Apr 2024
+        </p>
+        </section>
+        <ul>
+        <li>Convert decimal to ASCII.</li>
+        </ul>
+        <section id="encodings-url" class="wide">
+        <h2>Encodings: URL</h2>
+        <p class="right">
+        06 Apr 2024
+        </p>
+        </section>
+        <ul>
+        <li><p>Decode the <a
+        href="https://en.wikipedia.org/wiki/Percent-encoding">URL
+        encoding</a>.</p></li>
+        <li><p>Because all characters in the string are in the reserved
+        format, we can completely ignore all ‘%’ signs and convert
+        hexadecimal to ASCII.</p>
+        <pre><code>echo &quot;%59%69…&quot; | tr -d &#39;%&#39; | xxd -r -p</code></pre></li>
+        </ul>
+        <section id="training-stegano-i" class="wide">
+        <h2>Training: Stegano I</h2>
+        <p class="right">
+        06 Apr 2024
+        </p>
+        </section>
+        <ul>
+        <li>Output the image as ASCII…</li>
+        </ul>
+        <section id="training-crypto---caesar-i" class="wide">
+        <h2>Training: Crypto - Caesar I</h2>
+        <p class="right">
+        07 Apr 2024
+        </p>
+        </section>
+        <ul>
+        <li>Decode the <a
+        href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar
+        cipher</a>.</li>
+        </ul>
+        <section id="training-www-robots" class="wide">
+        <h2>Training: WWW-Robots</h2>
+        <p class="right">
+        07 Apr 2024
+        </p>
+        </section>
+        <ul>
+        <li>Visit the page restricted to webcrawlers by the <a
+        href="https://en.wikipedia.org/wiki/Robots.txt">robots exclusion
+        standard</a>.</li>
+        </ul>
+        <section id="christmas-hippety" class="wide">
+        <h2>2021 Christmas Hippety</h2>
+        with help from my friend Ian Zhao
+        <p class="right">
+        09 Apr 2024
+        </p>
+        </section>
+        <ul>
+        <li>The <code>&lt;a&gt;</code> tag links to a website that then
+        <a href="https://en.wikipedia.org/wiki/HTTP_301">301
+        redirects</a> to <code>hop.php</code>.</li>
+        <li>Try using <code>curl</code> to determine the content on that
+        page.</li>
+        </ul>
+        <h1 id="score-2">Score 2</h1>
+        <section id="christmas-grampa" class="wide">
+        <h2>2021 Christmas Grampa</h2>
+        <p class="right">
+        06 Apr 2024
+        </p>
+        </section>
+        <ul>
+        <li>Compute the <a
+        href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a> hash in
+        <code>solution.php</code>.</li>
+        </ul>
+        <section id="prime-factory" class="wide">
+        <h2>Prime Factory</h2>
+        <p class="right">
+        08 Apr 2024
+        </p>
+        </section>
+        <ul>
+        <li>Write a script to find these primes.</li>
+        </ul>
+        <section id="php-0817" class="wide">
+        <h2>PHP 0817</h2>
+        <p class="right">
+        09 Apr 2024
+        </p>
+        </section>
+        <ul>
+        <li>Comparisons with different types in PHP does implicit type
+        casting.</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      <p>
+        Contributing towards a lightweight web. HTML generated by Pandoc.
+      </p>
+    </footer>
+  </body>
+</html>

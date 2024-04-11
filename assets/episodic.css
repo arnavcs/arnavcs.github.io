@@ -1,0 +1,234 @@
+:root {
+  --bg-color: #1F1F28;
+  --fg-color: #DCD7BA;
+
+  --border-color: #54546D;
+  --link-color: #D27E99;
+  --sel-color: #2D4F67;
+  --accent-color: #C0A36E;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  /* to stop the mobile resizing that occurs normally */
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* general global formats */
+
+/* each episode has width 800px */
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  font-family: monospace;
+  font-size: medium;
+  margin: auto;
+  max-width: 1660px;
+  min-width: 840px;
+}
+
+.bg-fixed {
+  background: url(./dots.svg);
+  background-size: 5px 5px;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+h1, h2 {
+  color: var(--accent-color);
+}
+
+a, a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+li::marker {
+  color: var(--accent-color);
+}
+
+::selection {
+  background-color: var(--sel-color);
+}
+
+table th, table td {
+  border: 2px solid var(--border-color);
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  width: auto !important;
+}
+
+table col {
+  width: min-content !important;
+}
+
+table td, table tr, table th, table caption {
+  padding: 3px 5px;
+}
+
+table caption {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+math, math * {
+  margin-top: 0px !important;
+  font-size: small;
+}
+
+figure * {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header formatting */
+
+header {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  padding: 20px;
+  margin: 20px;
+}
+
+header * {
+  text-align: center;
+}
+
+header h1 {
+  font-size: xx-large;
+}
+
+header *:not(:first-child) {
+  margin-top: 5px;
+}
+
+/* Footer formatting */
+
+footer {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  padding: 20px;
+  margin: 20px;
+}
+
+footer * {
+  text-align: center;
+}
+
+footer *:not(:first-child) {
+  margin-top: 5px;
+}
+
+/* injected text formatting */
+
+main {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  gap: 20px;
+}
+
+.column {
+  flex-basis: 50%;
+}
+
+.episode {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  padding: 20px;
+}
+
+.episode:not(:first-child) {
+  margin-top: 20px;
+}
+
+.episode h1:first-child {
+  margin-top: 0px;
+}
+
+.episode h1:not(:first-child) {
+  border-top: 2px solid var(--border-color);
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.episode * {
+  margin-top: 5px;
+}
+
+.episode h1 {
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+.episode h2, .episode h3 {
+  font-size: medium;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.episode .wide {
+  margin-top: 0px;
+  position: relative;
+}
+
+.episode .wide * {
+  display: inline-block;
+}
+
+.episode .wide :not(h1,h2,h3,h4,h5,h6) {
+  margin: 0px;
+}
+
+.episode .wide .right {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.episode ul, .episode dd {
+  padding-left: 20px;
+}
+
+.episode ol {
+  padding-left: 30px;
+}
+
+.episode img {
+  max-width: 100%;
+}
+
+.episode table {
+  margin-top: 10px;
+}
+
+.episode hr {
+  width: 30%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* Media Responsiveness */
+
+@media screen and (max-width: 1660px) {
+  body {
+    max-width: 840px;
+  }
+  main {
+    flex-direction: column;
+  }
+}
+

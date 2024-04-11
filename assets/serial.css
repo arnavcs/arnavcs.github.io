@@ -1,0 +1,263 @@
+:root {
+  --bg-color: #1F1F28;
+  --fg-color: #DCD7BA;
+
+  --border-color: #54546D;
+  --link-color: #D27E99;
+  --sel-color: #2D4F67;
+  --accent-color: #C0A36E;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  /* to stop the mobile resizing that occurs normally */
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* general global formats */
+
+/* width of content will be 800px */
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  font-family: monospace;
+  font-size: medium;
+  margin: auto;
+  min-width: 840px;
+  max-width: 1140px;
+}
+
+.bg-fixed {
+  background: url(./dots.svg);
+  background-size: 5px 5px;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+h1, h2 {
+  color: var(--accent-color);
+}
+
+a, a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+li::marker {
+  color: var(--accent-color);
+}
+
+::selection {
+  background-color: var(--sel-color);
+}
+
+table th, table td {
+  border: 2px solid var(--border-color);
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  width: auto !important;
+}
+
+table col {
+  width: min-content !important;
+}
+
+table td, table tr, table th, table caption {
+  padding: 3px 5px;
+}
+
+table caption {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+math, math * {
+  margin-top: 0px !important;
+  font-size: small;
+}
+
+figure * {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header formatting */
+
+header {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+hgroup {
+  display: inline-block;
+}
+
+hgroup * {
+  display: inline;
+  vertical-align: middle;
+}
+
+hgroup h1 {
+  font-size: xx-large;
+}
+
+/* Footer formatting */
+
+footer {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  padding: 20px;
+  margin: 20px;
+}
+
+footer * {
+  text-align: center;
+}
+
+footer *:not(:first-child) {
+  margin-top: 5px;
+}
+
+/* Injected Text Formatting */
+
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 20px;
+  gap: 20px;
+}
+
+article, aside {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  padding: 20px;
+}
+
+/* TOC Formatting */
+
+aside {
+  width: 280px;
+}
+
+aside ul {
+  margin-left: 20px;
+}
+
+aside > ul {
+  margin-left: 0px;
+  list-style-type: none;
+  position: sticky;
+  top: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Article Formatting */
+
+article {
+  flex-basis: 100%;
+}
+
+article h1:first-child {
+  margin-top: 0px;
+}
+
+article h1:not(:first-child) {
+  border-top: 2px solid var(--border-color);
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+article * {
+  margin-top: 5px;
+}
+
+article h1 {
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+article h2, article h3 {
+  font-size: medium;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+article .wide {
+  margin-top: 0px;
+  position: relative;
+}
+
+article .wide * {
+  display: inline-block;
+}
+
+article .wide :not(h1,h2,h3,h4,h5,h6) {
+  margin: 0px;
+}
+
+article .wide .right {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+article ul, article dd {
+  padding-left: 20px;
+}
+
+article ol {
+  padding-left: 30px;
+}
+
+article img {
+  max-width: 100%;
+}
+
+article table {
+  margin-top: 10px;
+}
+
+article hr {
+  width: 30%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* Media Responsiveness */
+
+@media screen and (max-width: 1140px) {
+  body {
+    max-width: 840px;
+  }
+  main {
+    flex-direction: column;
+  }
+  aside {
+    width: auto;
+  }
+  aside > ul {
+    flex-direction: row;
+  }
+}
+

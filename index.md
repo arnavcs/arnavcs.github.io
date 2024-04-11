@@ -2,8 +2,8 @@
 title: Arnav Kumar
 ---
 
-::: topicscol
-::: topic
+::: column
+::: episode
 # Projects
 
 ::: wide
@@ -21,7 +21,7 @@ title: Arnav Kumar
 - Several machine learning models written to predict the deterioration of the condition of the lungs over time for patients of Idiopathic Pulmonary Fibrosis and give a level of confidence in the prediction
 :::
 
-::: topic
+::: episode
 # Presentations & Lectures
 
 ::: wide
@@ -59,10 +59,22 @@ title: Arnav Kumar
 :::
 - Introduction to combinatory logic; showing numbers and operations on numbers can be expressed as combinators
 :::
+
+::: episode
+# Wargames
+
+From Wikipedia, "wargames are cyber-security challenges involving exploitations in systems or applications".
+As a way to learn, they teach you a lot about building systems and the technical mechanics of software.
+Here are the notes I have made so far while doing wargames.
+
++----------------------------------------------------------+---------------------------------------------------+
+| [[1]](./wargame/we-chall/index.html) We Chall challenges | [[2]](./wargame/pwnable-kr/index.html) pwnable.kr |
++----------------------------------------------------------+---------------------------------------------------+
+:::
 :::
 
-::: topicscol
-::: topic
+::: column
+::: episode
 # University Courses
 
 Italics means self-taught or audited.
@@ -87,11 +99,11 @@ Asterisks are external resources.
 +-------+----------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+---------------------------------------------------------------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+
 | W '24 | MATH 249 [*](https://melczer.ca/249/wagner_239_249_notes.pdf)  | STAT 241 [*](https://doi.org/10.1093/oso/9780192867735.001.0001) | CO 255 [*](https://csclub.uwaterloo.ca/~c2kent/LectureNotes/co255-1191/CO255_CKclass.pdf)  | CS 240                                                                                | CS 241                                                        | *CS 485 [*](https://cs.uwaterloo.ca/~ppoupart/teaching/cs485-winter16/)* |                                                                          |
 +-------+----------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+---------------------------------------------------------------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| S '24 | COOP 2                                                         | PD 10                                                            |  *CO 330 [*](https://melczer.ca/330/WagnerNotes.pdf)[*](https://enumeration.ca/)*          |                                                                                       |                                                               |                                                                          |                                                                          |
+| S '24 | COOP 2                                                         | PD 10                                                            | *CO 330 [*](https://melczer.ca/330/WagnerNotes.pdf)[*](https://enumeration.ca/)*           |                                                                                       |                                                               |                                                                          |                                                                          |
 +-------+----------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+---------------------------------------------------------------+--------------------------------------------------------------------------+--------------------------------------------------------------------------+
 :::
 
-::: topic
+::: episode
 # Textbooks & Readings
 
 ## Completed
@@ -108,39 +120,15 @@ Asterisks are external resources.
 
 - *Learn You a Haskell for Great Good!* by Miran Lipovača
 
-## In Progress
-
 **Probability & Statistics**
 
 - *Essential Statistics for Data Science: A Concise Crash Course* by Mu Zhu
 
+## In Progress
+
 **Machine Learning**
 
 - *A Course in Machine Learning* by Hal Daumé III
-
-## To Read
-
-**Probability & Statistics**
-
-- *Probability and Random Processes* by Grimmet & Stirzaker
-
-**Machine Learning**
-
-- *Understanding Machine Learning: From Theory to Algorithms* by Shai Shalev-Shwartz, & Shai Ben-David
-
-**Computer Graphics**
-
-- *Real-Time Rendering* by Akenine-Möller, Haines, Hoffman, Pesce, Iwanicki, & Hillaire
-
-**Programming Languages**
-
-- *Category Theory for Programmers* by Bartosz Milewski
-- *Real World Haskell* by O'Sullivan, Stewart & Goerzen
-- *Structure and Interpretation of Computer Programs* by Abelson, Sussman, & Sussman
-
-**System Design**
-
-- *Specifying Systems* by Leslie Lamport
 :::
 :::
 

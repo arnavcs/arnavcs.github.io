@@ -2,6 +2,7 @@
 #
 # build.sh
 
-pandoc --standalone\
-       --template template.html\
-       index.md -o ./index.html
+pandoc --standalone \
+       --css ./assets/episodic.css \
+       --template ./assets/episodic.html \
+       ./index.md -o ./index.html
