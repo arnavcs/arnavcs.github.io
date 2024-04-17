@@ -16,7 +16,7 @@ title: Arnav Kumar
 ::: wide
 ## Prognosing Idiopathic Pulmonary Fibrosis
 [[CWSF paper]](./projects/osic-cwsf-paper.pdf)
-<p class="right">Dec 2023 - Jun 2021</p>
+<p class="right">Dec 2020 - Jun 2021</p>
 :::
 - Several machine learning models written to predict the deterioration of the condition of the lungs over time for patients of Idiopathic Pulmonary Fibrosis and give a level of confidence in the prediction
 :::
