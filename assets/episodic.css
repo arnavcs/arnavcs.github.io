@@ -18,8 +18,6 @@
 
 /* general global formats */
 
-/* each episode has width 800px */
-
 body {
   background-color: var(--bg-color);
   color: var(--fg-color);
@@ -38,6 +36,18 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+main {
+  display: grid;
+  grid-template-areas: 
+    "h h"
+    "i i"
+    "l r"
+    "f f";
+  grid-template-columns: 800px 800px;
+  grid-gap: 20px;
+  margin: 20px;
 }
 
 h1, h2 {
@@ -94,18 +104,24 @@ figure * {
 /* Header formatting */
 
 header {
+  grid-area: h;
   border: 2px solid var(--border-color);
   border-radius: 10px;
   background-color: var(--bg-color);
   padding: 20px;
-  margin: 20px;
-}
-
-header * {
   text-align: center;
 }
 
-header h1 {
+hgroup {
+  display: inline-block;
+}
+
+hgroup * {
+  display: inline;
+  vertical-align: middle;
+}
+
+hgroup h1 {
   font-size: xx-large;
 }
 
@@ -116,11 +132,11 @@ header *:not(:first-child) {
 /* Footer formatting */
 
 footer {
+  grid-area: f;
   border: 2px solid var(--border-color);
   border-radius: 10px;
   background-color: var(--bg-color);
   padding: 20px;
-  margin: 20px;
 }
 
 footer * {
@@ -133,15 +149,22 @@ footer *:not(:first-child) {
 
 /* injected text formatting */
 
-main {
-  display: flex;
-  flex-direction: row;
-  margin: 20px;
-  gap: 20px;
+.intro {
+  grid-area: i;
 }
 
-.column {
-  flex-basis: 50%;
+.left-col {
+  grid-area: l;
+}
+
+.right-col {
+  grid-area: r;
+}
+
+.left-col .episode:not(:first-child), 
+.right-col .episode:not(:first-child),
+.introduction .episode:not(:first-child) {
+  margin-top: 20px;
 }
 
 .episode {
@@ -149,10 +172,6 @@ main {
   border-radius: 10px;
   background-color: var(--bg-color);
   padding: 20px;
-}
-
-.episode:not(:first-child) {
-  margin-top: 20px;
 }
 
 .episode h1:first-child {
@@ -228,7 +247,13 @@ main {
     max-width: 840px;
   }
   main {
-    flex-direction: column;
+    grid-template-areas: 
+      "h"
+      "i"
+      "l"
+      "r"
+      "f";
+    grid-template-columns: 800px;
   }
 }
 
