@@ -8,27 +8,26 @@
     $endfor$
   </head>
   <body>
-    <div class="bg-fixed"></div>
-    <main>
-      <header>
-        <hgroup>
-          $path$
-          <h1 id="title">$title$</h1>
-        </hgroup>
-        $if(header)$
-        <p>$header$</p>
-        $endif$
-      </header>
-      $body$
-      <footer>
-        $if(footer)$
-        <p>$footer$</p>
-        $endif$
-        <p>
-          Contributing to a lightweight web. HTML generated with Pandoc.
-        </p>
-      </footer>
-    </main>
+    <header>
+      <hgroup>
+        $path$
+        <h1 id="title">$title$</h1>
+      </hgroup>
+      $if(header)$
+      <p>$header$</p>
+      $endif$
+    </header>
+    <hr class="lynx" />
+    $body$
+    <hr class="lynx" />
+    <footer>
+      $if(footer)$
+      <p>$footer$</p>
+      $endif$
+      <p>
+        Contributing to a lightweight web. HTML generated with Pandoc.
+      </p>
+    </footer>
   </body>
 </html>
 

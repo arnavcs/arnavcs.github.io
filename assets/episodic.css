@@ -20,25 +20,12 @@
 
 body {
   background-color: var(--bg-color);
+  background-image: url(./dots.svg);
   color: var(--fg-color);
   font-family: monospace;
   font-size: medium;
   margin: auto;
-  max-width: 1660px;
-  min-width: 840px;
-}
-
-.bg-fixed {
-  background: url(./dots.svg);
-  background-size: 5px 5px;
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-main {
+  padding: 20px;
   display: grid;
   grid-template-areas: 
     "h h"
@@ -47,11 +34,19 @@ main {
     "f f";
   grid-template-columns: 800px 800px;
   grid-gap: 20px;
-  margin: 20px;
+  max-width: 1660px;
+  min-width: 840px;
 }
 
-h1, h2 {
+main {
+}
+
+h1, strong {
   color: var(--accent-color);
+}
+
+h2 {
+  font-weight: normal;
 }
 
 a, a:visited {
@@ -99,6 +94,10 @@ figure * {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+hr.lynx {
+  display: none;
 }
 
 /* Header formatting */
@@ -197,22 +196,10 @@ footer *:not(:first-child) {
   font-size: medium;
   text-decoration: none;
   margin-top: 15px;
-}
-
-.episode .wide {
-  margin-top: 0px;
   position: relative;
 }
 
-.episode .wide * {
-  display: inline-block;
-}
-
-.episode .wide :not(h1,h2,h3,h4,h5,h6) {
-  margin: 0px;
-}
-
-.episode .wide .right {
+.episode .right {
   position: absolute;
   right: 0px;
   bottom: 0px;
@@ -244,9 +231,6 @@ footer *:not(:first-child) {
 
 @media screen and (max-width: 1660px) {
   body {
-    max-width: 840px;
-  }
-  main {
     grid-template-areas: 
       "h"
       "i"
@@ -254,6 +238,7 @@ footer *:not(:first-child) {
       "r"
       "f";
     grid-template-columns: 800px;
+    max-width: 840px;
   }
 }
 

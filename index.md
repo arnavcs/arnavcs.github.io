@@ -18,11 +18,7 @@ footer: 'Page part of [(Simon''s Cozyring)](https://ring.simonwu.dev/): [(previo
 
 Italics means self-taught or audited.
 
-::: wide
-## Waterloo Undergraduate Degree
-: Bachelors of Computer Science
-<p class="right">2022 - Present</p>
-:::
+## **Waterloo Undergraduate Degree** : Bachelors of Computer Science
 
 +-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Term  | Courses                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -44,26 +40,16 @@ Italics means self-taught or audited.
 ::: episode
 # Presentations & Lectures
 
-::: wide
-## Streams and Lazy Evaluation
-@ Webber Academy Programming Club
-[[notes]](./presentations/231013-streams/notes.py)
-<p class="right">Oct 13, 2023</p>
-:::
+## **Streams and Lazy Evaluation** @ Webber Academy Programming Club [[notes]](./presentations/231013-streams/notes.py) [13^th^ Oct 2023]{.right}
+
 - An introduction to simulating infinite lists with streams and their manipulation
 
-::: wide
-## On the Catalan Numbers
-@ Webber Academy Math Society
-[[notes]](./presentations/231011-catalan-numbers/notes.pdf)
-<p class="right">Oct 11, 2023</p>
-:::
+## **On the Catalan Numbers** @ Webber Academy Math Society [[notes]](./presentations/231011-catalan-numbers/notes.pdf) [11^th^ Oct 2023]{.right}
+
 - A derivation of the closed formula for the Catalan Numbers and examples of well known problems where the Catalan Numbers appear
 
-::: wide
-## High School Math Competition Lessons
-<p class="right">Summer 2023</p>
-:::
+## **High School Math Competition Lessons** [Summer 2023]{.right}
+
 +------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
 | [[1]](./presentations/23S-competition-lessons/01-divisibility-tricks.pdf) divisibilty tricks         | [[2]](./presentations/23S-competition-lessons/02-writing-solutions.pdf) writing solutions         | [[3]](./presentations/23S-competition-lessons/03-pigeonhole-principle.pdf) pigeonhole principle           |
 +------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
@@ -72,11 +58,8 @@ Italics means self-taught or audited.
 | [[7]](./presentations/23S-competition-lessons/07-points-in-a-triangle.pdf) points in a triangle      | [[8]](./presentations/23S-competition-lessons/08-cyclic-quadrilaterals.pdf) cyclic quadrilaterals |                                                                                                           |
 +------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+
 
-::: wide
-## Introductory Combinatory Logic
-@ Webber Academy Math Society
-<p class="right">Oct 11, 2022</p>
-:::
+## **Introductory Combinatory Logic** @ Webber Academy Math Society [11^th^ Oct 2022]{.right}
+
 - Introduction to combinatory logic; showing numbers and operations on numbers can be expressed as combinators
 :::
 :::
@@ -85,18 +68,12 @@ Italics means self-taught or audited.
 ::: episode
 # Projects
 
-::: wide
-## Interplanetary File Explorer
-[[try it]](https://ipfe.elguindi.xyz/) [[github]](https://github.com/youssefsoli/IPFE) [[devpost]](https://devpost.com/software/changeme)
-<p class="right">Jan 2023</p>
-:::
+## **Interplanetary File Explorer** [[try it]](https://ipfe.elguindi.xyz/) [[github]](https://github.com/youssefsoli/IPFE) [[devpost]](https://devpost.com/software/changeme) [Jan 2023]{.right}
+
 - A visual file explorer of an IPFS written in Golang, Python, and JavaScript that uses one of Cohere's NLP models to summarize and categorize files based on metadata, and Estuary's API to fetch the files from the IPFS
 
-::: wide
-## Prognosing Idiopathic Pulmonary Fibrosis
-[[CWSF paper]](./projects/osic-cwsf-paper.pdf)
-<p class="right">Dec 2020 - Jun 2021</p>
-:::
+## **Prognosing Idiopathic Pulmonary Fibrosis** [[CWSF paper]](./projects/osic-cwsf-paper.pdf) [Dec 2020 - Jun 2021]{.right}
+
 - Several machine learning models written to predict the deterioration of the condition of the lungs over time for patients of Idiopathic Pulmonary Fibrosis and give a level of confidence in the prediction
 :::
 
