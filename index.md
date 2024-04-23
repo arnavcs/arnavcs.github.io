@@ -1,6 +1,6 @@
 ---
 title: Arnav Kumar
-header: '[[github]](https://github.com/arnavcs) [[resume]](./resume-cv/resume.pdf) [[CV]](./resume-cv/cv.pdf)'
+header: '[[Github]](https://github.com/arnavcs) [[resume]](./resume-cv/resume.pdf) [[CV]](./resume-cv/cv.pdf)'
 footer: 'Page part of [(Simon''s Cozyring)](https://ring.simonwu.dev/): [(previous)](https://ring.simonwu.dev/prev/arnav) [(next)](https://ring.simonwu.dev/next/arnav) [(random)](https://ring.simonwu.dev/random/arnav)'
 ---
 
@@ -8,7 +8,8 @@ footer: 'Page part of [(Simon''s Cozyring)](https://ring.simonwu.dev/): [(previo
 ::: episode
 # Site Introduction
 
-* Links presented in round brackets like [(*)]() are to content which I did not create, whereas those in square brackets like [[*]]() are to content which I created.
+* Links wrapped in (square|round) brackets are to content which I (did|didn't) create, respectively.
+* This website does not have a sitemap, as everything is accesible from this homepage.
 :::
 :::
 
@@ -68,7 +69,7 @@ Italics means self-taught or audited.
 ::: episode
 # Projects
 
-## **Interplanetary File Explorer** [[try it]](https://ipfe.elguindi.xyz/) [[github]](https://github.com/youssefsoli/IPFE) [[devpost]](https://devpost.com/software/changeme) [Jan 2023]{.right}
+## **Interplanetary File Explorer** [[try it]](https://ipfe.elguindi.xyz/) [[Github]](https://github.com/youssefsoli/IPFE) [[Devpost]](https://devpost.com/software/changeme) [Jan 2023]{.right}
 
 - A visual file explorer of an IPFS written in Golang, Python, and JavaScript that uses one of Cohere's NLP models to summarize and categorize files based on metadata, and Estuary's API to fetch the files from the IPFS
 
@@ -80,27 +81,27 @@ Italics means self-taught or audited.
 ::: episode
 # Self-Learning
 
-## Concurrency
+## **Concurrency**
 
 - *Concurrency in Go* by Katherine Cox-Buday [[notes]](./readings/concurrency-in-go/notes.pdf)
 
-## Formal Logic
+## **Formal Logic**
 
 - *To Mock a Mockingbird* by Raymond Smullyan
 
-## Programming Languages
+## **Programming Languages**
 
 - *Learn You a Haskell for Great Good!* by Miran Lipovača [(book)](https://learnyouahaskell.com/)
 
-## Machine Learning
+## **Machine Learning**
 
 - *A Course in Machine Learning* by Hal Daumé III [(book)](http://ciml.info/) (in progress)
 
-## Cyber Security
+## **Cyber Security**
 
 - We Chall [(challenges)](https://www.wechall.net/challs) [[hints & notes]](./wargame/we-chall/index.html) (in progress)
 
-## Graphics
+## **Graphics**
 
 - University of Utah CS 4600 [(lectures)](https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh) [(assignments)](https://graphics.cs.utah.edu/courses/cs4600/fall2020/) (in progress)
 :::
