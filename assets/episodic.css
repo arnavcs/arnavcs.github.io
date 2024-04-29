@@ -20,7 +20,7 @@
 
 body {
   background-color: var(--bg-color);
-  background-image: url(./dots.svg);
+  background-image: url(./tile.png);
   color: var(--fg-color);
   font-family: monospace;
   font-size: medium;
@@ -219,6 +219,10 @@ footer *:not(:first-child) {
 
 .episode table {
   margin-top: 10px;
+}
+
+.episode td {
+  min-width: 60px;
 }
 
 .episode hr {
