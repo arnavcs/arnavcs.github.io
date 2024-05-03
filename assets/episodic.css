@@ -32,13 +32,9 @@ body {
     "i i"
     "l r"
     "f f";
-  grid-template-columns: 800px 800px;
+  grid-template-columns: 700px 700px;
   grid-gap: 20px;
-  max-width: 1660px;
-  min-width: 840px;
-}
-
-main {
+  width: 1420px;
 }
 
 h1, strong {
@@ -233,7 +229,7 @@ footer *:not(:first-child) {
 
 /* Media Responsiveness */
 
-@media screen and (max-width: 1660px) {
+@media screen and (max-width: 1460px) {
   body {
     grid-template-areas: 
       "h"
@@ -241,8 +237,8 @@ footer *:not(:first-child) {
       "l"
       "r"
       "f";
-    grid-template-columns: 800px;
-    max-width: 840px;
+    grid-template-columns: 700px;
+    width: 700px;
   }
 }
 

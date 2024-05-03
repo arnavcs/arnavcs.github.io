@@ -8,8 +8,9 @@ footer: 'Page part of [(Simon''s Cozyring)](https://ring.simonwu.dev/): [(previo
 ::: episode
 # Site Introduction
 
-* Links wrapped in (square|round) brackets are to content which I (did|didn't) create, respectively.
-* This website does not have a sitemap yet, as everything is accesible from this homepage.
+* This site is best viewed through a computer, and wasn't designed for mobile use.
+* Links in (square|round) brackets are to content I (did|didn't) create, respectively.
+* This website does not have a sitemap; everything is accesible from this homepage.
 :::
 :::
 
@@ -84,19 +85,16 @@ Course names are abbreviated; hover for full course name.
 
 I am still going through entries ending with ◇.
 
-## **Concurrency**
-
-- *Concurrency in Go* by Katherine Cox-Buday [[notes]](./readings/concurrency-in-go/notes.pdf)
-
-## **Formal Logic**
+## **Formal Logic & Puzzles**
 
 - *To Mock a Mockingbird* by Raymond Smullyan
 
 ## **Programming Languages**
 
+- *Concurrency in Go* by Katherine Cox-Buday [[notes]](./readings/concurrency-in-go/notes.pdf)
 - *Learn You a Haskell for Great Good!* by Miran Lipovača [(book)](https://learnyouahaskell.com/)
 
-## **Machine Learning, Probability, and Statistics**
+## **Machine Learning, Probability, & Statistics**
 
 - *Essential Statistics for Data Science* by Mu Zhu
 - *A Course in Machine Learning* by Hal Daumé III [(book)](http://ciml.info/) ◇
@@ -105,7 +103,7 @@ I am still going through entries ending with ◇.
 
 - We Chall [(challenges)](https://www.wechall.net/challs) [[hints & notes]](./wargame/we-chall/index.html) ◇
 
-## **Graphics**
+## **Geometry & Graphics**
 
 - University of Utah CS 4600 [(lectures)](https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh) [(assignments)](https://graphics.cs.utah.edu/courses/cs4600/fall2020/) ◇
 :::
