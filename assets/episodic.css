@@ -4,6 +4,7 @@
 
   --border-color: #54546D;
   --link-color: #D27E99;
+  --code-color: #7AA89F;
   --sel-color: #2D4F67;
   --accent-color: #C0A36E;
 }
@@ -56,6 +57,10 @@ li::marker {
 
 ::selection {
   background-color: var(--sel-color);
+}
+
+code {
+  color: var(--code-color);
 }
 
 table th, table td {

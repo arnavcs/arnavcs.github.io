@@ -41,6 +41,39 @@ Course names are abbreviated; hover for full course name.
 :::
 
 ::: episode
+# Projects
+
+## **Interplanetary File Explorer** [[try it]](https://ipfe.elguindi.xyz/) [[Github]](https://github.com/youssefsoli/IPFE) [[Devpost]](https://devpost.com/software/changeme) [Jan 2023]{.right}
+
+- A visual file explorer of an IPFS written in Golang, Python, and JavaScript that uses one of Cohere's NLP models to summarize and categorize files based on metadata, and Estuary's API to fetch the files from the IPFS
+
+## **Prognosing Idiopathic Pulmonary Fibrosis** [[CWSF paper]](./projects/osic-cwsf-paper.pdf) [Dec 2020 - Jun 2021]{.right}
+
+- Several machine learning models written to predict the deterioration of the condition of the lungs over time for patients of Idiopathic Pulmonary Fibrosis and give a level of confidence in the prediction
+:::
+
+::: episode
+# Computing Setup
+
+My hardware consists of a single laptop which I connect to an external monitor, keyboard, and mouse.
+
+In pursuit of a simple, intuitive, and easily extensible computing experience, I use:
+
+* [(cwm)](https://github.com/leahneukirchen/cwm) as an X11 window manager, extended with custom scripts
+* [(dmenu_run)](https://tools.suckless.org/dmenu/) as an application launcher
+* [(dmenu)](https://tools.suckless.org/dmenu/) or [(fzy)](https://github.com/jhawthorn/fzy) as a menu for user input in scripts
+* [(kitty)](https://sw.kovidgoyal.net/kitty/) as a terminal emulator, with [(bash)](https://www.gnu.org/software/bash/) integration
+* [(kakoune)](https://kakoune.org/) as a text editor, often with external programs like [(figlet)](http://www.figlet.org/) and [(boxes)](https://boxes.thomasjensen.com/)
+* [(firefox)](https://www.mozilla.org/firefox/), [(qutebrowser)](https://qutebrowser.org/), or [(lynx)](https://lynx.invisible-island.net/) as a web browser
+* [(pipe-rename)](https://github.com/marcusbuffett/pipe-rename) or [(mmv-go)](https://github.com/itchyny/mmv) for bulk renaming
+* [(texmacs)](https://texmacs.org/) occasionally for typesetting
+
+For more information, take a look at my dotfiles [[Github]](https://github.com/arnavcs/dotfiles) and scripts [[Github]](https://github.com/arnavcs/scripts).
+:::
+:::
+
+::: right-col
+::: episode
 # Presentations & Lectures
 
 ## **Streams and Lazy Evaluation** @ Webber Academy Programming Club [[notes]](./presentations/231013-streams/notes.py) [13^th^ Oct 2023]{.right}
@@ -64,20 +97,6 @@ Course names are abbreviated; hover for full course name.
 ## **Introductory Combinatory Logic** @ Webber Academy Math Society [11^th^ Oct 2022]{.right}
 
 - Introduction to combinatory logic; showing numbers and operations on numbers can be expressed as combinators
-:::
-:::
-
-::: right-col
-::: episode
-# Projects
-
-## **Interplanetary File Explorer** [[try it]](https://ipfe.elguindi.xyz/) [[Github]](https://github.com/youssefsoli/IPFE) [[Devpost]](https://devpost.com/software/changeme) [Jan 2023]{.right}
-
-- A visual file explorer of an IPFS written in Golang, Python, and JavaScript that uses one of Cohere's NLP models to summarize and categorize files based on metadata, and Estuary's API to fetch the files from the IPFS
-
-## **Prognosing Idiopathic Pulmonary Fibrosis** [[CWSF paper]](./projects/osic-cwsf-paper.pdf) [Dec 2020 - Jun 2021]{.right}
-
-- Several machine learning models written to predict the deterioration of the condition of the lungs over time for patients of Idiopathic Pulmonary Fibrosis and give a level of confidence in the prediction
 :::
 
 ::: episode
@@ -107,5 +126,6 @@ I am still going through entries ending with ◇.
 
 - University of Utah CS 4600 [(lectures)](https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh) [(assignments)](https://graphics.cs.utah.edu/courses/cs4600/fall2020/) ◇
 :::
+
 :::
 
