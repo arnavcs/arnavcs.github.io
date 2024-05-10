@@ -68,7 +68,7 @@ In pursuit of a simple, intuitive, and easily extensible computing experience, I
 * [(pipe-rename)](https://github.com/marcusbuffett/pipe-rename) or [(mmv-go)](https://github.com/itchyny/mmv) for bulk renaming
 * [(texmacs)](https://texmacs.org/) occasionally for typesetting
 
-For more information, take a look at my dotfiles [[Github]](https://github.com/arnavcs/dotfiles) and scripts [[Github]](https://github.com/arnavcs/scripts).
+For more information, take a look at my [[dotfiles]](https://github.com/arnavcs/dotfiles) and [[scripts]](https://github.com/arnavcs/scripts).
 :::
 :::
 
@@ -102,7 +102,7 @@ For more information, take a look at my dotfiles [[Github]](https://github.com/a
 ::: episode
 # Self-Learning
 
-I am still going through entries ending with ◇.
+I am still going through entries ending with &.
 
 ## **Formal Logic & Puzzles**
 
@@ -116,15 +116,15 @@ I am still going through entries ending with ◇.
 ## **Machine Learning, Probability, & Statistics**
 
 - *Essential Statistics for Data Science* by Mu Zhu
-- *A Course in Machine Learning* by Hal Daumé III [(book)](http://ciml.info/) ◇
+- *A Course in Machine Learning* by Hal Daumé III [(book)](http://ciml.info/) &
 
 ## **Cyber Security**
 
-- We Chall [(challenges)](https://www.wechall.net/challs) [[hints & notes]](./wargame/we-chall/index.html) ◇
+- We Chall [(challenges)](https://www.wechall.net/challs) [[hints & notes]](./wargame/we-chall/index.html) &
 
 ## **Geometry & Graphics**
 
-- University of Utah CS 4600 [(lectures)](https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh) [(assignments)](https://graphics.cs.utah.edu/courses/cs4600/fall2020/) ◇
+- University of Utah CS 4600 [(lectures)](https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh) [(assignments)](https://graphics.cs.utah.edu/courses/cs4600/fall2020/) &
 :::
 
 :::

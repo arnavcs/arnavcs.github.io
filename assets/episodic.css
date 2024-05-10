@@ -21,7 +21,7 @@
 
 body {
   background-color: var(--bg-color);
-  background-image: url(./tile.png);
+  background-image: url(./dots.svg);
   color: var(--fg-color);
   font-family: monospace;
   font-size: medium;
