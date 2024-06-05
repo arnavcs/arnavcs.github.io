@@ -16,6 +16,10 @@ footer {
   grid-area: f;
 }
 
+h2 {
+  color: var(--accent-color);
+}
+
 aside {
   grid-area: t;
 }

@@ -30,12 +30,8 @@ body {
   display: grid;
 }
 
-h1, strong {
+h1, h2 {
   color: var(--accent-color);
-}
-
-h2 {
-  font-weight: normal;
 }
 
 a, a:visited {
