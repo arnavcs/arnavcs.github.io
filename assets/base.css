@@ -1,0 +1,210 @@
+:root {
+  --bg-color: #1F1F28;
+  --fg-color: #DCD7BA;
+
+  --border-color: #54546D;
+  --link-color: #D27E99;
+  --code-color: #7AA89F;
+  --sel-color: #2D4F67;
+  --accent-color: #C0A36E;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  /* to stop the mobile resizing that occurs normally */
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* general global formats */
+
+body {
+  background-color: var(--bg-color);
+  background-image: url(./dots.svg);
+  color: var(--fg-color);
+  font-family: monospace;
+  font-size: medium;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+}
+
+h1, strong {
+  color: var(--accent-color);
+}
+
+h2 {
+  font-weight: normal;
+}
+
+a, a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+li::marker {
+  color: var(--accent-color);
+}
+
+::selection {
+  background-color: var(--sel-color);
+}
+
+code {
+  color: var(--code-color);
+}
+
+table th, table td {
+  border: 2px solid var(--border-color);
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  width: auto !important;
+}
+
+table col {
+  width: min-content !important;
+}
+
+table td, table tr, table th, table caption {
+  padding: 3px 5px;
+}
+
+table caption {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+math, math * {
+  margin-top: 0px !important;
+  font-size: small;
+}
+
+figure * {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr.lynx {
+  display: none;
+}
+
+/* Header formatting */
+
+header {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  padding: 20px;
+  text-align: center;
+}
+
+hgroup {
+  display: inline-block;
+}
+
+hgroup * {
+  display: inline;
+  vertical-align: middle;
+}
+
+hgroup h1 {
+  font-size: xx-large;
+}
+
+header *:not(:first-child) {
+  margin-top: 5px;
+}
+
+/* Footer formatting */
+
+footer {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  padding: 20px;
+}
+
+footer * {
+  text-align: center;
+}
+
+footer *:not(:first-child) {
+  margin-top: 5px;
+}
+
+/* injected text formatting */
+
+.episode {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  padding: 20px;
+}
+
+.episode h1:first-child {
+  margin-top: 0px;
+}
+
+.episode h1:not(:first-child) {
+  border-top: 2px solid var(--border-color);
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.episode * {
+  margin-top: 5px;
+}
+
+.episode h1 {
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+.episode h2, .episode h3 {
+  font-size: medium;
+  text-decoration: none;
+  margin-top: 15px;
+  position: relative;
+}
+
+.episode .right {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.episode ul, .episode dd {
+  padding-left: 20px;
+}
+
+.episode ol {
+  padding-left: 30px;
+}
+
+.episode li {
+  position: relative;
+}
+
+.episode img {
+  max-width: 100%;
+}
+
+.episode table {
+  margin-top: 10px;
+}
+
+.episode td {
+  min-width: 60px;
+}
+
+.episode hr {
+  width: 30%;
+  margin: auto;
+  margin-top: 10px;
+}
+

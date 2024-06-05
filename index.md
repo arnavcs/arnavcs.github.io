@@ -64,15 +64,24 @@ In pursuit of a simple, intuitive, and easily extensible computing experience, I
 * [(dmenu)](https://tools.suckless.org/dmenu/) or [(fzy)](https://github.com/jhawthorn/fzy) as a menu for user input in scripts
 * [(kitty)](https://sw.kovidgoyal.net/kitty/) as a terminal emulator, with [(bash)](https://www.gnu.org/software/bash/) integration
 * [(kakoune)](https://kakoune.org/) as a text editor, often with external programs like [(figlet)](http://www.figlet.org/) and [(boxes)](https://boxes.thomasjensen.com/)
+* [(pandoc markdown)](https://pandoc.org/MANUAL.html#pandocs-markdown) with [(pandoc-plot)](https://github.com/LaurentRDC/pandoc-plot) and [(codebraid)](https://codebraid.org/) filters, or occassionally [(texmacs)](https://texmacs.org/) for typesetting
 * [(firefox)](https://www.mozilla.org/firefox/), [(qutebrowser)](https://qutebrowser.org/), or [(lynx)](https://lynx.invisible-island.net/) as a web browser
 * [(pipe-rename)](https://github.com/marcusbuffett/pipe-rename) or [(mmv-go)](https://github.com/itchyny/mmv) for bulk renaming
-* [(texmacs)](https://texmacs.org/) occasionally for typesetting
 
 For more information, take a look at my [[dotfiles]](https://github.com/arnavcs/dotfiles) and [[scripts]](https://github.com/arnavcs/scripts).
 :::
 :::
 
 ::: right-col
+::: episode
+# Blog & Writings
+
+Dates are written in DD/MM/YY format.
+
+- [[04/06/24]]() Reflection on the Waterloo Spring '24 Game Jam WIP
+
+:::
+
 ::: episode
 # Presentations & Lectures
 
@@ -104,28 +113,28 @@ For more information, take a look at my [[dotfiles]](https://github.com/arnavcs/
 
 I am still going through entries ending with &.
 
+## **Combinatorics**
+
+- *Combinatorics and Partially Ordered Sets: Dimension Theory* by William T. Trotter &
+
 ## **Formal Logic & Puzzles**
 
 - *To Mock a Mockingbird* by Raymond Smullyan
 
-## **Programming Languages**
+## **Programming Theory**
 
 - *Concurrency in Go* by Katherine Cox-Buday [[notes]](./readings/concurrency-in-go/notes.pdf)
 - *Learn You a Haskell for Great Good!* by Miran Lipovača [(book)](https://learnyouahaskell.com/)
+- *Structure and Interpretation of Computer Programs* by Harold Abelson, Gerald Jay Sussman, and Julie Sussman [[reading club]](./self-learning/sicp/index.html) &
 
 ## **Machine Learning, Probability, & Statistics**
 
 - *Essential Statistics for Data Science* by Mu Zhu
 - *A Course in Machine Learning* by Hal Daumé III [(book)](http://ciml.info/) &
 
-## **Cyber Security**
-
-- We Chall [(challenges)](https://www.wechall.net/challs) [[hints & notes]](./wargame/we-chall/index.html) &
-
 ## **Geometry & Graphics**
 
 - University of Utah CS 4600 [(lectures)](https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh) [(assignments)](https://graphics.cs.utah.edu/courses/cs4600/fall2020/) &
 :::
-
 :::
 
