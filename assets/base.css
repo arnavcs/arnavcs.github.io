@@ -194,10 +194,6 @@ footer *:not(:first-child) {
   margin-top: 10px;
 }
 
-.episode td {
-  min-width: 60px;
-}
-
 .episode hr {
   width: 30%;
   margin: auto;
