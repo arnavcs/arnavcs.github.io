@@ -4,7 +4,7 @@ header: '[[Github]](https://github.com/arnavcs) [[itch.io]](https://arnavcs.itch
 footer: 'Page part of [(Simon''s Cozyring)](https://ring.simonwu.dev/): [(previous)](https://ring.simonwu.dev/prev/arnav) [(next)](https://ring.simonwu.dev/next/arnav) [(random)](https://ring.simonwu.dev/random/arnav)'
 ---
 
-::: intro
+::: epwrap
 ::: episode
 # Site Introduction
 
@@ -12,24 +12,31 @@ footer: 'Page part of [(Simon''s Cozyring)](https://ring.simonwu.dev/): [(previo
 * Links in (square|round) brackets are to content I (did|didn't) create, respectively.
 * This website does not have a sitemap; everything is accesible from this homepage.
 :::
+
+::: episode
+# Updates and Changelog
+
+- Uploaded link to first game jam project: Bloom. [5^th^ Jun 2024]{.right}
+- Created Wizard Reading Club webpage for SICP [4^th^ Jun 2024]{.right}
+:::
 :::
 
-::: left-col
+::: epwrap
 ::: episode
 # Projects
 
 ## **Bloom** [[itch.io]](https://kdxiao.itch.io/bloom) [[Github]](https://github.com/kdxiao/bloom) [May 2024 - Jun 2024]{.right}
 
-- A submission made in 72 hours with Godot for a game jam. You are a bee that pollinates flowers in a field to plant new hybrids.
-- Implemented colour mixing, screen wrapping, movement, and flower spawning mechanics.
+- A submission made in 72 hours with Godot for a game jam; you are a bee that pollinates flowers in a field to plant new hybrids
+- Implemented colour mixing, screen wrapping, movement, and flower spawning mechanics
 
 ## **Interplanetary File Explorer** [[try it]](https://ipfe.elguindi.xyz/) [[Github]](https://github.com/youssefsoli/IPFE) [[Devpost]](https://devpost.com/software/changeme) [Jan 2023]{.right}
 
-- A visual file explorer of an IPFS written in Golang, Python, and JavaScript that uses one of Cohere's NLP models to summarize and categorize files based on metadata, and Estuary's API to fetch the files from the IPFS.
+- A visual file explorer of an IPFS written in Golang, Python, and JavaScript that uses one of Cohere's NLP models to summarize and categorize files based on metadata, and Estuary's API to fetch the files from the IPFS
 
 ## **Prognosing IPF** [[CWSF paper]](./projects/osic-cwsf-paper.pdf) [Dec 2020 - Jun 2021]{.right}
 
-- Several machine learning models written to predict the deterioration of the condition of the lungs over time for patients of Idiopathic Pulmonary Fibrosis (IPF) and give a level of confidence in the prediction.
+- Several machine learning models written to predict the deterioration of the condition of the lungs over time for patients of Idiopathic Pulmonary Fibrosis (IPF) and give a level of confidence in the prediction
 :::
 
 ::: episode
@@ -75,9 +82,7 @@ In pursuit of a simple, intuitive, and easily extensible computing experience, I
 
 For more information, take a look at my [[dotfiles]](https://github.com/arnavcs/dotfiles) and [[scripts]](https://github.com/arnavcs/scripts).
 :::
-:::
 
-::: right-col
 ::: episode
 # Self-Learning
 

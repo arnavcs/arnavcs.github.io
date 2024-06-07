@@ -13,12 +13,14 @@ In addition, video lectures and accompanying course content are avaliable [(here
 
 # Schedule
 
-+----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Meeting Time   | Content Discussed                                                                                                                                     |
-+================+=======================================================================================================================================================+
-| Fri, 7^th^ Jun | [(Introduction to Chapter 1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-9.html)   |
-|                | and [(Section 1.1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-10.html)            |
-+----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Meeting Time    | Content Discussed                                                                                                                                   |
++=================+=====================================================================================================================================================+
+| Fri, 7^th^ Jun  | [(Introduction to Chapter 1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-9.html) |
+|                 | and [(Section 1.1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-10.html)          |
++-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Mon, 10^th^ Jun | [(Section 1.2)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-11.html)              |
++-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 # Meeting 1
 
@@ -70,3 +72,41 @@ It will attempt to evaluate `(p)` first (as it is an argument of `test`), which 
 
 With normal order, though, the program would terminate, yielding the value `0`.
 In specific, `(p)` will never be attempted to be evaluated because of the normal-order.
+
+## Exercise 1.6
+
+`if` is a special form, whereas `new-if` is simply a proceedure, so that all arguments are evaluated first.
+
+This means that `sqrt-iter` will never terminate because it will recursively call itself forever.
+
+## Exercise 1.7
+
+```scheme
+(define (sqrt x)
+  (define (new-guess g x)
+    (/ (+ g (/ x g)) 2))
+  (define (sqrt-iter g x)
+    (define g* (new-guess g x))
+    (if (< (abs (/ (- g* g) g*)) 0.001)
+        g*
+        (sqrt-iter g* x)))
+  (sqrt-iter 1 x))
+```
+
+## Exercise 1.8
+
+```scheme
+(define (good-enough? guess x)
+  (< (abs (- (* guess guess guess) x)) 0.001))
+
+(define (improve guess x)
+  (/ (+ (/ x (* y y))
+        (* 2 y))
+     3))
+
+(define (cbrt-iter guess x)
+  (if (good-enough? guess x)
+      guess
+      (cbrt-iter (improve guess x) x)))
+```
+
