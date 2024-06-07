@@ -81,6 +81,9 @@ This means that `sqrt-iter` will never terminate because it will recursively cal
 
 ## Exercise 1.7
 
+When small, the ratio of estimate to actual value is high.
+When large, floating point numbers are more coarse and there aren't numbers within 0.001 of the desired value.
+
 ```scheme
 (define (sqrt x)
   (define (new-guess g x)

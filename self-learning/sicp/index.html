@@ -132,6 +132,9 @@
       <p>This means that <code>sqrt-iter</code> will never terminate
       because it will recursively call itself forever.</p>
       <h2 id="exercise-1.7">Exercise 1.7</h2>
+      <p>When small, the ratio of estimate to actual value is high. When
+      large, floating point numbers are more coarse and there aren’t
+      numbers within 0.001 of the desired value.</p>
       <div class="sourceCode" id="cb4"><pre
       class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="kw">sqrt</span> x)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  (<span class="ex">define</span><span class="fu"> </span>(new-guess g x)</span>
