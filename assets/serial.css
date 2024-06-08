@@ -3,9 +3,9 @@ body {
     "h h"
     "b t"
     "f f";
-  grid-template-columns: 700px 300px;
+  grid-template-columns: 700px 200px;
   grid-gap: 20px;
-  width: 1020px;
+  width: 920px;
 }
 
 header {
@@ -22,13 +22,15 @@ h2 {
 
 aside {
   grid-area: t;
+  column-count: auto;
+  column-width: 200px;
 }
 
 main {
   grid-area: b;
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 960px) {
   body {
     grid-template-areas: 
       "h"

@@ -4,21 +4,12 @@ header: '[[Github]](https://github.com/arnavcs) [[itch.io]](https://arnavcs.itch
 footer: 'Page part of [(Simon''s Cozyring)](https://ring.simonwu.dev/): [(previous)](https://ring.simonwu.dev/prev/arnav) [(next)](https://ring.simonwu.dev/next/arnav) [(random)](https://ring.simonwu.dev/random/arnav)'
 ---
 
-::: epwrap
 ::: episode
 # Site Introduction
 
 * This site is best viewed through a computer, and wasn't designed for mobile use.
 * Links in (square|round) brackets are to content I (did|didn't) create, respectively.
 * This website does not have a sitemap; everything is accesible from this homepage.
-:::
-
-::: episode
-# Updates and Changelog
-
-- Uploaded link to first game jam project: Bloom. [5^th^ Jun 2024]{.right}
-- Created Wizard Reading Club webpage for SICP [4^th^ Jun 2024]{.right}
-:::
 :::
 
 ::: epwrap
