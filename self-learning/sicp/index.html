@@ -37,6 +37,19 @@
       <li><a href="#exercise-1.8" id="toc-exercise-1.8">Exercise
       1.8</a></li>
       </ul></li>
+      <li><a href="#meeting-2" id="toc-meeting-2">Meeting 2</a>
+      <ul>
+      <li><a href="#exercise-1.9" id="toc-exercise-1.9">Exercise
+      1.9</a></li>
+      <li><a href="#exercise-1.13" id="toc-exercise-1.13">Exercise
+      1.13</a></li>
+      <li><a href="#exercise-1.17" id="toc-exercise-1.17">Exercise
+      1.17</a></li>
+      <li><a href="#exercise-1.21" id="toc-exercise-1.21">Exercise
+      1.21</a></li>
+      <li><a href="#exercise-1.25" id="toc-exercise-1.25">Exercise
+      1.25</a></li>
+      </ul></li>
       </ul>
     </aside>
     <hr class="lynx" />
@@ -54,6 +67,9 @@
       avaliable <a
       href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/">(here)</a>,
       but this is not the main focus of this reading club.</p>
+      <p>Each member of the club is assigned a different set of
+      exercises to complete, and we share notable exercises during
+      meetings.</p>
       <h1 id="schedule">Schedule</h1>
       <table>
       <colgroup>
@@ -80,6 +96,12 @@
       <td><a
       href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-11.html">(Section
       1.2)</a></td>
+      </tr>
+      <tr class="odd">
+      <td>Fri, 14<sup>th</sup> Jun</td>
+      <td><a
+      href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-12.html">(Section
+      1.3)</a></td>
       </tr>
       </tbody>
       </table>
@@ -159,6 +181,73 @@
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">if</span> (good-enough? guess x)</span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      guess</span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>      (cbrt-iter (improve guess x) x)))</span></code></pre></div>
+      <h1 id="meeting-2">Meeting 2</h1>
+      <h2 id="exercise-1.9">Exercise 1.9</h2>
+      <p>With the first definition, we get a recursive process as seen
+      below.</p>
+      <div class="sourceCode" id="cb6"><pre
+      class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>   (<span class="op">+</span> <span class="dv">4</span> <span class="dv">5</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (inc (<span class="op">+</span> <span class="dv">3</span> <span class="dv">5</span>))</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (inc (inc (<span class="op">+</span> <span class="dv">2</span> <span class="dv">5</span>)))</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (inc (inc (inc (<span class="op">+</span> <span class="dv">1</span> <span class="dv">5</span>))))</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (inc (inc (inc (inc (<span class="op">+</span> <span class="dv">0</span> <span class="dv">5</span>)))))</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (inc (inc (inc (inc <span class="dv">5</span>))))</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (inc (inc (inc <span class="dv">6</span>)))</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (inc (inc <span class="dv">7</span>))</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (inc <span class="dv">8</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> <span class="dv">9</span></span></code></pre></div>
+      <p>And with the second, we get an iterative process as show
+      below.</p>
+      <div class="sourceCode" id="cb7"><pre
+      class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>   (<span class="op">+</span> <span class="dv">4</span> <span class="dv">5</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (<span class="op">+</span> <span class="dv">3</span> <span class="dv">6</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (<span class="op">+</span> <span class="dv">2</span> <span class="dv">7</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (<span class="op">+</span> <span class="dv">1</span> <span class="dv">8</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (<span class="op">+</span> <span class="dv">0</span> <span class="dv">9</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> <span class="dv">9</span></span></code></pre></div>
+      <h2 id="exercise-1.13">Exercise 1.13</h2>
+      <p>Let
+      <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mi>n</mi></msub><annotation encoding="application/x-tex">F_n</annotation></semantics></math>
+      be the
+      <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math><sup>th</sup>
+      Fibonacci number. Binet’s formula gives us
+      <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><msup><mi>ϕ</mi><mi>n</mi></msup><mo>−</mo><msup><mi>ψ</mi><mi>n</mi></msup></mrow><msqrt><mn>5</mn></msqrt></mfrac><mo>=</mo><mfrac><msup><mi>ϕ</mi><mi>n</mi></msup><msqrt><mn>5</mn></msqrt></mfrac><mo>−</mo><mfrac><msup><mi>ψ</mi><mi>n</mi></msup><msqrt><mn>5</mn></msqrt></mfrac></mrow><annotation encoding="application/x-tex">F_n = \frac{\phi^n - \psi^n}{\sqrt{5}} = \frac{\phi^n}{\sqrt{5}} - \frac{\psi^n}{\sqrt{5}}</annotation></semantics></math>.</p>
+      <p>Since
+      <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo>∈</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\psi \in (0,1)</annotation></semantics></math>,
+      for all
+      <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><annotation encoding="application/x-tex">n \in \mathbb{N}</annotation></semantics></math>
+      we have
+      <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msup><mi>ψ</mi><mi>n</mi></msup><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mrow><mo stretchy="true" form="prefix">|</mo><mi>ψ</mi><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">|\psi^n| \le |\psi|</annotation></semantics></math>
+      so
+      <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>F</mi><mi>n</mi></msub><mo>−</mo><mfrac><msup><mi>ϕ</mi><mi>n</mi></msup><msqrt><mn>5</mn></msqrt></mfrac><mo stretchy="true" form="postfix">|</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">|</mo><mfrac><msup><mi>ψ</mi><mi>n</mi></msup><msqrt><mn>5</mn></msqrt></mfrac><mo stretchy="true" form="postfix">|</mo></mrow><mo>≤</mo><mrow><mo stretchy="true" form="prefix">|</mo><mfrac><mi>ψ</mi><msqrt><mn>5</mn></msqrt></mfrac><mo stretchy="true" form="postfix">|</mo></mrow><mo>&lt;</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\left| F_n - \frac{\phi^n}{\sqrt{5}} \right| = \left| \frac{\psi^n}{\sqrt{5}} \right| \le \left| \frac{\psi}{\sqrt{5}} \right| &lt; 0.5</annotation></semantics></math>.</p>
+      <p>Hence
+      <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mi>n</mi></msub><annotation encoding="application/x-tex">F_n</annotation></semantics></math>
+      is the closest integer to
+      <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><msup><mi>ϕ</mi><mi>n</mi></msup><msqrt><mn>5</mn></msqrt></mfrac><annotation encoding="application/x-tex">\frac{\phi^n}{\sqrt{5}}</annotation></semantics></math>
+      as desired.</p>
+      <h2 id="exercise-1.17">Exercise 1.17</h2>
+      <div class="sourceCode" id="cb8"><pre
+      class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(fast-* a b)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">; fast-*-iter calculates a * b + acc</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  (<span class="ex">define</span><span class="fu"> </span>(fast-*-iter acc a b)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    (<span class="kw">cond</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>      ((<span class="kw">zero?</span> b) acc)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>      ((<span class="kw">even?</span> b) (fast-*-iter acc</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>                              (double a)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>                              (halve b)))</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>      (<span class="kw">else</span>      (fast-*-iter (<span class="op">+</span> acc a)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>                              a</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>                              (<span class="op">-</span> b <span class="dv">1</span>)))))</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  (fast-*-iter <span class="dv">0</span> a b))</span></code></pre></div>
+      <h2 id="exercise-1.21">Exercise 1.21</h2>
+      <p>The smallest divisors of 199, 1999, and 19999 are 199, 1999,
+      and 7 respectively.</p>
+      <h2 id="exercise-1.25">Exercise 1.25</h2>
+      <p>This would not be ideal for our fast prime tester. By taking
+      the remainder at the end, we have to calculate the entire
+      exponentiation result, meaning that we work with larger numbers so
+      each multiplication is harder. On the other hand, by taking the
+      remainder after every step, we maintain small values.</p>
     </main>
     <hr class="lynx" />
     <footer>
