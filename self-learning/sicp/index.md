@@ -11,20 +11,23 @@ The text is avaliable completely for free in [(pdf)](https://web.mit.edu/6.001/6
 
 In addition, video lectures and accompanying course content are avaliable [(here)](https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/), but this is not the main focus of this reading club.
 
-Each member of the club is assigned a different set of exercises to complete, and we share notable exercises during meetings.
+Each member of the club is welcome to complete any set of exercises that interest them, and we will share notable exercises during meetings.
 
 # Schedule
 
-+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| Meeting Time    | Content Discussed                                                                                                                                   |
-+=================+=====================================================================================================================================================+
-| Fri, 7^th^ Jun  | [(Introduction to Chapter 1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-9.html) |
-|                 | and [(Section 1.1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-10.html)          |
-+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| Mon, 10^th^ Jun | [(Section 1.2)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-11.html)              |
-+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| Fri, 14^th^ Jun | [(Section 1.3)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-12.html)              |
-+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| No. | Meeting Time    | Content Discussed                                                                                                                                    |
++=====+=================+======================================================================================================================================================+
+| 1   | Fri, 7^th^ Jun  | [(Introduction to Chapter 1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-9.html)  |
+|     |                 | and [(Section 1.1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-10.html)           |
++-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2   | Mon, 10^th^ Jun | [(Section 1.2)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-11.html)               |
++-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 3   | Fri, 14^th^ Jun | [(Section 1.3)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-12.html)               |
++-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 4   | Mon, 17^th^ Jun | [(Introduction to Chapter 2)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-13.html) |
+|     |                 | and [(Section 2.1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-14.html)           |
++-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 # Meeting 1
 
@@ -179,4 +182,50 @@ This would not be ideal for our fast prime tester.
 By taking the remainder at the end, we have to calculate the entire exponentiation result, meaning that we work with larger numbers so each multiplication is harder.
 On the other hand, by taking the remainder after every step, we maintain small values.
 
+# Meeting 3
+
+## Exercise 1.34
+
+The interpreter will give an error and be unable to interpret the expression `(f f)`. This is because we try to apply `2` as if it were a function, but it is not.
+
+```scheme
+   (f f)
+=> (f 2)
+=> (2 2)
+```
+
+## Exercise 1.42
+
+```scheme
+(define (compose f g)
+  (lambda (x) (f (g x))))
+```
+
+## Exercise 1.43
+
+Written as a linear iterative process:
+
+```scheme
+(define (repeated f n)
+  (lambda (x)
+    (define (iter n a)
+      (if (zero? n)
+          a
+          (iter (- n 1) (f a))))
+    (iter n x)))
+```
+
+## Exercise 1.44
+
+```scheme
+(define (smooth f)
+  (define dx 0.0001)
+  (define (average a b c)
+    (/ (+ a b c) 3))
+  (lambda (x)
+    (average (f (- x dx)) (f x) (f (+ x dx)))))
+
+(define (n-fold-smooth n f)
+  ((repeated smooth n) f))
+```
 

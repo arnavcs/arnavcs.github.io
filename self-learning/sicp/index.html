@@ -50,6 +50,17 @@
       <li><a href="#exercise-1.25" id="toc-exercise-1.25">Exercise
       1.25</a></li>
       </ul></li>
+      <li><a href="#meeting-3" id="toc-meeting-3">Meeting 3</a>
+      <ul>
+      <li><a href="#exercise-1.34" id="toc-exercise-1.34">Exercise
+      1.34</a></li>
+      <li><a href="#exercise-1.42" id="toc-exercise-1.42">Exercise
+      1.42</a></li>
+      <li><a href="#exercise-1.43" id="toc-exercise-1.43">Exercise
+      1.43</a></li>
+      <li><a href="#exercise-1.44" id="toc-exercise-1.44">Exercise
+      1.44</a></li>
+      </ul></li>
       </ul>
     </aside>
     <hr class="lynx" />
@@ -67,23 +78,26 @@
       avaliable <a
       href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/">(here)</a>,
       but this is not the main focus of this reading club.</p>
-      <p>Each member of the club is assigned a different set of
-      exercises to complete, and we share notable exercises during
-      meetings.</p>
+      <p>Each member of the club is welcome to complete any set of
+      exercises that interest them, and we will share notable exercises
+      during meetings.</p>
       <h1 id="schedule">Schedule</h1>
-      <table>
+      <table style="width:99%;">
       <colgroup>
+      <col style="width: 3%" />
       <col style="width: 10%" />
-      <col style="width: 89%" />
+      <col style="width: 85%" />
       </colgroup>
       <thead>
       <tr class="header">
+      <th>No.</th>
       <th>Meeting Time</th>
       <th>Content Discussed</th>
       </tr>
       </thead>
       <tbody>
       <tr class="odd">
+      <td>1</td>
       <td>Fri, 7<sup>th</sup> Jun</td>
       <td><a
       href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-9.html">(Introduction
@@ -92,16 +106,27 @@
       1.1)</a></td>
       </tr>
       <tr class="even">
+      <td>2</td>
       <td>Mon, 10<sup>th</sup> Jun</td>
       <td><a
       href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-11.html">(Section
       1.2)</a></td>
       </tr>
       <tr class="odd">
+      <td>3</td>
       <td>Fri, 14<sup>th</sup> Jun</td>
       <td><a
       href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-12.html">(Section
       1.3)</a></td>
+      </tr>
+      <tr class="even">
+      <td>4</td>
+      <td>Mon, 17<sup>th</sup> Jun</td>
+      <td><a
+      href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-13.html">(Introduction
+      to Chapter 2)</a> and <a
+      href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-14.html">(Section
+      2.1)</a></td>
       </tr>
       </tbody>
       </table>
@@ -248,6 +273,40 @@
       exponentiation result, meaning that we work with larger numbers so
       each multiplication is harder. On the other hand, by taking the
       remainder after every step, we maintain small values.</p>
+      <h1 id="meeting-3">Meeting 3</h1>
+      <h2 id="exercise-1.34">Exercise 1.34</h2>
+      <p>The interpreter will give an error and be unable to interpret
+      the expression <code>(f f)</code>. This is because we try to apply
+      <code>2</code> as if it were a function, but it is not.</p>
+      <div class="sourceCode" id="cb9"><pre
+      class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>   (f f)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (f <span class="dv">2</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (<span class="dv">2</span> <span class="dv">2</span>)</span></code></pre></div>
+      <h2 id="exercise-1.42">Exercise 1.42</h2>
+      <div class="sourceCode" id="cb10"><pre
+      class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(compose f g)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">lambda</span> (x) (f (g x))))</span></code></pre></div>
+      <h2 id="exercise-1.43">Exercise 1.43</h2>
+      <p>Written as a linear iterative process:</p>
+      <div class="sourceCode" id="cb11"><pre
+      class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(repeated f n)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">lambda</span> (x)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    (<span class="ex">define</span><span class="fu"> </span>(iter n a)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>      (<span class="kw">if</span> (<span class="kw">zero?</span> n)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>          a</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>          (iter (<span class="op">-</span> n <span class="dv">1</span>) (f a))))</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    (iter n x)))</span></code></pre></div>
+      <h2 id="exercise-1.44">Exercise 1.44</h2>
+      <div class="sourceCode" id="cb12"><pre
+      class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(smooth f)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  (<span class="ex">define</span><span class="fu"> dx </span><span class="fl">0.0001</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  (<span class="ex">define</span><span class="fu"> </span>(average a b c)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    (<span class="op">/</span> (<span class="op">+</span> a b c) <span class="dv">3</span>))</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">lambda</span> (x)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    (average (f (<span class="op">-</span> x dx)) (f x) (f (<span class="op">+</span> x dx)))))</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(n-fold-smooth n f)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  ((repeated smooth n) f))</span></code></pre></div>
     </main>
     <hr class="lynx" />
     <footer>
