@@ -89,7 +89,7 @@ I am still going through entries ending with &.
 
 ## **Programming Theory**
 
-- *Concurrency in Go* by Katherine Cox-Buday [[notes]](./readings/concurrency-in-go/notes.pdf)
+- *Concurrency in Go* by Katherine Cox-Buday [[notes]](./self-learning/concurrency-in-go/notes.pdf)
 - *Learn You a Haskell for Great Good!* by Miran Lipovača [(book)](https://learnyouahaskell.com/)
 - *Structure and Interpretation of Computer Programs* by Harold Abelson, Gerald Jay Sussman, and Julie Sussman [[reading club]](./self-learning/sicp/index.html) &
 
