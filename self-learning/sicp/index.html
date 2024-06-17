@@ -61,6 +61,15 @@
       <li><a href="#exercise-1.44" id="toc-exercise-1.44">Exercise
       1.44</a></li>
       </ul></li>
+      <li><a href="#meeting-4" id="toc-meeting-4">Meeting 4</a>
+      <ul>
+      <li><a href="#exercise-2.4" id="toc-exercise-2.4">Exercise
+      2.4</a></li>
+      <li><a href="#exercise-2.5" id="toc-exercise-2.5">Exercise
+      2.5</a></li>
+      <li><a href="#exercise-2.6" id="toc-exercise-2.6">Exercise
+      2.6</a></li>
+      </ul></li>
       </ul>
     </aside>
     <hr class="lynx" />
@@ -127,6 +136,43 @@
       to Chapter 2)</a> and <a
       href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-14.html">(Section
       2.1)</a></td>
+      </tr>
+      <tr class="odd">
+      <td>5</td>
+      <td>Fri, 21<sup>st</sup> Jun</td>
+      <td><a
+      href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-15.html">(Section
+      2.2)</a></td>
+      </tr>
+      <tr class="even">
+      <td>6</td>
+      <td>Mon, 24<sup>th</sup> Jun</td>
+      <td><a
+      href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-16.html">(Section
+      2.3)</a></td>
+      </tr>
+      <tr class="odd">
+      <td>7</td>
+      <td>Fri, 28<sup>th</sup> Jun</td>
+      <td><a
+      href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-17.html">(Section
+      2.4)</a></td>
+      </tr>
+      <tr class="even">
+      <td>8</td>
+      <td>Mon, 1<sup>st</sup> Jul</td>
+      <td><a
+      href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-18.html">(Section
+      2.5)</a></td>
+      </tr>
+      <tr class="odd">
+      <td>9</td>
+      <td>Fri, 5<sup>th</sup> Jul</td>
+      <td><a
+      href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-19.html">(Introduction
+      to Chapter 3)</a> and <a
+      href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-20.html">(Section
+      3.1)</a></td>
       </tr>
       </tbody>
       </table>
@@ -307,6 +353,46 @@
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(n-fold-smooth n f)</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  ((repeated smooth n) f))</span></code></pre></div>
+      <h1 id="meeting-4">Meeting 4</h1>
+      <h2 id="exercise-2.4">Exercise 2.4</h2>
+      <p>We have that <code>(car (cons x y))</code> yields
+      <code>x</code> as desired.</p>
+      <div class="sourceCode" id="cb13"><pre
+      class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>   (<span class="kw">car</span> (<span class="kw">cons</span> x y))</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> (<span class="kw">car</span> (<span class="kw">lambda</span> (m) (m x y)))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> ((<span class="kw">lambda</span> (m) (m x y)) (<span class="kw">lambda</span> (p q) p))</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> ((<span class="kw">lambda</span> (p q) p) x y)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="op">=&gt;</span> x</span></code></pre></div>
+      <p>And a valid definition of <code>cdr</code> is given below.</p>
+      <div class="sourceCode" id="cb14"><pre
+      class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="kw">cdr</span> z)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  (z (<span class="kw">lambda</span> (p q) q)))</span></code></pre></div>
+      <h2 id="exercise-2.5">Exercise 2.5</h2>
+      <div class="sourceCode" id="cb15"><pre
+      class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="kw">cons</span> x y)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  (<span class="op">*</span> (<span class="kw">expt</span> <span class="dv">2</span> x)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>     (<span class="kw">expt</span> <span class="dv">3</span> y)))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="kw">car</span> z)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  (<span class="ex">define</span><span class="fu"> </span>(iter n z)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    (<span class="kw">if</span> (<span class="kw">zero?</span> (<span class="kw">modulo</span> z <span class="dv">2</span>))</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        (iter (<span class="op">+</span> n <span class="dv">1</span>) (<span class="op">/</span> z <span class="dv">2</span>))</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        <span class="dv">0</span>))</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  (iter <span class="dv">0</span> z))</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(<span class="kw">cdr</span> z)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  (<span class="ex">define</span><span class="fu"> </span>(iter n z)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    (<span class="kw">if</span> (<span class="kw">zero?</span> (<span class="kw">modulo</span> z <span class="dv">3</span>))</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>        (iter (<span class="op">+</span> n <span class="dv">1</span>) (<span class="op">/</span> z <span class="dv">3</span>))</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>        <span class="dv">0</span>))</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  (iter <span class="dv">0</span> z))</span></code></pre></div>
+      <h2 id="exercise-2.6">Exercise 2.6</h2>
+      <div class="sourceCode" id="cb16"><pre
+      class="sourceCode scheme"><code class="sourceCode scheme"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> one</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">lambda</span> (f) (<span class="kw">lambda</span> (x) (f x))))</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> two</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">lambda</span> (f) (<span class="kw">lambda</span> (x) (f (f x)))))</span></code></pre></div>
     </main>
     <hr class="lynx" />
     <footer>

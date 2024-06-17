@@ -28,6 +28,17 @@ Each member of the club is welcome to complete any set of exercises that interes
 | 4   | Mon, 17^th^ Jun | [(Introduction to Chapter 2)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-13.html) |
 |     |                 | and [(Section 2.1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-14.html)           |
 +-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 5   | Fri, 21^st^ Jun | [(Section 2.2)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-15.html)               |
++-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 6   | Mon, 24^th^ Jun | [(Section 2.3)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-16.html)               |
++-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 7   | Fri, 28^th^ Jun | [(Section 2.4)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-17.html)               |
++-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 8   | Mon, 1^st^ Jul  | [(Section 2.5)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-18.html)               |
++-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 9   | Fri, 5^th^ Jul  | [(Introduction to Chapter 3)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-19.html) |
+|     |                 | and [(Section 3.1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-20.html)           |
++-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 # Meeting 1
 
@@ -229,3 +240,55 @@ Written as a linear iterative process:
   ((repeated smooth n) f))
 ```
 
+# Meeting 4
+
+## Exercise 2.4
+
+We have that `(car (cons x y))` yields `x` as desired.
+
+```scheme
+   (car (cons x y))
+=> (car (lambda (m) (m x y)))
+=> ((lambda (m) (m x y)) (lambda (p q) p))
+=> ((lambda (p q) p) x y)
+=> x
+```
+
+And a valid definition of `cdr` is given below.
+
+```scheme
+(define (cdr z)
+  (z (lambda (p q) q)))
+```
+
+## Exercise 2.5
+
+```scheme
+(define (cons x y)
+  (* (expt 2 x)
+     (expt 3 y)))
+
+(define (car z)
+  (define (iter n z)
+    (if (zero? (modulo z 2))
+        (iter (+ n 1) (/ z 2))
+        0))
+  (iter 0 z))
+
+(define (cdr z)
+  (define (iter n z)
+    (if (zero? (modulo z 3))
+        (iter (+ n 1) (/ z 3))
+        0))
+  (iter 0 z))
+```
+
+## Exercise 2.6
+
+```scheme
+(define one
+  (lambda (f) (lambda (x) (f x))))
+
+(define two
+  (lambda (f) (lambda (x) (f (f x)))))
+```
