@@ -28,15 +28,15 @@ Each member of the club is welcome to complete any set of exercises that interes
 | 4   | Mon, 17^th^ Jun | [(Introduction to Chapter 2)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-13.html) |
 |     |                 | and [(Section 2.1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-14.html)           |
 +-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 5   | Fri, 21^st^ Jun | [(Section 2.2)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-15.html)               |
+| 5   | Fri, 28^th^ Jun | [(Section 2.2)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-15.html)               |
 +-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 6   | Mon, 24^th^ Jun | [(Section 2.3)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-16.html)               |
+| 6   | Fri, 5^th^ Jul  | [(Section 2.3)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-16.html)               |
 +-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 7   | Fri, 28^th^ Jun | [(Section 2.4)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-17.html)               |
+| 7   | Fri, 12^th^ Jul | [(Section 2.4)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-17.html)               |
 +-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 8   | Mon, 1^st^ Jul  | [(Section 2.5)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-18.html)               |
+| 8   | Fri, 19^th^ Jul | [(Section 2.5)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-18.html)               |
 +-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 9   | Fri, 5^th^ Jul  | [(Introduction to Chapter 3)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-19.html) |
+| 9   | Fri, 26^th^ Jul | [(Introduction to Chapter 3)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-19.html) |
 |     |                 | and [(Section 3.1)](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book-Z-H-20.html)           |
 +-----+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
 
