@@ -292,3 +292,158 @@ And a valid definition of `cdr` is given below.
 (define two
   (lambda (f) (lambda (x) (f (f x)))))
 ```
+
+# Meeting 5
+
+## Exercise 2.17
+
+```scheme
+(define (last-pair as)
+  (if (null? (cdr as))
+      as
+      (last-pair (cdr as))))
+```
+
+## Exercise 2.18
+
+```scheme
+(define (reverse as)
+  (define (rev-iter in out)
+    (if (null? in)
+        out
+        (rev-iter (cdr in)
+                  (cons (car in)
+                        out))))
+  (rev-iter as '()))
+```
+
+## Exercise 2.20
+
+```scheme
+(define (same-parity . as)
+  (define (filter-parity as p)
+    (cond ((null? as)                as)
+          ((= (modulo (car as) 2) p) (cons (car as)
+                                           (filter-parity (cdr as) p)))
+          (else                      (filter-parity (cdr as) p))))
+  (filter-parity as
+                 (if (null? as)
+                     -1
+                     (modulo (car as) 2))))
+```
+
+## Exercise 2.23
+
+```scheme
+(define (for-each f as)
+  (if (null? as)
+      #t
+      (begin (f (car as))
+             (for-each f (cdr as)))))
+```
+
+## Exercise 2.24
+
+The interpreter will print `(1 (2 (3 4)))`.
+Here is the box-and-pointer structure:
+```
+┌───┬───┐   ┌───┬───┐
+│   │   │ → │   │ / │
+└───┴───┘   └───┴───┘
+  ↓           ↓
+┌───┐       ┌───┬───┐   ┌───┬───┐
+│ 1 │       │   │   │ → │   │ / │
+└───┘       └───┴───┘   └───┴───┘
+              ↓           ↓
+            ┌───┐       ┌───┬───┐   ┌───┬───┐
+            │ 2 │       │   │   │ → │   │ / │
+            └───┘       └───┴───┘   └───┴───┘
+                          ↓           ↓
+                        ┌───┐       ┌───┐
+                        │ 3 │       │ 4 │
+                        └───┘       └───┘
+```
+
+Here is the tree diagram:
+```
+  •
+ / \
+1   •
+   / \
+  2   •
+     / \
+    3   4
+```
+
+## Exercise 2.27
+
+```scheme
+(define (deep-reverse t)
+  (cond
+    ((null? t) t)
+    ((pair? t) (reverse (map deep-reverse t)))
+    (else      t)))
+```
+
+## Exercise 2.28
+
+```scheme
+(define (fringe t)
+  (cond
+    ((null? t) t)
+    ((pair? t) (append (fringe (car t))
+                       (fringe (cdr t))))
+    (else      (list t))))
+```
+
+## Exercise 2.31
+
+```scheme
+(define (tree-map f t)
+  (cond
+    ((null? t) t)
+    ((list? t) (map (lambda (t) (tree-map f t)) t))
+    (else      (f t))))
+```
+
+## Exercise 2.32
+
+Because every subset either contains an element or doesn't, we simply split on those two cases, and append the results.
+
+```scheme
+(define (subsets s)
+  (if (null? s)
+      (list '())
+      (let ((rest (subsets (cdr s))))
+        (append rest                               ; subset doesn't contain (car s)
+                (map (lambda (x) (cons (car s) x)) ; subset contains (car s)
+                     rest)))))
+```
+
+## Exercise 2.33
+
+```scheme
+(define (map p seq)
+  (accumulate (lambda (x y) (cons (p x) y)) '() seq)
+
+(define (append seq1 seq2)
+  (accumulate cons seq2 (reverse seq1)))
+
+(define (length sequence)
+  (accumulate (lambda (x y) (+ y 1)) 0 sequence))
+```
+
+## Exercise 2.41
+
+```scheme
+(define (unique-pairs n)
+  (flatmap
+    (lambda (i)
+      (map (lambda (j) (list i j))
+           (enumerate-interval 1 (- i 1))))
+    (enumerate-interval 1 n)))
+
+(define (prime-sum-pairs n)
+  (map make-pair-sum
+       (filter prime-sum? (unique-pairs n))))
+```
