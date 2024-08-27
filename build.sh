@@ -3,7 +3,6 @@
 # build.sh
 
 pandoc --standalone \
-       --css ./assets/base.css \
-       --css ./assets/episodic.css \
-       --template ./assets/episodic.html \
+       --css ./assets/style.css \
+       --template ./assets/template.html \
        ./index.md -o ./index.html
