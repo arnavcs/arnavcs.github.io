@@ -93,10 +93,15 @@ math, math * {
 
 figure {
   display: block;
-  width: 50%;
   margin-left: auto;
   margin-right: auto;
+  width: min-content;
   text-align: center;
+}
+
+figure pre {
+  text-align: left;
+  width: min-content;
 }
 
 /* Header formatting */
