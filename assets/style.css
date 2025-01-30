@@ -209,14 +209,6 @@ main hgroup * {
   bottom: 0px;
 }
 
-.tag::before {
-  content: "<";
-}
-
-.tag::after {
-  content: ">";
-}
-
 .tag {
   color: var(--code-color);
 }
