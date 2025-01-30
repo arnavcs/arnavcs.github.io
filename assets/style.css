@@ -6,6 +6,7 @@
   --link-color: #D27E99;
   --code-color: #7FB4CA;
   --sel-color: #2D4F67;
+  --soft-acc-bg-color: #2D4F6760;
   --accent-color: #C0A36E;
 }
 
@@ -193,7 +194,7 @@ table {
   margin-top: 10px;
 }
 
-main hgroup {
+main hgroup, main li {
   position: relative;
   display: block;
 }
@@ -206,5 +207,21 @@ main hgroup * {
   position: absolute;
   right: 0px;
   bottom: 0px;
+}
+
+.tag::before {
+  content: "<";
+}
+
+.tag::after {
+  content: ">";
+}
+
+.tag {
+  color: var(--code-color);
+}
+
+em {
+  background-color: var(--soft-acc-bg-color);
 }
 
