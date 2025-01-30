@@ -213,6 +213,16 @@ main hgroup * {
   color: var(--code-color);
 }
 
+ul li {
+  padding-left: 40px;
+  text-indent: -40px;
+}
+
+ul li * {
+  padding-left: 0px;
+  text-indent: 0px;
+}
+
 em {
   background-color: var(--soft-acc-bg-color);
 }
