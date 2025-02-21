@@ -194,9 +194,13 @@ table {
   margin-top: 10px;
 }
 
-main hgroup, main li {
+main hgroup {
   position: relative;
   display: block;
+}
+
+main li {
+  position: relative;
 }
 
 main hgroup * {
@@ -213,7 +217,11 @@ main hgroup * {
   color: var(--code-color);
 }
 
-ul li {
+ul.blank {
+  list-style-type: none;
+}
+
+ul.blank li {
   padding-left: 40px;
   text-indent: -40px;
 }
