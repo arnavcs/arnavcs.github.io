@@ -2,14 +2,21 @@
 
 \begin{resumeItem}
 \experienceHead{Software Engineer}{Trend Micro}{Jan 2025 - Apr 2025}{Kanata, ON.}
+\begin{resumeList}
+    \item Spearheaded Alicloud infrastructure deployment using Terraform, and developed serverless functions for disk snapshots.
+    \item Engineered utility functions for Alicloud's Object Storage Service and Parameter Store, optimizing cloud workflows and enhancing secure data management.
+\end{resumeList}
 \end{resumeItem}
 
 \begin{resumeItem}
 \experienceHead{Combinatorics Researcher}{University of Waterloo}{May 2024 - Aug 2024}{Waterloo, ON.}
 \begin{resumeList}
-    \item Worked on novel research exploring random graph orders and poset dimension utilizing probabilistic methods including configuration models, approximation techniques, and convergence in probability. 
-    \item Examined a conjecture about poset dimension, designing and running programs to search for counterexamples, and devising constructions to improve random graph order dimension bounds.
+    \item Worked on novel research exploring random graph orders and poset dimension utilizing configuration models, approximation techniques, convergence in probability, devising constructions, and computationally searching for counterexamples. 
+    % \item Examined a conjecture about poset dimension, designing and running programs to search for counterexamples, and devising constructions to improve random graph order dimension bounds.
+    \item Developed two theorems about the nature of poset dimension for bipartite posets based on the dimension of induced subposets and for random graph orders.
+\ifthenelse{ \equal{\version}{cv} }{
     \item Engaged in regular meetings to discuss and advance research, demonstrating capacity for effective collaboration.
+}{}
 \end{resumeList}
 \end{resumeItem}
 
@@ -26,8 +33,10 @@
 \begin{resumeItem}
 \experienceHead{Data Science Intern}{Tektorch.ai}{Apr 2022 - Aug 2022}{Online}
 \begin{resumeList}
+\ifthenelse{ \equal{\version}{cv} }{
     \item Extracted features such as job title, location, classification, and pay from a job listing website using Python, Beautiful Soup 4, NumPy, and Pandas to create a dataset for analysis. 
-    \item Developed an end-to-end data visualization pipeline to ingest data and display trends using Matplotlib, and NumPy.
+}{}
+    \item Developed an end-to-end data visualization pipeline to ingest data and display trends using Matplotlib and NumPy.
 \end{resumeList}
 \end{resumeItem}
 
@@ -66,7 +75,11 @@
 \experienceHead{Machine Learning Research Intern}{University of Alberta}{Jul 2021 - Aug 2021}{Online}
 \begin{resumeList}
     \item Trained and employed Natural Language Processing (NLP) models to help determine the cause of a change in depressive language in Tweets as part of a psychology study.
+\ifthenelse{ \equal{\version}{cv} }{
     \item Created an evaluation framework with graphs and videos to analyse subject mouse position data during exams.
     \item Developed automation pipeline in Bash to reduce time spent by $20\times$ on the application of the evaluation framework.
+}{
+    \item Created an evaluation framework to analyze mouse position data and automated it in Bash to reduce time spent by $20\times$.
+}
 \end{resumeList}
 \end{resumeItem}
