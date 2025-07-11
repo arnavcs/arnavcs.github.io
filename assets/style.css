@@ -89,7 +89,6 @@ table caption {
 
 math, math * {
   margin-top: 0px !important;
-  font-size: small;
 }
 
 figure {
@@ -97,6 +96,10 @@ figure {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+figure figcaption {
+  color: var(--code-color);
 }
 
 figure pre {

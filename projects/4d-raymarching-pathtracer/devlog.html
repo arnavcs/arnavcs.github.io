@@ -1,0 +1,124 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>4D Raymarching Pathtracer Devlog - Arnav Kumar</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+ </head>
+ <body>
+  <header>
+   <hgroup><a href="../../index.html">[Arnav Kumar]</a> / <h1>4D Raymarching Pathtracer Devlog</h1></hgroup>
+  </header>
+  <main>
+   <h2>4D Camera and GIF output</h2>
+   <hgroup>
+    <h3>--- Day 01 ---</h3>
+    <span class="right">Jul 09 2025</span>
+   </hgroup>
+   <p>
+    Today I started working on the project.
+    I started off by cleaning up my code for raytracing significantly and refactoring GIF rendering and removing all of the OpenGL window work.
+    I also had to switch to C++17 for <code>std::variant</code>.
+    I should have working GIF output now, but I don't have a way to test it without creating a scene, and a simple render.
+    So for now, I am working on the simple raymarching.
+   </p>
+   <p>
+    I have created structs for two objects, a hypersphere (3-sphere) and a hyperplane.
+    I then define <code>Object</code> as a variant of the two types of objects, and define <code>Scene</code> simply as a vector of objects.
+    I was orignally getting lots of errors when I tried implementing this with C tagged unions, but I realized that C++ has some different quirks than C, so I had to learn to use C++ variants.
+   </p>
+   <hgroup>
+    <h3>--- Day 02 ---</h3>
+    <span class="right">Jul 10 2025</span>
+   </hgroup>
+   <p>
+    I changed the second object from a hyperplane to a halfspace for now.
+    I'll probably add a hyperplane later, but for now, I think the simplicity of the halfspace is prefered.
+    I have written up both of the SDFs for the two object types I have right now, using a <code>switch</code> on the <code>variant::index()</code>.
+   </p>
+   <p>
+    I finished writing up the camera.
+    The way I have set up the camera is that it contains information about its location and 4 orthonormal vectors which form its heading.
+    Additionally, the function <code>nextCamera</code> updates the camera for the next frame of the GIF based on its current state, thus shifting the camera position.
+   </p>
+   <h2>Simple Raymarching</h2>
+   <p>
+    Today, I have also written a simple raymarcher that uses the SDFs to simply check if there is an intersection or not, and colour white if there is.
+    Like this, I can create simple renders of the 3D hyperplane the camera is pointing in!
+   </p>
+   <p>
+    I have 2 below, one which is a static render, and the second being a render with the camera moving in the 4th dimension.
+    Both scenes are of two hyperspheres with a halfplane, where colouring is based on the atan of a component of the intersection position.
+    This colouring method is currently hard coded and something that I'll change (it's not very pleasant to look at either).
+   </p>
+   <figure>
+    <img src="./render-01.gif" width=50%>
+    <figcaption>Figure 1: 100 marching steps per ray</figcaption>
+   </figure>
+   <p>
+    Here you can clearly see that as we move into the orthogonal direction, the spheres seem to "get smaller".
+    This is just because the sphere slice of the hypersphere we are observing is smaller in the camera's new hyperplane.
+   </p>
+   <p>
+    As you can see, there is undesirable warping of the shape of the halfplane near the hypersphere and near the horizon.
+    This is because the halfspace and rays ends up at grazing angles near the horizon, and near the edge of the sphere, rays have to spend many steps as well.
+    Thus, both of these issues can be resolved with more marching steps, like in the render below (which is only one frame).
+   </p>
+   <figure>
+    <img src="./render-02.gif" width=50%>
+    <figcaption>Figure 2: 10000 marching steps per ray</figcaption>
+   </figure>
+   <hgroup>
+    <h3>--- Day 03 ---</h3>
+    <span class="right">Jul 11 2025</span>
+   </hgroup>
+   <p>
+    Today, I started off with gradient approximation at the hit location.
+    From knowing which object yielded the smallest SDF, we can approximate that object's SDF's gradient at the hit location to determine the normal direction.
+    The normal is given by n defined as follows (i, j, k, l are the standard 4D unit vectors, f is the sdf of the object, and p is the hit position).
+   </p>
+   <code>
+<pre>n = norm(m)
+
+m.x = f(p + εi) - f(p - εi)
+m.y = f(p + εj) - f(p - εj)
+m.z = f(p + εk) - f(p - εk)
+m.w = f(p + εl) - f(p - εl)</pre>
+   </code>
+   <p>
+    From this, we can shade our hit location according to the normal position to get some sort of idea of if our normals our correct.
+    Renders in figure 3 and 4 show a single hypersphere with normal shading.
+   </p>
+   <figure>
+    <img src="./render-03.gif" width=50%>
+    <figcaption>Figure 3: still camera; RGB = normal xyz</figcaption>
+   </figure>
+   <p>
+    One interesting thing to note is that we almost form "cells" of colour in the first example.
+    This probably relate to intersections where the w component of the normal is nearly 0, and is likely a floating point rounding issue.
+    As you will see in the next render though, this is a negligible edge case, and the result is not pronounced.
+   </p>
+   <figure>
+    <img src="./render-04.gif" width=50%>
+    <figcaption>Figure 4: camera moves in w; RGB = normal xyw</figcaption>
+   </figure>
+   <p>
+    In this render, we can see that as we move farther into slices of the hypersphere with larger w components, the overall blue in the sphere increases.
+   </p>
+   <p>
+    Finally, if you are wondering (for example) why the reddest spot in Figure 3 is not the rightmost, it is because at the rightmost point of the sphere, the green and blue components will be half.
+    We have to transform a range from [-1, 1] to [0, 1] for each of RGB, so it won't be pure red.
+   </p>
+   <h2>Material Specification System</h2>
+   <h2>BDRFs for Monte Carlo and Fresnel Refraction</h2>
+   <h2>Volumetric Fog</h2>
+   <h2>Pathtracing with Parallel Computation</h2>
+   <h2>SDF Manipulations</h2>
+   <h2>Denoising</h2>
+  </main>
+  <footer>
+   <p>
+    Contributing to a lightweight and accessible web.
+   </p>
+  </footer>
+ </body>
+</html>
