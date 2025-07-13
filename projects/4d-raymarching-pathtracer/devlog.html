@@ -108,6 +108,22 @@ m.w = f(p + εl) - f(p - εl)</pre>
     Finally, if you are wondering (for example) why the reddest spot in Figure 3 is not the rightmost, it is because at the rightmost point of the sphere, the green and blue components will be half.
     We have to transform a range from [-1, 1] to [0, 1] for each of RGB, so it won't be pure red.
    </p>
+   <hgroup>
+    <h3>--- Day 04 ---</h3>
+    <span class="right">Jul 12 2025</span>
+   </hgroup>
+   <p>
+    Today, I just worked on creating a scene that I like.
+    So far I only have the hypersphere and halfplane primitives, so I set up a scene with 2 hyperspheres in a room made of halfplanes.
+    The hyperspheres have varying w components and radii.
+   </p>
+   <figure>
+    <img src="./render-05.gif" width=50%>
+    <figcaption>Figure 4: Room render</figcaption>
+   </figure>
+   <p>
+    I had to increase the raymarching intersection epsilon to get the room to render properly without black edges.
+   </p>
    <h2>Material Specification System</h2>
    <h2>BDRFs for Monte Carlo and Fresnel Refraction</h2>
    <h2>Volumetric Fog</h2>

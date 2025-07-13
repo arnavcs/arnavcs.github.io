@@ -29,8 +29,7 @@ body {
   color: var(--fg-color);
   margin: auto;
   padding: 20px;
-  max-width: 800px;
-  min-width: 700px;
+  width: 800px;
 }
 
 main, footer {
