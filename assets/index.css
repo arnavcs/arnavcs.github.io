@@ -1,0 +1,21 @@
+@media only screen and (min-width: 1660px) {
+  body {
+    width: 1620px;
+    display: grid;
+    grid-template-columns: 800px 800px;
+    grid-template-rows: auto;
+    column-gap: 20px;
+    grid-template-areas:
+      "h h"
+      "i i"
+      "l r"
+      "f f";
+  }
+  
+  header            { grid-area: h; }
+  main#intro        { grid-area: i; }
+  section#left-col  { grid-area: l; }
+  section#right-col { grid-area: r; }
+  footer            { grid-area: f; }
+}
+

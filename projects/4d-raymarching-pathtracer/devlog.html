@@ -119,12 +119,91 @@ m.w = f(p + εl) - f(p - εl)</pre>
    </p>
    <figure>
     <img src="./render-05.gif" width=50%>
-    <figcaption>Figure 4: Room render</figcaption>
+    <figcaption>Figure 5: Room render</figcaption>
    </figure>
    <p>
     I had to increase the raymarching intersection epsilon to get the room to render properly without black edges.
    </p>
    <h2>Material Specification System</h2>
+   <hgroup>
+    <h3>--- Day 05 ---</h3>
+    <span class="right">Jul 13 2025</span>
+   </hgroup>
+   <p>
+    The implementation of the material system required me to redefine an object to not simply be a geometry, but to consist of both a geometry and a material.
+    I have material as a <code>variant</code> of glass, mirror, and textured materials for now.
+   </p>
+   <p>
+    This mirror material uses the normals to reflect the rays.
+    As you will see though, what I thought was going to be a negligible problem (inaccurate normals) will become very noticable.
+   </p>
+   <figure>
+    <img src="./render-06.gif" width=50%>
+    <figcaption>Figure 6: Mirror material</figcaption>
+   </figure>
+   <p>
+    I definitely need a way to fix this.
+    Also, I had some issues with rays getting infinitely reflected on mirror surfaces because it is infinitely registered as reflection.
+    I fixed that temporarily by shifting the position of the reflected ray has to start at an offset away from the sphere.
+   </p>
+   <p>
+    One interesting code architecture choice is that I am letting the texture be a <code>std::functional&lt;float4, float4&gt;</code>.
+    Thus, the texture can be specified as any function of position and surface normal.
+   </p>
+   <hgroup>
+    <h3>--- Day 06 ---</h3>
+    <span class="right">Jul 14 2025</span>
+   </hgroup>
+   <p>
+    I started off today with reflecting on what I did yesterday, and I realized that yesterday I spent a lot of time trying to fix avoiding a ray getting infinitely reflected.
+    Really, all I needed was a check on the value of <code>dot(n, d)</code> where <code>d</code> is the ray direction.
+    If this value is negative, then we reflect, otherwise, we just let it march.
+    And so with that, I tried to render the sphere scene to no avail, just black spheres.
+    But increasing the marching intersection epsilon and increasing the max number of steps for a ray yielded an image.
+   </p>
+   <figure>
+    <img src="./render-07.gif" width=50%>
+    <figcaption>Figure 7: Improved ray reflection</figcaption>
+   </figure>
+   <p>
+    Surprisingly, the wonky steppyness that I was getting earlier is also gone...
+    The render time is extremely high, as we may expect, though, so I think that I will take an aside to work on getting parallel computing working.
+   </p>
+   <hgroup>
+    <h3>--- Day 07 ---</h3>
+    <span class="right">Jul 15 2025</span>
+   </hgroup>
+   <p>
+    Starting off with execution time speedups, I started with working on implementing some sort of concurrency or parallelism.
+    I decided to use <a href="https://www.openmp.org/">(OpenMP)</a>, because it seems to be rather straightforward.
+    Here is the time takes to render the scene in figure 7 with and without parallelism.
+   </p>
+   <p>
+    Without parallelism
+   </p>
+   <code>
+<pre>real	0m3.180s
+user	0m3.153s
+sys	0m0.017s</pre>
+   </code>
+   <p>
+    With parallelism
+   </p>
+   <code>
+<pre>real	0m0.142s
+user	0m6.107s
+sys	0m0.078s</pre>
+   </code>
+   <p>
+    As you can see, the speedup is substantial.
+   </p>
+   <p>
+    And with that speedup, here is a more flushed out render of the two mirror hyperspheres scene.
+   </p>
+   <figure>
+    <img src="./render-08.gif" width=50%>
+    <figcaption>Figure 8: More impressive render</figcaption>
+   </figure>
    <h2>BDRFs for Monte Carlo and Fresnel Refraction</h2>
    <h2>Volumetric Fog</h2>
    <h2>Pathtracing with Parallel Computation</h2>

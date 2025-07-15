@@ -3,6 +3,7 @@
   <meta charset="utf-8">
   <title>Arnav Kumar</title>
   <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/index.css">
  </head>
  <body>
   <header>
@@ -14,7 +15,7 @@
     <a href="./resume-cv/cv.pdf">[CV]</a>
    </p>
   </header>
-  <main>
+  <main id="intro">
    <h2>Site Introduction</h2>
    <p>Links are surrounded by brackets. The type of bracket conveys the following:</p>
    <table>
@@ -24,390 +25,396 @@
     <tr><th>Other</th><td>-</td><td>(Round)</td></tr>
    </table>
   </main>
-  <main>
-   <h2>Articles</h2>
-   <ul class="blank">
-    <li>Jul 06 2025 <a href="./writings/2025-07-06-surfs-up.html">[Surf's Up]</a></li>
-    <li>Jul 02 2025 <a href="./writings/2025-07-02-how-to-walk.html">[How to Walk]</a></li>
-    <li>Jun 30 2025 <a href="./writings/2025-06-30-learning-humanity-from-ants.html">[Learning Humanity from Ants]</a></li>
-    <li>May 07 2025 <a href="./writings/2025-05-07-the-sacred-marigold.html">[The Sacred Marigold]</a></li>
-    <li>Jan 01 2025 <a href="./writings/2025-01-01-new-years-resolution.html">[My 2025 Resolution]</a></li>
-    <li>Nov 17 2024 <a href="./writings/2024-11-17-paper-lily-chapter-1-review.html">[Paper Lily Chapter 1 Review]</a></li>
-    <li>Nov 02 2024 <a href="./writings/2024-11-02-nier-automata-city-ruins-tab.html">[Nier Automata City Ruins Bass Tab]</a></li>
-    <li>Sep 09 2024 <a href="./writings/2024-09-09-horse-chestnuts.html">[Horse Chestnuts]</a></li>
-   </ul>
-  </main>
-  <main>
-   <h2>Publications</h2>
-   <hgroup>
-    <h3>The Dimension of Sparse Random Graph Orders</h3>
-    <a href="https://youtu.be/7kGkBQDHszU">(presentation)</a>
-    <a href="https://arxiv.org/abs/2504.19029">{arXiv preprint}</a>
-    <span class="right">May 2024 - Aug 2024</span>
-   </hgroup>
-   <ul>
-    <li>Coauthored paper during undergraduate research assistantship under professor Jane Gao</li>
-   </ul>
-   <h2>Projects</h2>
-   <hgroup>
-    <h3>WIP - 4D Raytracing Pathtracer</h3>
-    | C++
-    <a href="./projects/4d-raymarching-pathtracer/devlog.html">[devlog]</a>
-    <span class="right">July 2025</span>
-   </hgroup>
-   <ul>
-    <li>Final project for the CS 488 graphics course at the University of Waterloo</li>
-   </ul>
-   <hgroup>
-    <h3>Rigid-body Particle Simulation</h3>
-    | C++
-    <a href="./projects/rigid-body-particles/gravity.gif">[gif]</a>
-    <a href="./projects/rigid-body-particles/collisions.gif">[gif]</a>
-    <span class="right">July 2025</span>
-   </hgroup>
-   <ul>
-    <li>Created for the CS 488 graphics course at the University of Waterloo</li>
-    <li>Simulated gravity, spherical constraints, and collision physics for rigid body particles</li>
-   </ul>
-   <hgroup>
-    <h3>Software Rasterizer</h3>
-    | C++
-    <a href="./projects/software-rasterizer/cornell-box.png">[png]</a>
-    <a href="./projects/software-rasterizer/textured.png">[png]</a>
-    <span class="right">June 2025</span>
-   </hgroup>
-   <ul>
-    <li>Created for the CS 488 graphics course at the University of Waterloo</li>
-    <li>Recreated the whole rasterization process on the CPU, including perspective transformation, triangle rasterization, depth buffering, and perspective correct interpolation</li>
-   </ul>
-   <hgroup>
-    <h3>Software Raytracer</h3>
-    | C++
-    <a href="./projects/software-raytracer/test-object.png">[png]</a>
-    <a href="./projects/software-raytracer/metal-teapot.png">[png]</a>
-    <a href="./projects/software-raytracer/glass-teapot.png">[png]</a>
-    <a href="./projects/software-raytracer/bunny.png">[png]</a>
-    <span class="right">May 2025 - June 2025</span>
-   </hgroup>
-   <ul>
-    <li>Created for the CS 488 graphics course at the University of Waterloo</li>
-    <li>Implemented the Möller–Trumbore algorithm for fast ray-triangle intersection</li>
-    <li>Programmed Lambertian diffuse, specular refraction, and specular reflection behaviour, and support for spherical environment mapping</li>
-   </ul>
-   <hgroup>
-    <h3>Software Raycaster</h3>
-    | JavaScript
-    <a href="https://arnavcs.github.io/software-raycaster">[web]</a>
-    <a href="https://github.com/arnavcs/software-raycaster">{Github}</a>
-    <span class="right">Sep 2024 - Oct 2024</span>
-   </hgroup>
-   <ul>
-    <li>Implemented a software based raycasting algorithm with vanilla JavaScript where parameters and the scene can be manipulated</li>
-   </ul>
-   <hgroup>
-    <h3>Renovating the Labyrinth</h3>
-    | JavaScript
-    <a href="https://arnavcs.github.io/renovating-the-labyrinth">[web]</a>
-    <a href="https://arnavcs.itch.io/renovating-the-labyrinth">{itch.io}</a>
-    <a href="https://github.com/arnavcs/renovating-the-labyrinth">{Github}</a>
-    <span class="right">Oct 2024</span>
-   </hgroup>
-   <ul>
-    <li>Solo submission made in 72 hours with vanilla JavaScript on an HTML canvas for the UW Game Dev Club's fall 2024 game jam; voted winner of the technical achievement award</li>
-    <li>Built a real time optimized ray caster with ordered Bayer matrix dithering</li>
-    <li>Programmed 2D rigid body collision behaviour and a randomized Prim's algorithm for map generation</li>
-   </ul>
-   <hgroup>
-    <h3>Bloom</h3>
-    | Godot
-    <a href="https://kdxiao.itch.io/bloom">{itch.io}</a>
-    <a href="https://github.com/kdxiao/bloom">{Github}</a>
-    <span class="right">May 2024 - Jun 2024</span>
-   </hgroup>
-   <ul>
-    <li>Team submission made in 72 hours with Godot for the UW Game Dev Club's spring 2024 game jam</li>
-    <li>Implemented colour mixing, screen wrapping, movement, and flower spawning mechanics</li>
-   </ul>
-   <hgroup>
-    <h3>Interplanetary File Explorer</h3>
-    | Go, Python, JavaScript
-    <a href="https://ipfe.elguindi.xyz/">{web}</a>
-    <a href="https://github.com/youssefsoli/IPFE">{Github}</a>
-    <a href="https://devpost.com/software/changeme">{Devpost}</a>
-    <span class="right">Jan 2023</span>
-   </hgroup>
-   <ul>
-    <li>Visual file explorer of an IPFS written in Golang, Python, and JavaScript for the 2023 UofTHacks X hackathon; winner of the Estuary sponsor prize</li>
-    <li>Created vector embeddings for files in the Estuary IPFS using Co:here’s NLP embeddings on file headers</li>
-    <li>Performed principal component analysis of the vector embeddings to reduce dimensionality and be displayed interactively in 3D space with Three.js</li>
-   </ul>
-   <hgroup>
-    <h3>Prognosing IPF</h3>
-    | Python
-    <a href="./projects/prognosing-ipf/osic-cwsf-paper.pdf">[CWSF paper]</a>
-    <span class="right">Dec 2020 - Jun 2021</span>
-   </hgroup>
-   <ul>
-    <li>Several machine learning models written to predict the deterioration of the condition of the lungs over time for patients of Idiopathic Pulmonary Fibrosis (IPF) and give a level of confidence in the prediction</li>
-    <li>Implemented an auto-encoder, linear regression, dense neural network, and bayesian model in order to accurately predict future lung capacity and give a confidence value using initial lung capacity data, age, sex, smoking status, and more</li>
-    <li>Obtained a Laplace Log Likelihood score of −6.9 (much better than the baseline −8.1) with σ ≈ 200mL</li>
-   </ul>
-  </main>
-  <main>
-   <h2>Presentations</h2>
-   <hgroup>
-    <h3>Dimension of Posets and Random Graph Orders</h3> @ University of Waterloo
-    <span class="right">1<sup>st</sup> Aug 2024</span>
-   </hgroup>
-   <ul>
-    <li>Presentation of work completed during research term under Jane Gao</li>
-   </ul>
-   <hgroup>
-    <h3>Streams and Lazy Evaluation</h3> @ Webber Academy Programming Club
-    <a href="./presentations/231013-streams/notes.py">[notes]</a>
-    <span class="right">13<sup>th</sup> Oct 2023</span>
-   </hgroup>
-   <ul>
-    <li>An introduction to simulating infinite lists with streams and their manipulation</li>
-   </ul>
-   <hgroup>
-    <h3>On the Catalan Numbers</h3> @ Webber Academy Math Society
-    <a href="./presentations/231011-catalan-numbers/notes.pdf">[notes]</a>
-    <span class="right">11<sup>th</sup> Oct 2023</span>
-   </hgroup>
-   <ul>
-    <li>A derivation of the closed formula for the Catalan Numbers and examples of well known problems where the Catalan Numbers appear</li>
-   </ul>
-   <hgroup>
-    <h3>Introductory Combinatory Logic</h3> @ Webber Academy Math Society
-    <span class="right">11<sup>th</sup> Oct 2022</span>
-   </hgroup>
-   <ul>
-    <li>Introduction to combinatory logic; showing numbers and operations on numbers can be expressed as combinators</li>
-   </ul>
-   <h2>Lectures & Lessons</h2>
-   <hgroup>
-    <h3>High School Math Competition Lessons</h3>
-    <span class="right">Summer 2023</span>
-   </hgroup>
-   <ol>
-    <li><a href="./presentations/23S-competition-lessons/01-divisibility-tricks.pdf">[divisibilty tricks]</a> Divisibility, modular arithmetic, and deriving divisibility tricks</li>
-    <li><a href="./presentations/23S-competition-lessons/02-writing-solutions.pdf">[writing solutions]</a> Tips for writing readable proofs</li>
-    <li><a href="./presentations/23S-competition-lessons/03-pigeonhole-principle.pdf">[pigeonhole principle]</a> The pigeonhole and generalized pigeonhole principles</li>
-    <li><a href="./presentations/23S-competition-lessons/04-finite-series-and-products.pdf">[series and products]</a> Telescoping series, common series, and term grouping strategies</li>
-    <li><a href="./presentations/23S-competition-lessons/05-intro-geometry.pdf">[intro geometry]</a> Basic triangle facts, and effects of transformations on geometric objects</li>
-    <li><a href="./presentations/23S-competition-lessons/06-number-bases-and-induction.pdf">[number bases &amp; induction]</a> Number bases, (strong) induction, and an example from the KJMO</li>
-    <li><a href="./presentations/23S-competition-lessons/07-points-in-a-triangle.pdf">[points in a triangle]</a> Involving (circum|in|ex|ortho)centers and centroids</li>
-    <li><a href="./presentations/23S-competition-lessons/08-cyclic-quadrilaterals.pdf">[cyclic quadrilaterals]</a> Power of a point, Ptolemy's theorem, and Brahmagupta's formula</li>
-   </ol>
-  </main>
-  <main>
-   <h2>Formal Education</h2>
-   <hgroup>
-    <h3>Waterloo Undergraduate Degree</h3>: Bachelors of Computer Science
-   </hgroup>
-   <table>
-    <thead>
-     <tr>
-      <th>Term</th>
-      <th colspan="7">Courses</th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr class="odd">
-      <th>F ’22</th>
-      <td title="MATH 145 - Algebra (Advanced Level)">MATH 145</td>
-      <td title="MATH 147 - Calculus 1 (Advanced Level)">MATH 147</td>
-      <td title="CS 145 - Designing Functional Programs (Advanced Level)">CS 145</td>
-      <td title="ENGL 109 - Introduction to Academic Writing">ENGL 109</td>
-      <td title="PHYS 121 - Mechanics">PHYS 121</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-     <th>W ’23</th>
-     <td title="MATH 146 - Linear Algebra 1 (Advanced Level)">MATH 146</td>
-     <td title="MATH 148 - Calculus 2 (Advanced Level)">MATH 148</td>
-     <td title="CS 146 - Elementary Algorithm Design and Data Abstraction (Advanced Level)">CS 146</td>
-     <td title="CS 136L - Tools and Techniques for Software Development">CS 136L</td>
-     <td title="ENGL 108B - Global English Literatures">ENGL 108B</td>
-     <td title="PHYS 122 - Waves, Electricity and Magnetism">PHYS 122</td>
-     <td title="PD 1 - Career Fundamentals">PD 1</td>
-    </tr>
-    <tr>
-     <th>S ’23</th>
-     <td title="COOP 1 - Blockchain Software Engineer at Dandelion Networks">COOP 1</td>
-     <td title="PD 11 - Processes for Technical Report Writing">PD 11</td>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
-    </tr>
-    <tr>
-     <th>F ’23</th>
-     <td title="MATH 245 - Linear Algebra 2 (Advanced Level)">MATH 245</td>
-     <td title="MATH 247 - Calculus 3 (Advanced Level)">MATH 247</td>
-     <td title="STAT 240 - Probability (Advanced Level)">STAT 240</td>
-     <td title="CS 245E - Logic and Computation (Enriched)">CS 245E</td>
-     <td title="CS 246E - Object-Oriented Software Development (Enriched)">CS 246E</td>
-     <td></td>
-     <td></td>
-    </tr>
-    <tr>
-     <th>W ’24</th>
-     <td title="MATH 249 - Introduction to Combinatorics (Advanced Level)">MATH 249</td>
-     <td title="STAT 241 - Statistics (Advanced Level)">STAT 241</td>
-     <td title="CO 255 - Introduction to Optimization (Advanced Level)">CO 255</td>
-     <td title="CS 240 - Data Structures and Data Management">CS 240</td>
-     <td title="CS 241 - Foundations of Sequential Programs">CS 241</td>
-     <td></td>
-     <td></td>
-    </tr>
-    <tr>
-     <th>S ’24</th>
-     <td title="COOP 2 - Research Assistantship under Professor Jane Gao">COOP 2</td>
-     <td title="PD 10 - Professional Responsibility in Computing">PD 10</td>
-     <td title="CS 251 - Computer Organization and Design">CS 251</td>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
-    </tr>
-    <tr>
-     <th>F ’24</th>
-     <td title="CS 350 - Operating Systems">CS 350</td>
-     <td title="CS 341 - Algorithms">CS 341</td>
-     <td title="CS 370 - Numerical Computation">CS 370</td>
-     <td title="PHYS 256 - Geometrical and Physical Optics">PHYS 256</td>
-     <td title="FINE 100 - Studio Fundamentals">FINE 100</td>
-     <td></td>
-     <td></td>
-    </tr>
-    <tr>
-     <th>W ’25</th>
-     <td title="COOP 3 - Software Engineer at Trend Micro">COOP 3</td>
-     <td title="PD 6 - Problem Solving">PD 6</td>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
-    </tr>
-    <tr>
-     <th>S ’25</th>
-     <td title="CS 475/675 - Computational Linear Algebra">CS 475</td>
-     <td title="CS 480/680 - Introduction to Machine Learning">CS 480</td>
-     <td title="CS 488/688 - Introduction to Computer Graphics">CS 488</td>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td></td>
-    </tr>
-    </tbody>
-   </table>
-   <h2>Academic Self-Learning</h2>
-   <p>I am still going through entries ending with &amp;.</p>
-   <h3>Operating Systems</h3>
-   <ul>
-    <li><em>Operating Systems: Three Easy Pieces</em> by Remzi H. and Andrea C. Arpaci-Dusseau <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/">(book)</a></li>
-   </ul>
-   <h3>Formal Logic &amp; Programming Theory</h3>
-   <ul>
-    <li><em>The Symmetric Interaction Calculus</em> by Victor Maia <a href="https://medium.com/@maiavictor/the-abstract-calculus-fe8c46bcf39c">(article)</a></li>
-    <li><em>Concurrency in Go</em> by Katherine Cox-Buday <a href="./education/concurrency-in-go/notes.pdf">[notes]</a></li>
-    <li><em>To Mock a Mockingbird</em> by Raymond Smullyan</li>
-    <li><em>Learn You a Haskell for Great Good!</em> by Miran Lipovača <a href="https://learnyouahaskell.com/">(book)</a></li>
-   </ul>
-   <h3>Machine Learning, Probability, &amp; Statistics</h3>
-   <ul>
-    <li><em>Essential Statistics for Data Science</em> by Mu Zhu</li>
-   </ul>
-   <h3>Geometry &amp; Graphics</h3>
-   <ul>
-    <li><em>Projective Geometric Algebra Illuminated</em> by Eric Lengyel &amp;</li>
-    <li><em>Ray Tracing in One Weekend</em> by Peter Shirley, Trevor David Black, Steve Hollasch <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">(book)</a></li>
-    <li><em>Computer Graphics from Scratch</em> by Gabriel Gambetta <a href="https://www.gabrielgambetta.com/computer-graphics-from-scratch/">(book)</a></li>
-    <li>University of Utah CS 4600 <a href="https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh">(lectures)</a> <a href="https://graphics.cs.utah.edu/courses/cs4600/fall2020/">(assignments)</a></li>
-    <li><em>Raycasting Series</em> by Lode Vandevenne <a href="https://lodev.org/cgtutor/index.html">(lesson)</a></li>
-   </ul>
-  </main>
-  <main>
-   <h2>Consumed Media</h2>
-   <p>
-    Stars indicate my rating and tags are organized as follows.
-    <ul>
-     <li>Media form: <span class="tag">&lt;book&gt;</span>, <span class="tag">&lt;manga&gt;</span>, <span class="tag">&lt;poem&gt;</span>, <span class="tag">&lt;film&gt;</span>, <span class="tag">&lt;serial&gt;</span>, <span class="tag">&lt;performance&gt;</span>, <span class="tag">&lt;anime&gt;</span>, <span class="tag">&lt;animation&gt;</span>.</li>
-     <li>Language of Content: <span class="tag">&lt;en&gt;</span>, <span class="tag">&lt;es&gt;</span>, <span class="tag">&lt;ru&gt;</span>.</li>
+  <section id="left-col">
+   <main>
+    <h2>Articles</h2>
+    <ul class="blank">
+     <li>Jul 18 2025 <a href="./writings/2025-07-18-a-haiku-a-day.html">[A Haiku a Day]</a></li>
+     <li>Jul 06 2025 <a href="./writings/2025-07-06-surfs-up.html">[Surf's Up]</a></li>
+     <li>Jul 02 2025 <a href="./writings/2025-07-02-how-to-walk.html">[How to Walk]</a></li>
+     <li>Jun 30 2025 <a href="./writings/2025-06-30-learning-humanity-from-ants.html">[Learning Humanity from Ants]</a></li>
+     <li>May 07 2025 <a href="./writings/2025-05-07-the-sacred-marigold.html">[The Sacred Marigold]</a></li>
+     <li>Jan 01 2025 <a href="./writings/2025-01-01-new-years-resolution.html">[My 2025 Resolution]</a></li>
+     <li>Nov 17 2024 <a href="./writings/2024-11-17-paper-lily-chapter-1-review.html">[Paper Lily Chapter 1 Review]</a></li>
+     <li>Nov 02 2024 <a href="./writings/2024-11-02-nier-automata-city-ruins-tab.html">[Nier Automata City Ruins Bass Tab]</a></li>
+     <li>Sep 09 2024 <a href="./writings/2024-09-09-horse-chestnuts.html">[Horse Chestnuts]</a></li>
     </ul>
-   </p>
-   <br/>
-   <ul class="blank">
-    <li>Jul 10 2025 <em>Ranma ½ (2024)</em> by Takahashi Rumiko <span class="tag">&lt;anime&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">****</span></li>
-    <li>Jul 06 2025 <em>KPop Demon Hunters</em> by Chris Appelhans and Maggie Kang <span class="tag">&lt;film&gt;</span> <span class="tag">&lt;animation&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">***</span></li>
-    <li>Jul 05 2025 <em>Surf's Up</em> by Ash Brandon and Chris Buck <span class="tag">&lt;film&gt;</span> <span class="tag">&lt;animation&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">****</span></li>
-    <li>Jul 03 2025 <em>Sinners</em> by Ryan Coogler <span class="tag">&lt;film&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">***</span></li>
-    <li>Jun 29 2025 <em>Echoes</em> by Koji Narita <span class="tag">&lt;manga&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">***</span></li>
-    <li>Jun 28 2025 <em>The Amaxing Digital Circus Episode 5</em> by Glitch <span class="tag">&lt;animation&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">***</span></li>
-    <li>Jun 28 2025 <em>Hunter×Hunter 2011</em> by Madhouse Studios <span class="tag">&lt;anime&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">****</span></li>
-    <li>Feb 23 2025 <em>La Receta de la Felicidad</em> by Deepak Chopra <span class="tag">&lt;book&gt;</span> <span class="tag">&lt;es&gt;</span> <span class="right">****</span></li>
-    <li>Feb 15 2025 <em>Ночь, улится, фонар, аптека</em> by Александр Блок <span class="tag">&lt;poem&gt;</span> <span class="tag">&lt;ru&gt;</span> <span class="right">***</span></li>
-    <li>Feb 12 2025 <em>Сама Дура</em> <span class="tag">&lt;serial&gt;</span> <span class="tag">&lt;ru&gt;</span> <span class="right">***</span></li>
-    <li>Feb 03 2025 <em>Insomniacs after School</em> by Makoto Ojiro <span class="tag">&lt;manga&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">**</span></li>
-    <li>Feb 01 2025 <em>Giselle</em> by the National Ballet of Canada <span class="tag">&lt;performance&gt;</span> <span class="right">***</span></li>
-    <li>Jan 25 2025 <em>Ёжик в тумане</em> by Yuri Norstein and Soyuzmultfilm <span class="tag">&lt;film&gt;</span> <span class="tag">&lt;ru&gt;</span> <span class="right">***</span></li>
-    <li>Jan 21 2025 <em>the life-changing magic of tidying up - the Japanese art of decluttering and organizing</em> by Marie Kondo <span class="tag">&lt;book&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">****</span></li>
-    <li>Dec 31 2024 <em>Braiding Sweetgrass</em> by Robin Wall Kimmerer <span class="tag">&lt;book&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">*****</span></li>
-   </ul>
-  </main>
-  <main>
-   <h2>Interesting Sites</h2>
-   <h3>Mathematics</h3>
-   <ul>
-    <li><a href="https://projectivegeometricalgebra.org/">(Projective Geometric Algebra)</a> Webpage that links to <a href="https://conformalgeometricalgebra.org/wiki/">(conformal)</a> and <a href="https://rigidgeometricalgebra.org/wiki/">(rigid)</a> algebra wikis</li>
-    <li><a href="https://artofproblemsolving.com/">(Art of Problem Solving)</a> Competition problem archive, and wiki</li>
-    <li><a href="https://artofproblemsolving.com/wiki/index.php/Proofs_without_words">(Proofs without words)</a> Cool visual proofs</li>
-    <li><a href="https://imogeometry.blogspot.com/">(Geometry Problems from IMO)</a> Olympiad geometry problems</li>
-    <li><a href="https://sites.google.com/site/imocanada/home">(Canada IMO training)</a> Links and resources for IMO training</li>
-    <li><a href="https://www.cut-the-knot.org/">(Cut the Knot)</a> A large number of mathematical puzzles</li>
-   </ul>
-   <h3>Computer Science</h3>
-   <ul>
-    <li><a href="https://teachyourselfcs.com/">(Teach Yourself CS)</a> Book and course recommendations for computer science</li>
-    <li><a href="https://github.com/dylanaraps/pure-sh-bible">(pure sh bible)</a> and <a href="https://github.com/dylanaraps/pure-bash-bible">(pure bash bible)</a> Pure shell code instead of external process invokation</li>
-    <li><a href="https://github.com/codecrafters-io/build-your-own-x">(Build Your Own X)</a> Learn to build a regex engine, OS, text editor, and much more</li>
-    <li><a href="https://herbie.uwplse.org/">(The Herbie Project)</a> Restructure floating point operations to reduce inaccuracy</li>
-    <li><a href="https://marctenbosch.com/">(Marc Ten Bosch)</a> 4D graphics via publications and blogs</li>
-    <li><a href="https://blog.demofox.org/">(The blog at the bottom of the sea)</a> Graphics, gamedev, computation, audio synthesis</li>
-    <li><a href="https://www.cemyuksel.com/">(Cem Yuksel)</a> Graphics research and teaching</li>
-    <li><a href="https://terathon.com/lengyel/">(Eric Lengyel)</a> Game engines, geometric algebra, and rendering</li>
-   </ul>
-   <h3>Search Engines</h3>
-   <ul>
-    <li><a href="https://www.qwant.com/">(Qwant)</a> Private search engine with independent search indexing</li>
-    <li><a href="https://wiby.me/">(wiby.me)</a> Search engine for personalized webpages and sites for hobbyists</li>
-    <li><a href="https://docs.searxng.org/">(searXNG)</a> Free metasearch engine (accumulates results from multiple engines)</li>
-   </ul>
-   <h3>Games</h3>
-   <ul>
-    <li><a href="https://www.puzzle-bridges.com/">(Puzzle Games)</a> Galaxies, Hashi, Star Battle, and much more</li>
-    <li><a href="https://gungi.io/">(Gungi.io)</a> Gungi, if you have a friend to play with</li>
-   </ul>
-   <h3>File Sharing</h3>
-   <ul>
-    <li><a href="https://0x0.st/">(The Null Pointer)</a> Temporary file hosting</li>
-    <li><a href="https://litterbox.catbox.moe/">(Litterbox)</a> Temporary file storage (≤ 1GB)</li>
-    <li><a href="https://litterbox.catbox.moe/">(Catbox)</a> Permanent file storage (≤ 200MB)</li>
-   </ul>
-   <h3>Miscellanous</h3>
-   <ul>
-    <li><a href="https://lukesmith.xyz/">(Luke Smith's Webpage)</a> Philosophy, unix, and linguistics</li>
-    <li><a href="https://lospec.com/">(Lospec)</a> Colour palettes and pixel art</li>
-    <li><a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books">(Anime Girls Holding Programming Books)</a> A Github repository of such images</li>
-    <li><a href="https://owlsintowels.org/">(Owls in Towels)</a> A site dedicated to owls in towels</li>
-    <li><a href="https://sadgrl.online/guides/">(sadgirl.online)</a> Guides on how to bypass paywalls and surf the web</li>
-   </ul>
-  </main>
+   </main>
+   <main>
+    <h2>Consumed Media</h2>
+    <p>
+     Stars indicate my rating and tags are organized as follows.
+     <ul>
+      <li>Media form: <span class="tag">&lt;book&gt;</span>, <span class="tag">&lt;manga&gt;</span>, <span class="tag">&lt;poem&gt;</span>, <span class="tag">&lt;film&gt;</span>, <span class="tag">&lt;serial&gt;</span>, <span class="tag">&lt;performance&gt;</span>, <span class="tag">&lt;anime&gt;</span>, <span class="tag">&lt;animation&gt;</span>.</li>
+      <li>Language of Content: <span class="tag">&lt;en&gt;</span>, <span class="tag">&lt;es&gt;</span>, <span class="tag">&lt;ru&gt;</span>.</li>
+     </ul>
+    </p>
+    <br/>
+    <ul class="blank">
+     <li>Jul 14 2025 <em>Words Bubble Up Like Soda Pop</em> by Kyohei Ishiguro <span class="tag">&lt;anime&gt;</span> <span class="tag">&lt;film&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">****</span></li>
+     <li>Jul 10 2025 <em>Ranma ½ (2024)</em> by Takahashi Rumiko <span class="tag">&lt;anime&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">****</span></li>
+     <li>Jul 06 2025 <em>KPop Demon Hunters</em> by Chris Appelhans and Maggie Kang <span class="tag">&lt;film&gt;</span> <span class="tag">&lt;animation&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">***</span></li>
+     <li>Jul 05 2025 <em>Surf's Up</em> by Ash Brandon and Chris Buck <span class="tag">&lt;film&gt;</span> <span class="tag">&lt;animation&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">****</span></li>
+     <li>Jul 03 2025 <em>Sinners</em> by Ryan Coogler <span class="tag">&lt;film&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">***</span></li>
+     <li>Jun 29 2025 <em>Echoes</em> by Koji Narita <span class="tag">&lt;manga&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">***</span></li>
+     <li>Jun 28 2025 <em>The Amaxing Digital Circus Episode 5</em> by Glitch <span class="tag">&lt;animation&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">***</span></li>
+     <li>Jun 28 2025 <em>Hunter×Hunter 2011</em> by Madhouse Studios <span class="tag">&lt;anime&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">****</span></li>
+     <li>Feb 23 2025 <em>La Receta de la Felicidad</em> by Deepak Chopra <span class="tag">&lt;book&gt;</span> <span class="tag">&lt;es&gt;</span> <span class="right">****</span></li>
+     <li>Feb 15 2025 <em>Ночь, улится, фонар, аптека</em> by Александр Блок <span class="tag">&lt;poem&gt;</span> <span class="tag">&lt;ru&gt;</span> <span class="right">***</span></li>
+     <li>Feb 12 2025 <em>Сама Дура</em> <span class="tag">&lt;serial&gt;</span> <span class="tag">&lt;ru&gt;</span> <span class="right">***</span></li>
+     <li>Feb 03 2025 <em>Insomniacs after School</em> by Makoto Ojiro <span class="tag">&lt;manga&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">**</span></li>
+     <li>Feb 01 2025 <em>Giselle</em> by the National Ballet of Canada <span class="tag">&lt;performance&gt;</span> <span class="right">***</span></li>
+     <li>Jan 25 2025 <em>Ёжик в тумане</em> by Yuri Norstein and Soyuzmultfilm <span class="tag">&lt;film&gt;</span> <span class="tag">&lt;ru&gt;</span> <span class="right">***</span></li>
+     <li>Jan 21 2025 <em>the life-changing magic of tidying up - the Japanese art of decluttering and organizing</em> by Marie Kondo <span class="tag">&lt;book&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">****</span></li>
+     <li>Dec 31 2024 <em>Braiding Sweetgrass</em> by Robin Wall Kimmerer <span class="tag">&lt;book&gt;</span> <span class="tag">&lt;en&gt;</span> <span class="right">*****</span></li>
+    </ul>
+   </main>
+   <main>
+    <h2>Interesting Sites</h2>
+    <h3>Mathematics</h3>
+    <ul>
+     <li><a href="https://projectivegeometricalgebra.org/">(Projective Geometric Algebra)</a> Webpage that links to <a href="https://conformalgeometricalgebra.org/wiki/">(conformal)</a> and <a href="https://rigidgeometricalgebra.org/wiki/">(rigid)</a> algebra wikis</li>
+     <li><a href="https://artofproblemsolving.com/">(Art of Problem Solving)</a> Competition problem archive, and wiki</li>
+     <li><a href="https://artofproblemsolving.com/wiki/index.php/Proofs_without_words">(Proofs without words)</a> Cool visual proofs</li>
+     <li><a href="https://imogeometry.blogspot.com/">(Geometry Problems from IMO)</a> Olympiad geometry problems</li>
+     <li><a href="https://sites.google.com/site/imocanada/home">(Canada IMO training)</a> Links and resources for IMO training</li>
+     <li><a href="https://www.cut-the-knot.org/">(Cut the Knot)</a> A large number of mathematical puzzles</li>
+    </ul>
+    <h3>Computer Science</h3>
+    <ul>
+     <li><a href="https://teachyourselfcs.com/">(Teach Yourself CS)</a> Book and course recommendations for computer science</li>
+     <li><a href="https://github.com/dylanaraps/pure-sh-bible">(pure sh bible)</a> and <a href="https://github.com/dylanaraps/pure-bash-bible">(pure bash bible)</a> Pure shell code instead of external process invokation</li>
+     <li><a href="https://github.com/codecrafters-io/build-your-own-x">(Build Your Own X)</a> Learn to build a regex engine, OS, text editor, and much more</li>
+     <li><a href="https://herbie.uwplse.org/">(The Herbie Project)</a> Restructure floating point operations to reduce inaccuracy</li>
+     <li><a href="https://marctenbosch.com/">(Marc Ten Bosch)</a> 4D graphics via publications and blogs</li>
+     <li><a href="https://blog.demofox.org/">(The blog at the bottom of the sea)</a> Graphics, gamedev, computation, audio synthesis</li>
+     <li><a href="https://www.cemyuksel.com/">(Cem Yuksel)</a> Graphics research and teaching</li>
+     <li><a href="https://terathon.com/lengyel/">(Eric Lengyel)</a> Game engines, geometric algebra, and rendering</li>
+    </ul>
+    <h3>Search Engines</h3>
+    <ul>
+     <li><a href="https://www.qwant.com/">(Qwant)</a> Private search engine with independent search indexing</li>
+     <li><a href="https://wiby.me/">(wiby.me)</a> Search engine for personalized webpages and sites for hobbyists</li>
+     <li><a href="https://docs.searxng.org/">(searXNG)</a> Free metasearch engine (accumulates results from multiple engines)</li>
+    </ul>
+    <h3>Games</h3>
+    <ul>
+     <li><a href="https://www.puzzle-bridges.com/">(Puzzle Games)</a> Galaxies, Hashi, Star Battle, and much more</li>
+     <li><a href="https://gungi.io/">(Gungi.io)</a> Gungi, if you have a friend to play with</li>
+    </ul>
+    <h3>File Sharing</h3>
+    <ul>
+     <li><a href="https://0x0.st/">(The Null Pointer)</a> Temporary file hosting</li>
+     <li><a href="https://litterbox.catbox.moe/">(Litterbox)</a> Temporary file storage (≤ 1GB)</li>
+     <li><a href="https://litterbox.catbox.moe/">(Catbox)</a> Permanent file storage (≤ 200MB)</li>
+    </ul>
+    <h3>Miscellanous</h3>
+    <ul>
+     <li><a href="https://lukesmith.xyz/">(Luke Smith's Webpage)</a> Philosophy, unix, and linguistics</li>
+     <li><a href="https://lospec.com/">(Lospec)</a> Colour palettes and pixel art</li>
+     <li><a href="https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books">(Anime Girls Holding Programming Books)</a> A Github repository of such images</li>
+     <li><a href="https://owlsintowels.org/">(Owls in Towels)</a> A site dedicated to owls in towels</li>
+     <li><a href="https://sadgrl.online/guides/">(sadgirl.online)</a> Guides on how to bypass paywalls and surf the web</li>
+    </ul>
+   </main>
+  </section>
+  <section id="right-col">
+   <main>
+    <h2>Publications</h2>
+    <hgroup>
+     <h3>The Dimension of Sparse Random Graph Orders</h3>
+     <a href="https://youtu.be/7kGkBQDHszU">(presentation)</a>
+     <a href="https://arxiv.org/abs/2504.19029">{arXiv preprint}</a>
+     <span class="right">May 2024 - Aug 2024</span>
+    </hgroup>
+    <ul>
+     <li>Coauthored paper during undergraduate research assistantship under professor Jane Gao</li>
+    </ul>
+    <h2>Projects</h2>
+    <hgroup>
+     <h3>WIP - 4D Raytracing Pathtracer</h3>
+     | C++
+     <a href="./projects/4d-raymarching-pathtracer/devlog.html">[devlog]</a>
+     <span class="right">July 2025</span>
+    </hgroup>
+    <ul>
+     <li>Final project for the CS 488 graphics course at the University of Waterloo</li>
+    </ul>
+    <hgroup>
+     <h3>Rigid-body Particle Simulation</h3>
+     | C++
+     <a href="./projects/rigid-body-particles/gravity.gif">[gif]</a>
+     <a href="./projects/rigid-body-particles/collisions.gif">[gif]</a>
+     <span class="right">July 2025</span>
+    </hgroup>
+    <ul>
+     <li>Created for the CS 488 graphics course at the University of Waterloo</li>
+     <li>Simulated gravity, spherical constraints, and collision physics for rigid body particles</li>
+    </ul>
+    <hgroup>
+     <h3>Software Rasterizer</h3>
+     | C++
+     <a href="./projects/software-rasterizer/cornell-box.png">[png]</a>
+     <a href="./projects/software-rasterizer/textured.png">[png]</a>
+     <span class="right">June 2025</span>
+    </hgroup>
+    <ul>
+     <li>Created for the CS 488 graphics course at the University of Waterloo</li>
+     <li>Recreated the whole rasterization process on the CPU, including perspective transformation, triangle rasterization, depth buffering, and perspective correct interpolation</li>
+    </ul>
+    <hgroup>
+     <h3>Software Raytracer</h3>
+     | C++
+     <a href="./projects/software-raytracer/test-object.png">[png]</a>
+     <a href="./projects/software-raytracer/metal-teapot.png">[png]</a>
+     <a href="./projects/software-raytracer/glass-teapot.png">[png]</a>
+     <a href="./projects/software-raytracer/bunny.png">[png]</a>
+     <span class="right">May 2025 - June 2025</span>
+    </hgroup>
+    <ul>
+     <li>Created for the CS 488 graphics course at the University of Waterloo</li>
+     <li>Implemented the Möller–Trumbore algorithm for fast ray-triangle intersection</li>
+     <li>Programmed Lambertian diffuse, specular refraction, and specular reflection behaviour, and support for spherical environment mapping</li>
+    </ul>
+    <hgroup>
+     <h3>Software Raycaster</h3>
+     | JavaScript
+     <a href="https://arnavcs.github.io/software-raycaster">[web]</a>
+     <a href="https://github.com/arnavcs/software-raycaster">{Github}</a>
+     <span class="right">Sep 2024 - Oct 2024</span>
+    </hgroup>
+    <ul>
+     <li>Implemented a software based raycasting algorithm with vanilla JavaScript where parameters and the scene can be manipulated</li>
+    </ul>
+    <hgroup>
+     <h3>Renovating the Labyrinth</h3>
+     | JavaScript
+     <a href="https://arnavcs.github.io/renovating-the-labyrinth">[web]</a>
+     <a href="https://arnavcs.itch.io/renovating-the-labyrinth">{itch.io}</a>
+     <a href="https://github.com/arnavcs/renovating-the-labyrinth">{Github}</a>
+     <span class="right">Oct 2024</span>
+    </hgroup>
+    <ul>
+     <li>Solo submission made in 72 hours with vanilla JavaScript on an HTML canvas for the UW Game Dev Club's fall 2024 game jam; voted winner of the technical achievement award</li>
+     <li>Built a real time optimized ray caster with ordered Bayer matrix dithering</li>
+     <li>Programmed 2D rigid body collision behaviour and a randomized Prim's algorithm for map generation</li>
+    </ul>
+    <hgroup>
+     <h3>Bloom</h3>
+     | Godot
+     <a href="https://kdxiao.itch.io/bloom">{itch.io}</a>
+     <a href="https://github.com/kdxiao/bloom">{Github}</a>
+     <span class="right">May 2024 - Jun 2024</span>
+    </hgroup>
+    <ul>
+     <li>Team submission made in 72 hours with Godot for the UW Game Dev Club's spring 2024 game jam</li>
+     <li>Implemented colour mixing, screen wrapping, movement, and flower spawning mechanics</li>
+    </ul>
+    <hgroup>
+     <h3>Interplanetary File Explorer</h3>
+     | Go, Python, JavaScript
+     <a href="https://ipfe.elguindi.xyz/">{web}</a>
+     <a href="https://github.com/youssefsoli/IPFE">{Github}</a>
+     <a href="https://devpost.com/software/changeme">{Devpost}</a>
+     <span class="right">Jan 2023</span>
+    </hgroup>
+    <ul>
+     <li>Visual file explorer of an IPFS written in Golang, Python, and JavaScript for the 2023 UofTHacks X hackathon; winner of the Estuary sponsor prize</li>
+     <li>Created vector embeddings for files in the Estuary IPFS using Co:here’s NLP embeddings on file headers</li>
+     <li>Performed principal component analysis of the vector embeddings to reduce dimensionality and be displayed interactively in 3D space with Three.js</li>
+    </ul>
+    <hgroup>
+     <h3>Prognosing IPF</h3>
+     | Python
+     <a href="./projects/prognosing-ipf/osic-cwsf-paper.pdf">[CWSF paper]</a>
+     <span class="right">Dec 2020 - Jun 2021</span>
+    </hgroup>
+    <ul>
+     <li>Several machine learning models written to predict the deterioration of the condition of the lungs over time for patients of Idiopathic Pulmonary Fibrosis (IPF) and give a level of confidence in the prediction</li>
+     <li>Implemented an auto-encoder, linear regression, dense neural network, and bayesian model in order to accurately predict future lung capacity and give a confidence value using initial lung capacity data, age, sex, smoking status, and more</li>
+     <li>Obtained a Laplace Log Likelihood score of −6.9 (much better than the baseline −8.1) with σ ≈ 200mL</li>
+    </ul>
+   </main>
+   <main>
+    <h2>Presentations</h2>
+    <hgroup>
+     <h3>Dimension of Posets and Random Graph Orders</h3> @ University of Waterloo
+     <span class="right">1<sup>st</sup> Aug 2024</span>
+    </hgroup>
+    <ul>
+     <li>Presentation of work completed during research term under Jane Gao</li>
+    </ul>
+    <hgroup>
+     <h3>Streams and Lazy Evaluation</h3> @ Webber Academy Programming Club
+     <a href="./presentations/231013-streams/notes.py">[notes]</a>
+     <span class="right">13<sup>th</sup> Oct 2023</span>
+    </hgroup>
+    <ul>
+     <li>An introduction to simulating infinite lists with streams and their manipulation</li>
+    </ul>
+    <hgroup>
+     <h3>On the Catalan Numbers</h3> @ Webber Academy Math Society
+     <a href="./presentations/231011-catalan-numbers/notes.pdf">[notes]</a>
+     <span class="right">11<sup>th</sup> Oct 2023</span>
+    </hgroup>
+    <ul>
+     <li>A derivation of the closed formula for the Catalan Numbers and examples of well known problems where the Catalan Numbers appear</li>
+    </ul>
+    <hgroup>
+     <h3>Introductory Combinatory Logic</h3> @ Webber Academy Math Society
+     <span class="right">11<sup>th</sup> Oct 2022</span>
+    </hgroup>
+    <ul>
+     <li>Introduction to combinatory logic; showing numbers and operations on numbers can be expressed as combinators</li>
+    </ul>
+    <h2>Lectures & Lessons</h2>
+    <hgroup>
+     <h3>High School Math Competition Lessons</h3>
+     <span class="right">Summer 2023</span>
+    </hgroup>
+    <ol>
+     <li><a href="./presentations/23S-competition-lessons/01-divisibility-tricks.pdf">[divisibilty tricks]</a> Divisibility, modular arithmetic, and deriving divisibility tricks</li>
+     <li><a href="./presentations/23S-competition-lessons/02-writing-solutions.pdf">[writing solutions]</a> Tips for writing readable proofs</li>
+     <li><a href="./presentations/23S-competition-lessons/03-pigeonhole-principle.pdf">[pigeonhole principle]</a> The pigeonhole and generalized pigeonhole principles</li>
+     <li><a href="./presentations/23S-competition-lessons/04-finite-series-and-products.pdf">[series and products]</a> Telescoping series, common series, and term grouping strategies</li>
+     <li><a href="./presentations/23S-competition-lessons/05-intro-geometry.pdf">[intro geometry]</a> Basic triangle facts, and effects of transformations on geometric objects</li>
+     <li><a href="./presentations/23S-competition-lessons/06-number-bases-and-induction.pdf">[number bases &amp; induction]</a> Number bases, (strong) induction, and an example from the KJMO</li>
+     <li><a href="./presentations/23S-competition-lessons/07-points-in-a-triangle.pdf">[points in a triangle]</a> Involving (circum|in|ex|ortho)centers and centroids</li>
+     <li><a href="./presentations/23S-competition-lessons/08-cyclic-quadrilaterals.pdf">[cyclic quadrilaterals]</a> Power of a point, Ptolemy's theorem, and Brahmagupta's formula</li>
+    </ol>
+   </main>
+   <main>
+    <h2>Formal Education</h2>
+    <hgroup>
+     <h3>Waterloo Undergraduate Degree</h3>: Bachelors of Computer Science
+    </hgroup>
+    <table>
+     <thead>
+      <tr>
+       <th>Term</th>
+       <th colspan="7">Courses</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr class="odd">
+       <th>F ’22</th>
+       <td title="MATH 145 - Algebra (Advanced Level)">MATH 145</td>
+       <td title="MATH 147 - Calculus 1 (Advanced Level)">MATH 147</td>
+       <td title="CS 145 - Designing Functional Programs (Advanced Level)">CS 145</td>
+       <td title="ENGL 109 - Introduction to Academic Writing">ENGL 109</td>
+       <td title="PHYS 121 - Mechanics">PHYS 121</td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr>
+      <th>W ’23</th>
+      <td title="MATH 146 - Linear Algebra 1 (Advanced Level)">MATH 146</td>
+      <td title="MATH 148 - Calculus 2 (Advanced Level)">MATH 148</td>
+      <td title="CS 146 - Elementary Algorithm Design and Data Abstraction (Advanced Level)">CS 146</td>
+      <td title="CS 136L - Tools and Techniques for Software Development">CS 136L</td>
+      <td title="ENGL 108B - Global English Literatures">ENGL 108B</td>
+      <td title="PHYS 122 - Waves, Electricity and Magnetism">PHYS 122</td>
+      <td title="PD 1 - Career Fundamentals">PD 1</td>
+     </tr>
+     <tr>
+      <th>S ’23</th>
+      <td title="COOP 1 - Blockchain Software Engineer at Dandelion Networks">COOP 1</td>
+      <td title="PD 11 - Processes for Technical Report Writing">PD 11</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr>
+      <th>F ’23</th>
+      <td title="MATH 245 - Linear Algebra 2 (Advanced Level)">MATH 245</td>
+      <td title="MATH 247 - Calculus 3 (Advanced Level)">MATH 247</td>
+      <td title="STAT 240 - Probability (Advanced Level)">STAT 240</td>
+      <td title="CS 245E - Logic and Computation (Enriched)">CS 245E</td>
+      <td title="CS 246E - Object-Oriented Software Development (Enriched)">CS 246E</td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr>
+      <th>W ’24</th>
+      <td title="MATH 249 - Introduction to Combinatorics (Advanced Level)">MATH 249</td>
+      <td title="STAT 241 - Statistics (Advanced Level)">STAT 241</td>
+      <td title="CO 255 - Introduction to Optimization (Advanced Level)">CO 255</td>
+      <td title="CS 240 - Data Structures and Data Management">CS 240</td>
+      <td title="CS 241 - Foundations of Sequential Programs">CS 241</td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr>
+      <th>S ’24</th>
+      <td title="COOP 2 - Research Assistantship under Professor Jane Gao">COOP 2</td>
+      <td title="PD 10 - Professional Responsibility in Computing">PD 10</td>
+      <td title="CS 251 - Computer Organization and Design">CS 251</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr>
+      <th>F ’24</th>
+      <td title="CS 350 - Operating Systems">CS 350</td>
+      <td title="CS 341 - Algorithms">CS 341</td>
+      <td title="CS 370 - Numerical Computation">CS 370</td>
+      <td title="PHYS 256 - Geometrical and Physical Optics">PHYS 256</td>
+      <td title="FINE 100 - Studio Fundamentals">FINE 100</td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr>
+      <th>W ’25</th>
+      <td title="COOP 3 - Software Engineer at Trend Micro">COOP 3</td>
+      <td title="PD 6 - Problem Solving">PD 6</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr>
+      <th>S ’25</th>
+      <td title="CS 475/675 - Computational Linear Algebra">CS 475</td>
+      <td title="CS 480/680 - Introduction to Machine Learning">CS 480</td>
+      <td title="CS 488/688 - Introduction to Computer Graphics">CS 488</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+     </tbody>
+    </table>
+    <h2>Academic Self-Learning</h2>
+    <p>I am still going through entries ending with &amp;.</p>
+    <h3>Operating Systems</h3>
+    <ul>
+     <li><em>Operating Systems: Three Easy Pieces</em> by Remzi H. and Andrea C. Arpaci-Dusseau <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/">(book)</a></li>
+    </ul>
+    <h3>Formal Logic &amp; Programming Theory</h3>
+    <ul>
+     <li><em>The Symmetric Interaction Calculus</em> by Victor Maia <a href="https://medium.com/@maiavictor/the-abstract-calculus-fe8c46bcf39c">(article)</a></li>
+     <li><em>Concurrency in Go</em> by Katherine Cox-Buday <a href="./education/concurrency-in-go/notes.pdf">[notes]</a></li>
+     <li><em>To Mock a Mockingbird</em> by Raymond Smullyan</li>
+     <li><em>Learn You a Haskell for Great Good!</em> by Miran Lipovača <a href="https://learnyouahaskell.com/">(book)</a></li>
+    </ul>
+    <h3>Machine Learning, Probability, &amp; Statistics</h3>
+    <ul>
+     <li><em>Essential Statistics for Data Science</em> by Mu Zhu</li>
+    </ul>
+    <h3>Geometry &amp; Graphics</h3>
+    <ul>
+     <li><em>Projective Geometric Algebra Illuminated</em> by Eric Lengyel &amp;</li>
+     <li><em>Ray Tracing in One Weekend</em> by Peter Shirley, Trevor David Black, Steve Hollasch <a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">(book)</a></li>
+     <li><em>Computer Graphics from Scratch</em> by Gabriel Gambetta <a href="https://www.gabrielgambetta.com/computer-graphics-from-scratch/">(book)</a></li>
+     <li>University of Utah CS 4600 <a href="https://youtube.com/playlist?list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh">(lectures)</a> <a href="https://graphics.cs.utah.edu/courses/cs4600/fall2020/">(assignments)</a></li>
+     <li><em>Raycasting Series</em> by Lode Vandevenne <a href="https://lodev.org/cgtutor/index.html">(lesson)</a></li>
+    </ul>
+   </main>
+  </section>
   <footer>
    <p>
     Page part of <a href="https://ring.simonwu.dev/">(Simon’s Cozyring)</a>: <a href="https://ring.simonwu.dev/prev/arnav">(previous)</a> <a href="https://ring.simonwu.dev/next/arnav">(next)</a> <a href="https://ring.simonwu.dev/random/arnav">(random)</a>
