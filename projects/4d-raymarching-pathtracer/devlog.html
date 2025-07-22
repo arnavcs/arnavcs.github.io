@@ -204,6 +204,36 @@ sys	0m0.078s</pre>
     <img src="./render-08.gif" width=50%>
     <figcaption>Figure 8: More impressive render</figcaption>
    </figure>
+   <hgroup>
+    <h3>--- Day 08 ---</h3>
+    <span class="right">Jul 16 2025</span>
+   </hgroup>
+   <p>
+    Today I refactored the material system with one objective in mind: to allow for one object to have different materials based on where on the material you are.
+    To accomplish this, each object has a geometry, and a material map.
+    The material map is a function which returns a material based on position and normal.
+   </p>
+   <p>
+    And with this new material system, I wanted to show that rays which are reflected can go into a different subspace.
+    To this end, I setup the material map as follows for the walls:
+   </p>
+   <code>
+<pre>MaterialMap walls = [](float4 p, float4 n) {
+    float4 nn = 0.5f * n + float4(0.5f);
+    return Light{(nn.x + 0.5f * nn.z) * RED + (nn.y + 0.5f * nn.z) * GREEN + p.w * BLUE};
+};</pre>
+   </code>
+   <p>
+    And with this material, if we render one frame with the w component as 0, we get the following:
+   </p>
+   <figure>
+    <img src="./render-09.gif" width=50%>
+    <figcaption>Figure 9: Reflected rays exit camera's rendering hyperplane</figcaption>
+   </figure>
+   <p>
+    From here, we can evidently see that the rays reflecting from the small hypersphere get bounced out of the camera's hyperplane.
+    This is because the center of the smaller hypersphere is not in the camera's hyperplane (it has a different w component).
+   </p>
    <h2>BDRFs for Monte Carlo and Fresnel Refraction</h2>
    <h2>Volumetric Fog</h2>
    <h2>Pathtracing with Parallel Computation</h2>
