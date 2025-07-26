@@ -234,10 +234,121 @@ sys	0m0.078s</pre>
     From here, we can evidently see that the rays reflecting from the small hypersphere get bounced out of the camera's hyperplane.
     This is because the center of the smaller hypersphere is not in the camera's hyperplane (it has a different w component).
    </p>
-   <h2>BDRFs for Monte Carlo and Fresnel Refraction</h2>
-   <h2>Volumetric Fog</h2>
-   <h2>Pathtracing with Parallel Computation</h2>
+   <h2>Fresnel Refraction</h2>
+   <hgroup>
+    <h3>--- Day 09 ---</h3>
+    <span class="right">Jul 22 2025</span>
+   </hgroup>
+   <p>
+    I started off today with a refactor of the raymarching algorithm by having a queue of <code>RayInfo</code> rays which contain the ray we are currently tracing, as well as the current accumulated colour and "tint" associated with the ray.
+    The reason that I include this is because I would like the Fresnel refraction to be exact and to accomplish this, I need to have the rays split into 2.
+    While I could optionally keep this information in the start and use explicit recursion, this would not be good as I keep a very high ray marching recursion depth, and I would be limited by the stack recursion depth.
+   </p>
+   <p>
+    Also, it is good to note that I had to change the closest intersection to use the absolute value of the SDF since we'll be marching inside an object.
+    In order to calculate the refracted ray we also need to know both the index of refraction before and after refraction.
+    To determine this, I add a condition that the objects in the space cannot overlap, and it they do, raymarching behaviour at overlapping spaces is undefined.
+   </p>
+   <p>
+    I then spent the rest of the day refactoring all of the code to allow for sufficient information when calculating the resulting rays from an intersection.
+   </p>
+   <hgroup>
+    <h3>--- Day 10 ---</h3>
+    <span class="right">Jul 23 2025</span>
+   </hgroup>
+   <p>
+    Today, I finished the refactoring. I added a material for air, and also changed the way I match over variants to avoid using indices and start using <code>std::holds_alternative</code>.
+    I implemented refraction according to <a href="https://en.wikipedia.org/wiki/Snell%27s_law#Vector_form">(this formula)</a> on the vector form section of the Snell's Law wikipedia.
+    I seem to be having some issues though, because my render is ending up black like the following.
+   </p>
+   <figure>
+    <img src="./render-10.gif" width=50%>
+    <figcaption>Figure 10: Issue with refraction code</figcaption>
+   </figure>
+   <p>
+    So, after some time, I figured out what the issue is. I seem to always register a hit once I hit a glass surface regardless of where we are in relation to the glass surface.
+    This turned out to be because I scoped certain variables incorrectly and they didn't reset in value like they should have.
+    So far though, I just have either total internal reflection or refraction, and no Fresnel refraction.
+    Here is an example render though, where the big hypersphere is a glass sphere and the smaller one on the right is a mirror.
+   </p>
+   <figure>
+    <img src="./render-11.gif" width=50%>
+    <figcaption>Figure 11: Non-Fresnel refraction</figcaption>
+   </figure>
+   <p>
+    With this, there are two interesting things to notice.
+   </p>
+   <ol>
+    <li>The w component of the position corresponds to the blue channel of the wall colour</li>
+    <li>I added two walls with normals in the w direction which are visible as mossy green and lavender in the glass and mirror</li>
+   </ol>
+   <hgroup>
+    <h3>--- Day 11 ---</h3>
+    <span class="right">Jul 24 2025</span>
+   </hgroup>
+   <p>
+    In accordance to <a href="https://en.wikipedia.org/wiki/Schlick%27s_approximation">(Schlick's approximation)</a>, I implemented Fresnel refraction.
+    There was a hiccup relating to having a queue which grew indefinitely because I never seemed to have a termination statement that was met.
+    This was due to an error in implementing the reflectance coefficient, in which the sign I assumed for the vectors <code>l</code> and <code>n</code> was incorrect.
+    I referenced the "Background: Physics and Math of Shading (Naty Hoffman)" course notes for a <a href="https://blog.selfshadow.com/publications/s2012-shading-course/#course_content">(SIGGRAPH 2012 course)</a> for more information about the Schlick approximation.
+   </p>
+   <figure>
+    <img src="./render-12.gif" width=50%>
+    <figcaption>Figure 12: Fresnel refraction with refractive index 2</figcaption>
+   </figure>
+   <figure>
+    <img src="./render-13.gif" width=50%>
+    <figcaption>Figure 13: Fresnel refraction with refractive index 1.4</figcaption>
+   </figure>
    <h2>SDF Manipulations</h2>
+   <p>
+    The purpose of this section is to to the following:
+   </p>
+   <ul>
+    <li>introduce hypercube geometry</li>
+    <li>geometry infinite tiling</li>
+    <li>geometry rounding</li>
+    <li>geometry onioning</li>
+    <li>modify SDFs for translations and rotations</li>
+    <li>remodel existing geometry to use transformations instead of having position parameters</li>
+   </ul>
+   <hgroup>
+    <h3>--- Day 12 ---</h3>
+    <span class="right">Jul 25 2025</span>
+   </hgroup>
+   <p>
+    Today, I have introduced hyperbox geometry, and added SDFs for translations and rotations.
+    I have additionally remodelled the existing hypersphere and halfplane code to be described by simply radius and normal vectors, and to leave the position and offset as results of translation.
+    Here is an example of a hypercube that is rotated into an interesting position.
+   </p>
+   <figure>
+    <img src="./render-14.gif" width=50%>
+    <figcaption>Figure 14: Hypercube at an orientation</figcaption>
+   </figure>
+   <hgroup>
+    <h3>--- Day 13 ---</h3>
+    <span class="right">Jul 26 2025</span>
+   </hgroup>
+   <p>
+    I finished off the other SDF manipulations like onioning and rounding.
+    In fact, here is a onioned, rounded hyperbox with Fresnel refraction.
+   </p>
+   <figure>
+    <img src="./render-15.gif" width=50%>
+    <figcaption>Figure 15: Onioned, rounded, rotated glass hyperbox</figcaption>
+   </figure>
+   <p>
+    There is a lot of noise in this render.
+    This is something that we may expect because some paths are terminated very early compared to how long they should proceed.
+    This means we potentially only get less contributing paths.
+    When volumetric fog and volumetric rendering is added, this should be remediated somewhat.
+   </p>
+   <h2>BDRFs for Monte Carlo and Pathtracing with Parallel Computation</h2>
+   <h2>Volumetric Fog</h2>
+   <p>
+    In order to add volumetric fog, I have to consider two things: the absorption of light by the fog, and the scattering of the light from the fog.
+    Implementing the absorption of light seems very doable since I can simply calculate the absorption based on distance the ray marches.
+   </p>
    <h2>Denoising</h2>
   </main>
   <footer>
