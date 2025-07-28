@@ -343,6 +343,139 @@ sys	0m0.078s</pre>
     This means we potentially only get less contributing paths.
     When volumetric fog and volumetric rendering is added, this should be remediated somewhat.
    </p>
+   <p>
+    The code for describing this scene is as follows:
+   </p>
+   <code>
+<pre>MaterialMap wall = [](float4 p, float4 n) {
+    float4 nn = 0.5f * n + float4(0.5f);
+    return Light{(nn.x + 0.5f * nn.z) * RED + (nn.y + 0.5f * nn.z) * GREEN + (0.25f * p.w + 0.5f) * BLUE};
+};
+
+MaterialMap glass = [](float4 p, float4 n) {
+    return Glass{Colour(0.7f), 1.4f};
+};
+
+Geometry room   = Hyperbox{float4(2.0f, 1.5f, 4.0f, 2.0f)};
+Geometry roomT  = Translation{float4(0.0f, 0.0f, -2.0f, 0.0f), &room};
+Geometry roomTO = Onion{0.1f, &roomT};
+
+Geometry box    = Hyperbox{float4(0.5f)};
+Geometry boxR   = Rotation{inverse(rotateAlong(0, 3, 20,
+                                   rotateAlong(1, 3, 45,
+                                   rotateAlong(1, 2, 30,
+                                   rotateAlong(0, 2, 30, linalg::identity))))), &box};
+Geometry boxRR  = Round{0.3f, &boxR};
+Geometry boxRRO = Onion{0.2f, &boxRR};
+
+scene.objects.push_back(Object{roomTO, wall});
+scene.objects.push_back(Object{boxRRO, glass});</pre>
+   </code>
+   <p>
+    I didn't mention this yesterday, but the way that I do rotations is by specifying the inverse rotation matrix.
+    In specific, the inverse rotation matrix should by an isometry and have determinant 1.
+    Since it's hard to come up with such rotation matrices, I decided to be able to construct such a matrix via the ability to rotate along a certain plane at a time.
+    Namely, the function <code>rotateAlong</code> will replace the columns of the rotation matrix at specified indices with two new vectors which are linear combinations of the columns.
+    Here is the actual implementation
+   </p>
+   <code>
+<pre>float4x4 rotateAlong(int index1, int index2, float angleDegrees, float4x4 rotation) {
+    float angleRadians = angleDegrees * DEG_TO_RAD;
+    float4 n1 =  float(cos(angleRadians)) * rotation[index1] + float(sin(angleRadians)) * rotation[index2];
+    float4 n2 = -float(sin(angleRadians)) * rotation[index1] + float(cos(angleRadians)) * rotation[index2];
+    rotation[index1] = n1;
+    rotation[index2] = n2;
+    return rotation;
+}</pre>
+   </code>
+   <hgroup>
+    <h3>--- Day 14 ---</h3>
+    <span class="right">Jul 28 2025</span>
+   </hgroup>
+   <p>
+    Today I finished the inifite tiling code.
+    I decided to implement tiling generally by allowing the user to specify a function which given a point in space, returns the center of the closest tiling cell.
+    Then, I can denote the D4 tiling scheme as follows:
+   </p>
+   <code>
+<pre>TilingCellMap d4Tiling = [](float4 p) {
+    float4 tilingCell;
+
+    int lx = std::ceil(p.x - 1.0f), rx = std::floor(p.x + 1.0f);
+    int ly = std::ceil(p.y - 1.0f), ry = std::floor(p.y + 1.0f);
+    int lz = std::ceil(p.z - 1.0f), rz = std::floor(p.z + 1.0f);
+    int lw = std::ceil(p.w - 1.0f), rw = std::floor(p.w + 1.0f);
+    lz = std::max(lz, 0); rz = std::max(rz, 0); // cut off points with negative z
+
+    float distance2 = std::numeric_limits&lt;float&gt;::max();
+    for (int x = lx; x <= rx; x++) {
+    for (int y = ly; y <= ry; y++) {
+    for (int z = lz; z <= rz; z++) {
+    for (int w = lw; w <= rw; w++) {
+        if ((x + y + z + w) % 2 != 0) continue;
+        float4 candidate = float4(x, y, z, w);
+        if (distance2 < length2(candidate - p)) continue;
+        distance2 = length2(candidate - p);
+        tilingCell = candidate;
+    }}}}
+    return tilingCell;
+};</pre>
+   </code>
+   <p>
+    Note that the way to exclude points with negative z component is to change <code>lz</code> and <code>rz</code>.
+    I was originally first clamping the z component of <code>p</code> before performing any operations, but this is incorrect since the SDF function will think it's closest to a hypersphere with z value 1 instead of a closer sphere with z value 0 sometimes.
+    This is the type of artifact that I was getting:
+   </p>
+   <figure>
+    <img src="./render-16.gif" width=50%>
+    <figcaption>Figure 16: Incorrect D4 lattice with hyperspheres</figcaption>
+   </figure>
+   <p>
+    So I fixed this, and used hyperspheres of radius <code>1 / sqrt(2)</code> with the following shading scheme:
+   </p>
+   <code>
+<pre>MaterialMap d4Shading = [d4Tiling](float4 p, float4 n) {
+    std::vector&lt;Colour&gt; colours = {RED, GREEN, BLUE, YELLOW, TEAL, PINK, WHITE};
+    int4 ip = apply([](float q) {return int(q);}, d4Tiling(p));
+    int index = (2 * ip.x + 3 * ip.y + 5 * ip.z + 7 * ip.w) % colours.size();
+    if (index < 0) index += colours.size();
+
+    return Light{colours[index] * (0.5f + 0.5f * dot(n, normalize(float4(-1.0f))))};
+};</pre>
+   </code>
+   <p>
+    This yields the following visualization of the D4 packing of hyperspheres, the densest packing of hyperspheres in 4 dimensional real space.
+   </p>
+   <figure>
+    <img src="./render-17.gif" width=50%>
+    <figcaption>Figure 17: Densest equal hypersphere packing in 4D</figcaption>
+   </figure>
+   <p>
+    You can see in some intermediate frames that there are an infinite number of these spheres.
+    This is quite cool to observe since we have only one SDF for this whole object and only one shading rule.
+    This is why I opted to let each object have a material map rather than a fixed material.
+    In fact, since we defined our objects to have a material map, we can even make some of the spheres mirrors, like so:
+   </p>
+   <code>
+<pre>MaterialMap d4Shading = [d4Tiling](float4 p, float4 n) {
+    std::vector&lt;Colour&gt; colours = {RED, GREEN, BLUE, YELLOW, TEAL, PINK, WHITE};
+    int4 ip = apply([](float q) {return int(q);}, d4Tiling(p));
+    int index = (2 * ip.x + 3 * ip.y + 5 * ip.z + 7 * ip.w) % (colours.size() + 1);
+    if (index < 0) index += (colours.size() + 1);
+
+    Material m;
+    if (index == (int) colours.size()) m = Mirror{0.7f * WHITE};
+    else m = Light{colours[index] * (0.5f + 0.5f * dot(n, normalize(float4(-1.0f))))};
+    return m;
+};</pre>
+   </code>
+   <p>
+    Which yields the following render:
+   </p>
+   <figure>
+    <img src="./render-18.gif" width=50%>
+    <figcaption>Figure 18: One object (with one SDF and one material map) renders as multiple distinct hyperspheres</figcaption>
+   </figure>
    <h2>BDRFs for Monte Carlo and Pathtracing with Parallel Computation</h2>
    <h2>Volumetric Fog</h2>
    <p>
