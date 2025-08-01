@@ -581,12 +581,58 @@ scene.objects.push_back(Object{boxRRO, glass});</pre>
    </p>
    <figure>
     <img src="./render-22.gif" width=50%>
-    <figcaption>Figure 22: Fixed Householder reflection matrix; 3 samples / pixel</figcaption>
+    <figcaption>Figure 22: Fixed Householder reflection matrix; 1 samples / pixel</figcaption>
    </figure>
    <p>
     Now, the noise should be significantly reduced when many more samples are taken.
-    I will begin work on the
+    I will begin work on the microfacet model for glossy models.
+    I spent a lot of time researching the microfacet models.
+    Here are some of the sources that I used to do the research.
    </p>
+   <ul>
+    <li><a href="https://agraphicsguynotes.com/posts/sample_microfacet_brdf/#one-extra-step">(sampling microfacet BRDF)</a></li>
+    <li><a href="https://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.pdf">(mircofacet model through rough surfaces)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=gya7x9H3mV0">(mircofacet model video)</a></li>
+   </ul>
+   <p>
+    Now we know that the mircofacet model consists of various terms.
+    We can express it as the sum of a diffuse term and a specular term (consisting of a Fresnel reflection component, a distribution function, and a shadowing function / geometry term).
+   </p>
+   <p>
+    So how will we adopt this to 4D?
+    Well, one thing is that I am interested in glossy and reflective materials, so I would like to get rid of the diffuse term to get closer to a metalic gloss.
+    The second thing is that the Fresnel reflection term is something that (for metals) is based on the properties (colour) of the metal and always takes a value between 0 and 1.
+    The distribution term is something very vital, which we can use the GGX distribution for.
+    Finally, there is the last aspect of how to represent the shadowing term.
+    Traditionally, in 3D this is represented by a term that considers how close to grazing the light is, and then reduces the BRDF output if we are close to grazing.
+   </p>
+   <p>
+    Okay, so now that we have an idea of the 3D way of things working, I will explain what we can and cannot reaonsably do in 4D.
+    Firstly, the specular term in the 3D microfacet model is divided by <code>4 * dot(N, L) * dot(N, V)</code>.
+    It is not immediately clear to me how to determine an equivalent expression for 4D.
+    There are definitely some 4D integrals involed and to be honest, I don't understand the derivation of the 3D microfacet model BRDF to derive one for 4D.
+    Thus, I am forced to make certain further simplifications to make this easier.
+   </p>
+   <p>
+    As with the implementation of the Lambertian BRDF, I will rely entirely on sampling.
+    This is to avoid the calculation of the BRDF so we can easily ensure that there isn't an addition of energy into the scene.
+    To this end, I implement the sampling of a mircofacet normal <code>m</code> according to the GGX distribution around the surface normal <code>n</code>.
+    We keep resample according to a probability given by the geometric term of the generated microfacet normal.
+    The probability that we resample is given by the formula for the Geometry term (using the Schlick-GGX approximation) given in the video.
+    Then, reflection is conducted with colour transmitted according to the coefficient given by the Fresnel term.
+   </p>
+   <p>
+    I was originally intending to use the Beckmann distribution for sampling, but even though the distribution might be harder for GGX, the geometry term is easier written.
+    Here are some results of the microfacet model where the sphere on the right is shiny (shaded with the microfacet model).
+   </p>
+   <figure>
+    <img src="./render-23.gif" width=50%>
+    <figcaption>Figure 23: Grey GGX microfacet with roughness 0.25; 10 samples / pixel</figcaption>
+   </figure>
+   <figure>
+    <img src="./render-24.gif" width=50%>
+    <figcaption>Figure 23: Red GGX microfacet with roughness 1.00; 10 samples / pixel</figcaption>
+   </figure>
    <h2>Volumetric Fog</h2>
    <p>
     In order to add volumetric fog, I have to consider two things: the absorption of light by the fog, and the scattering of the light from the fog.
