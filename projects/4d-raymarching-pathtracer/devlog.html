@@ -349,7 +349,9 @@ sys	0m0.078s</pre>
    <code>
 <pre>MaterialMap wall = [](float4 p, float4 n) {
     float4 nn = 0.5f * n + float4(0.5f);
-    return Light{(nn.x + 0.5f * nn.z) * RED + (nn.y + 0.5f * nn.z) * GREEN + (0.25f * p.w + 0.5f) * BLUE};
+    return Light{(nn.x + 0.5f * nn.z) * RED
+               + (nn.y + 0.5f * nn.z) * GREEN
+               + (0.25f * p.w + 0.5f) * BLUE};
 };
 
 MaterialMap glass = [](float4 p, float4 n) {
@@ -381,8 +383,10 @@ scene.objects.push_back(Object{boxRRO, glass});</pre>
    <code>
 <pre>float4x4 rotateAlong(int index1, int index2, float angleDegrees, float4x4 rotation) {
     float angleRadians = angleDegrees * DEG_TO_RAD;
-    float4 n1 =  float(cos(angleRadians)) * rotation[index1] + float(sin(angleRadians)) * rotation[index2];
-    float4 n2 = -float(sin(angleRadians)) * rotation[index1] + float(cos(angleRadians)) * rotation[index2];
+    float4 n1 =  float(cos(angleRadians)) * rotation[index1]
+               + float(sin(angleRadians)) * rotation[index2];
+    float4 n2 = -float(sin(angleRadians)) * rotation[index1]
+               + float(cos(angleRadians)) * rotation[index2];
     rotation[index1] = n1;
     rotation[index2] = n2;
     return rotation;
@@ -393,7 +397,7 @@ scene.objects.push_back(Object{boxRRO, glass});</pre>
     <span class="right">Jul 28 2025</span>
    </hgroup>
    <p>
-    Today I finished the inifite tiling code.
+    Today I finished the infinite tiling code.
     I decided to implement tiling generally by allowing the user to specify a function which given a point in space, returns the center of the closest tiling cell.
     Then, I can denote the D4 tiling scheme as follows:
    </p>
@@ -448,7 +452,7 @@ scene.objects.push_back(Object{boxRRO, glass});</pre>
    </p>
    <figure>
     <img src="./render-17.gif" width=50%>
-    <figcaption>Figure 17: Densest equal hypersphere packing in 4D</figcaption>
+    <figcaption>Figure 17: Densest equal hypersphere packing in 4D; w = [-1, 1]</figcaption>
    </figure>
    <p>
     You can see in some intermediate frames that there are an infinite number of these spheres.
@@ -476,13 +480,124 @@ scene.objects.push_back(Object{boxRRO, glass});</pre>
     <img src="./render-18.gif" width=50%>
     <figcaption>Figure 18: One object (with one SDF and one material map) renders as multiple distinct hyperspheres</figcaption>
    </figure>
-   <h2>BDRFs for Monte Carlo and Pathtracing with Parallel Computation</h2>
+   <h2>Pathtracing with Parallel Computation</h2>
+   <hgroup>
+    <h3>--- Day 15 ---</h3>
+    <span class="right">Jul 30 2025</span>
+   </hgroup>
+   <p>
+    The start for this is to first introduce tone mapping to shift from a space described by radiance and luminance to one which is described by pixel colour value.
+    For now, I have opted to use Reinhard tone mapping with a slight modification.
+    If <code>V</code> is the luminance of the pixel before mapping, then the luminance after tone mapping will be <code>Ar / (Ar + 1)</code> where <code>A</code> is some constant value.
+    This is slightly more general than the typical tone mapping while still being really bare-bones.
+    Higher values of <code>A</code> will result in overexposure, but lower values will result in images too dark.
+    I've found <code>A = 2.0f</code> seems to be an acceptable middle ground.
+   </p>
+   <p>
+    The second thing that I've done is to write a <code>randomPixelRay</code> function which randomly and uniformly samples an eye ray passing through the passed pixel.
+    Along with this, I've introduced sampling for the render by averaging the resulting radiance for the rays for each pixel.
+   </p>
+   <figure>
+    <img src="./render-19.gif" width=50%>
+    <figcaption>Figure 19: Tone mapping and multiple eye rays</figcaption>
+   </figure>
+   <p>
+    Recall that the parallel computation aspect is something that I've already implemented earlier.
+   </p>
+   <h2>Revisiting Fresnel and other BRDFs</h2>
+   <hgroup>
+    <h3>--- Day 16 ---</h3>
+    <span class="right">Jul 31 2025</span>
+   </hgroup>
+   <p>
+    I already have support for the BRDF of mirror surfaces and black body light sources.
+    I am now looking at supporting the BRDFs of the following materials:
+   </p>
+   <ul>
+    <li>Glass via Fresnel refraction</li>
+    <li>Lambertian surfaces (ideal diffuse)</li>
+    <li>Glossy materials via microfacets</li>
+   </ul>
+   <p>
+    The implementation of this for glass is quite easy since I already ahve the diverging paths version implemented.
+    All I have to do is choose to either refract into the material or reflect with the probability given by the computed coefficient.
+    It returns an image like the following:
+   </p>
+   <figure>
+    <img src="./render-20.gif" width=50%>
+    <figcaption>Figure 20: Pathtracing Fresnel refraction with 5 samples / pixel</figcaption>
+   </figure>
+   <p>
+    Now working on the ideal diffuse (Lambertian) BRDF, it is interesting to notice that I had to write a ton of new functions.
+    Along with a variety of random sampling utilities, which make use of the C++ <code>&lt;random&gt;</code> header, I also had to write a householder reflection function.
+   </p>
+   <p>
+    If you don't know, the householder reflection matrix <code>F</code> for a vector <code>x</code> satisfies <code>F * x = length(x) * e1</code> where <code>e1</code> is the first standard basis of the space.
+    Why do I need such a function?
+    Well, when a ray strikes a surface, suppose we want to uniformly sample the ball in the 3d space orthogonal to the surface normal.
+    What is this subspace?
+    If we have an orthonormal set of basis vectors, with one such vector being the surface normal, then we can instantly transform the standard unit ball to one in a space orthogonal to the surface normal.
+    This is why we need a householder reflection matrix: it gives us the orthonormal bases that we want.
+   </p>
+   <p>
+    Now let us delve into 4D Lambertian materials.
+   </p>
+   <p>
+    First off, it is very important to understand the 3D Lambertian BRDF.
+    I spent some time reading the following two articles: <a href="https://www.oceanopticsbook.info/view/surfaces/lambertian-brdfs">(Ocean Optics)</a>, <a href="https://sakibsaikia.github.io/graphics/2019/09/10/Deriving-Lambertian-BRDF-From-First-Principles.html">(Lambertian BRDF derivation)</a>.
+    What I learnt is that in the BRDF, we divide by π (and not 2π as I would have expected) in order to ensure that we have no energy loss when albedo is 1.
+    The BRDF is simply constructed in order to ensure that.
+    But more importantly than that, I think I gained a better understanding of why the cosine sampling method works for 3D.
+   </p>
+   <p>
+    Because of this, I am able to simply use the equivalent of disk sampling for the 4D case.
+    I made the back facing wall a light source and all of the walls Lambertian, and rendered to get this image:
+   </p>
+   <figure>
+    <img src="./render-21.gif" width=50%>
+    <figcaption>Figure 21: Pathtracing Lambertian ideal diffusion; 5 samples / pixel</figcaption>
+   </figure>
+   <hgroup>
+    <h3>--- Day 17 ---</h3>
+    <span class="right">Aug 01 2025</span>
+   </hgroup>
+   <p>
+    Okay, so let's talk about what sort of image I produced yesterday.
+    As expected, with 5 samples, we have a lot of noise, especially since our search space is huge too.
+    Additionally, there is a single black pixel in the center of the light source on the back facing wall.
+    But... more than that there seems to be a jarring problem.
+   </p>
+   <p>
+    The entirety of the left wall is not illuminated at all.
+   </p>
+   <p>
+    Luckily, I am pretty sure I know why this is the case; it's because of numerical stability with the householder reflection matrix.
+    It is important to note that this effect is only hapenning on the wall with a normal pointing in the standard i direction (the direction of <code>e1</code>).
+    In this case, we end up dividing by a very small, maybe zero quantity.
+   </p>
+   <p>
+    To avoid this, I have to change the way I calculate the Householder reflection.
+    To ensure numerical stability, the ideal method is that if we are too close to <code>+e1</code>, then we instead use <code>-e1</code> and negate the resulting matrix.
+   </p>
+   <figure>
+    <img src="./render-22.gif" width=50%>
+    <figcaption>Figure 22: Fixed Householder reflection matrix; 3 samples / pixel</figcaption>
+   </figure>
+   <p>
+    Now, the noise should be significantly reduced when many more samples are taken.
+    I will begin work on the
+   </p>
    <h2>Volumetric Fog</h2>
    <p>
     In order to add volumetric fog, I have to consider two things: the absorption of light by the fog, and the scattering of the light from the fog.
     Implementing the absorption of light seems very doable since I can simply calculate the absorption based on distance the ray marches.
    </p>
    <h2>Denoising</h2>
+   <h2>Next Steps</h2>
+   <ul>
+    <li>Camera setup via main (and Gram-Schmidt orthonormalization)</li>
+    <li></li>
+   </ul>
   </main>
   <footer>
    <p>
