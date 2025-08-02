@@ -31,8 +31,17 @@
     <span class="right">Jul 10 2025</span>
    </hgroup>
    <p>
-    I changed the second object from a hyperplane to a halfspace for now.
+    I changed the second object from a hyperplane to a halfspace for now. distance we have already stepped in the given direction.
+    Additionally, there is the question of how to scatter when we hit a particle.
+    The simplest answer, and the one I chose to implement is to simply choose a new direction at random.
     I'll probably add a hyperplane later, but for now, I think the simplicity of the halfspace is prefered.
+    <p>
+     One problem I seem to have is that too many of my rays die too early without reaching a light source.
+     This is because with a set number of permitted steps, the amount of computation for a simple path is greatly increased.
+     This makes the renders dark, like we might have already seen.
+     When the extinctionis high , the likelyhood that particles make it to a light source at all is very very negligible.
+     And since I don't have NEE (due to not having information about where light sources are...) volumetric fog will cause darkness.
+    </p>
     I have written up both of the SDFs for the two object types I have right now, using a <code>switch</code> on the <code>variant::index()</code>.
    </p>
    <p>
@@ -631,14 +640,54 @@ scene.objects.push_back(Object{boxRRO, glass});</pre>
    </figure>
    <figure>
     <img src="./render-24.gif" width=50%>
-    <figcaption>Figure 23: Red GGX microfacet with roughness 1.00; 10 samples / pixel</figcaption>
+    <figcaption>Figure 24: Red GGX microfacet with roughness 1.00; 10 samples / pixel</figcaption>
+   </figure>
+   <hgroup>
+    <h3>--- Day 18 ---</h3>
+    <span class="right">Aug 02 2025</span>
+   </hgroup>
+   <p>
+    The way I implemented microfacet lighting models is equivalent to the typical way in 3D from what I understand, but it has the downside of being problematic when the roughness is close to 0.
+    This is because with low roughness, we may have to often resample and this is problematic in edge cases when we have incoming rays which are grazing.
+    Here is a render involving a wider scene with more objects of different materials, and the walls are Lambertian diffuse as always.
+   </p>
+   <figure>
+    <img src="./render-25.gif" width=50%>
+    <figcaption>Figure 25: From left to right: mirror, roughness 1.00 and 0.25 copper, glass</figcaption>
    </figure>
    <h2>Volumetric Fog</h2>
    <p>
-    In order to add volumetric fog, I have to consider two things: the absorption of light by the fog, and the scattering of the light from the fog.
-    Implementing the absorption of light seems very doable since I can simply calculate the absorption based on distance the ray marches.
+    Volumetric fog consists of two components: extinction (via scattering and absorption) and scattering in.
+    The laws for volumetric fog are much easier to work with given homogenous mediums, so I assume that all glass and air mediums are homogenous and defined via medium map in a way that is not based on normals.
    </p>
+   <p>
+    Typically, we sample a distance from an exponential distribution, and we check if the sampled distance is more or less than the distance to the next hit.
+    If it is more, then we hit as normal, and if it is less, then we scatter the light and multiply by the extinction coefficient given by <code>exp(-σ_t * t)</code> where <code>σ_t</code> is the extinction coefficient of the homogenour material we are in, and <code>t</code> is the distance we just sampled (and travelled).
+   </p>
+   <p>
+    To implement this in raymarching, we have to keep track of two quantities as we step: the distance allocated for us to travel in the current direction (generated according to random exponential distribution based on the current medium), and the distance we have already stepped in the given direction.
+    Additionally, there is the question of how to scatter when we hit a particle.
+    The simplest answer, and the one I chose to implement is to simply choose a new direction at random.
+   </p>
+   <p>
+    One problem I seem to have is that too many of my rays die too early without reaching a light source.
+    This is because with a set number of permitted steps, the amount of computation for a simple path is greatly increased.
+    This makes the renders dark, like we might have already seen.
+    When the extinction is high, the likelyhood that particles make it to a light source at all is very very negligible.
+    And since I don't have NEE (due to not having information about where light sources are...) volumetric fog will cause darkness.
+   </p>
+   <figure>
+    <img src="./render-26.gif" width=50%>
+    <figcaption>Figure 26: Air with 0.1 extinction; 32 samples</figcaption>
+   </figure>
+   <figure>
+    <img src="./render-27.gif" width=50%>
+    <figcaption>Figure 27: Glass with 0.7 extinction; 32 samples</figcaption>
+   </figure>
    <h2>Denoising</h2>
+   <p>
+    I have
+   </p>
    <h2>Next Steps</h2>
    <ul>
     <li>Camera setup via main (and Gram-Schmidt orthonormalization)</li>
