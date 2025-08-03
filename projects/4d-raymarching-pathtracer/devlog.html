@@ -686,13 +686,42 @@ scene.objects.push_back(Object{boxRRO, glass});</pre>
    </figure>
    <h2>Denoising</h2>
    <p>
-    I have
+    I have looked at two denoising algorithms, and believe that for my purpose, the ideal method would be using the median filter.
+    In order to implement a median filter, there has to be knowledge of the the final render already.
+    To this end, I am required to store all of the rendered frame information before actually displaying it.
    </p>
-   <h2>Next Steps</h2>
-   <ul>
-    <li>Camera setup via main (and Gram-Schmidt orthonormalization)</li>
-    <li></li>
-   </ul>
+   <p>
+    I have thus refactored the camera code to become more readable and controllable via just the elements of the Camera struct.
+    Towards this, the camera consists of a start position, end position, current frame number, and final frame number.
+    With this information, it is possible to get the information about what to render onto what frame.
+   </p>
+   <p>
+    So, I have implemented the median filter algorithm, which requires a step after completely rendering everything to recalculate all of the pixel values.
+    Here are the two previous scenes but with the median filtering.
+   </p>
+   <figure>
+    <img src="./render-28.gif" width=50%>
+    <figcaption>Figure 28: Median filtering for denoising</figcaption>
+   </figure>
+   <figure>
+    <img src="./render-29.gif" width=50%>
+    <figcaption>Figure 29: Median filtering for denoising</figcaption>
+   </figure>
+   <p>
+    As you can see, there is definitely a difference that is observable.
+    But the result of the algorithm isn't exactly what we wanted.
+    While the algorithm seems to be effective in obtaining a clearer, less visually jarring image, we seem to be getting blurr, which is somewhat expectable.
+    The difference between figure 27 and 29 seems to show this.
+    We see that the glass hyperbox is blurry in figure 29.
+   </p>
+   <h2>Preparing for Final Project Submission</h2>
+   <p>
+    For the final project submission, I choose to submit 3 scenes, namely the scenes depicted in figures 26, 27, and 30.
+   </p>
+   <figure>
+    <img src="./render-30.gif" width=50%>
+    <figcaption>Figure 30: Pathtraced D4 packing with diffuse material and emission; 4 samples</figcaption>
+   </figure>
   </main>
   <footer>
    <p>
