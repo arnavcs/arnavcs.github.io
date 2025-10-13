@@ -3,13 +3,21 @@
 \begin{resumeItem}
 \ifthenelse{ \equal{\version}{cv} }{
 \subsubsection{Linguistics}
-English, Hindi, Spanish, Russian (read, write, speak), and Japanese (only spoken)
+English, Hindi, Spanish, Russian, Romanian (read, write, speak), and Japanese (only spoken)
 }{}
 
 \subsubsection{Programming}
-Python, C++, Rust, Go, JavaScript, TypeScript, Haskell, Racket, Java, Bash, {\LaTeX}\ifthenelse{ \equal{\version}{cv} }{, HTML, CSS, Markdown, RegEx}{}
+\ifthenelse{ \equal{\focus}{graphics} }{
+    C, C++, Rust, TypeScript, GLSL, Go, Python, Haskell, Bash
+}{
+    Python, C++, Rust, Go, JavaScript, TypeScript, Haskell, Java, Bash, {\LaTeX}\ifthenelse{ \equal{\version}{cv} }{, HTML, CSS, Markdown, RegEx}{}
+}{}
 
 \subsubsection{Tools}
-WebGL, Three.js, Pandas, Matplotlib, NumPy, Tensorflow, Scikit-learn, OpenCV, Linux, Unix, Godot, Protobuf
+\ifthenelse{ \equal{\focus}{graphics} }{
+    WebGL, Three.js, Godot, Unity, Unreal Engine, Matplotlib, Pytorch, Scikit-learn, OpenCV, Unix
+}{
+    WebGL, Three.js, Pandas, Matplotlib, NumPy, Pytorch, Scikit-learn, OpenCV, Unix, Godot, Protobuf
+}{}
 \end{resumeItem}
 
