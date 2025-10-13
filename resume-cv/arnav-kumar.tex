@@ -20,6 +20,16 @@
 \def\version{resume}
 \fi
 
+\ifdefined\focus
+\else
+\def\focus{general}
+\fi
+
+\ifdefined\board
+\else
+\def\board{external}
+\fi
+
 \definecolor{MyBlue1}{RGB}{50, 50, 200}
 \definecolor{MyBlue2}{RGB}{50, 50, 200} % Headers
 \definecolor{MyBlue3}{RGB}{50, 50, 200} % Title
@@ -108,12 +118,18 @@
     \input{./presentations.tex}
     \input{./programs.tex}
     \input{./projects.tex}
+}{ \ifthenelse{ \equal{\board}{waterlooworks} }{
+    \input{./skills.tex}
+    \input{./experience.tex}
+    \input{./achievements.tex}
+    \input{./projects.tex}
+    \input{./education.tex}
 }{
     \input{./skills.tex}
     \input{./education.tex}
     \input{./experience.tex}
     \input{./achievements.tex}
     \input{./projects.tex}
-}
+}}
 
 \end{document}

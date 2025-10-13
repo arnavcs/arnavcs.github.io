@@ -1,12 +1,46 @@
 \section{Projects}
 
 \begin{resumeItem}
-\projectHead{\href{https://github.com/arnavcs/software-rasterizer}{Software Rasterizer}}{Elm}{May 2025}
+\projectHead{\href{https://github.com/arnavcs/4d-raymarching-pathtracer}{4D Raytracing Pathtracer}}{C++}{Jul - Aug 2025}
 \begin{resumeList}
-    \item Created rasterizing essentials such as drawing shaded triangles pixel by pixel
-    \item Implemented a projection algorithm to view 3D objects from a camera.
+    \item Implemented SDF raymarching in 4D space with CPU pathtracing to contruct GIF renders of the scene.
+    \item Encoded the render such that every frame in the GIF, the camera sends out rays into a 3D affine subspace of the 4D space, which are scattered into 4D space upon colliding at a surface.
+    \item Designed and wrote a powerful material system with microfacet BRDFs, glass, volumetric fog, and more with the ability to assign more than one material to a geometry.
 \end{resumeList}
 \end{resumeItem}
+
+
+\ifthenelse{ \equal{\focus}{general} }{
+\begin{resumeItem}
+\projectHead{Rigid-body Particle Simulation}{C++}{Jul 2025}
+\begin{resumeList}
+    \item Simulated gravity, spherical constraints, and collision physics for rigid body particles.
+\end{resumeList}
+\end{resumeItem}
+}{}
+
+\begin{resumeItem}
+\projectHead{Software Rasterizer}{C++}{May 2025}
+\begin{resumeList}
+    \item Recreated the whole rasterization process on the CPU, including perspective transformation, triangle rasterization, depth buffering, and perspective correct interpolation.
+\end{resumeList}
+\end{resumeItem}
+
+\begin{resumeItem}
+\projectHead{Software Raytracer}{C++}{May - Jun 2025}
+\begin{resumeList}
+    \item Implemented the Möller–Trumbore algorithm for fast ray-triangle intersection
+    \item Programmed Lambertian diffuse, specular refraction, and specular reflection behaviour, and support for spherical environment mapping
+\end{resumeList}
+\end{resumeItem}
+
+% \begin{resumeItem}
+% \projectHead{\href{https://github.com/arnavcs/software-rasterizer}{Software Rasterizer}}{Elm}{May 2025}
+% \begin{resumeList}
+%     \item Created rasterizing essentials such as drawing shaded triangles pixel by pixel
+%     \item Implemented a projection algorithm to view 3D objects from a camera.
+% \end{resumeList}
+% \end{resumeItem}
 
 \begin{resumeItem}
 \projectHead{\href{https://arnavcs.itch.io/renovating-the-labyrinth}{Renovating the Labyrinth (Game)}}{JavaScript}{Oct 2024}
@@ -18,6 +52,7 @@
 \end{resumeItem}
 
 \ifthenelse{ \equal{\version}{cv} }{
+\ifthenelse{ \equal{\focus}{general} }{
 \begin{resumeItem}
 \projectHead{\href{https://arnavcs.github.io/software-raycaster}{Software Raycaster}}{JavaScript}{Oct 2024}
 \begin{resumeList}
@@ -25,7 +60,9 @@
     \item Enabled options for Bayer matrix dithering, scene customization, and different casting algorithms.
 \end{resumeList}
 \end{resumeItem}
+}{}
 
+\ifthenelse{ \equal{\focus}{general} }{
 \begin{resumeItem}
 \projectHead{\href{https://kdxiao.itch.io/bloom}{Bloom (Game)}}{Godot, GDScript}{Jun 2024}
 \begin{resumeList}
@@ -34,7 +71,9 @@
 \end{resumeList}
 \end{resumeItem}
 }{}
+}{}
 
+\ifthenelse{ \equal{\focus}{general} }{
 \begin{resumeItem}
 \projectHead{\href{https://github.com/youssefsoli/IPFE}{InterPlanetary File Explorer (IPFE)}}{Go, Python, Scikit-learn, Estuary, Co:here, Three.js}{Jan 2023}
 \begin{resumeList}
@@ -42,7 +81,9 @@
     \item Performed principal component analysis of the vector embeddings to reduce the dimensionality from 4096 to 3 to be plotted and displayed interactively in 3D space using Three.js.
 \end{resumeList}
 \end{resumeItem}
+}{}
 
+\ifthenelse{ \equal{\focus}{general} }{
 \begin{resumeItem}
 \projectHead{\href{https://github.com/arnavcs/OSIC-IPF}{Prognosing Idiopathic Pulmonary Fibrosis (IPF)}}{Python, Tensorflow2, Pandas, Scikit-learn}{Dec 2020 - Jun 2021}
 \begin{resumeList}
@@ -50,25 +91,24 @@
     \item Obtained a Laplace Log Likelihood score of $-6.9$ (much better than the baseline score $-8.1$) with $\sigma \approx 200$mL.
 \end{resumeList}
 \end{resumeItem}
-
-\ifthenelse{ \equal{\version}{cv} }{
-\begin{resumeItem}
-\projectHead{\href{https://github.com/arnavcs/quack-stack}{Custom Language Interpreter}}{Haskell}{May 2023 - Present}
-\begin{resumeList}
-    \item Created an expression evaluator for a self-made stack-based language.
-    \item Implemented zipper traversal to determine which part of the stack has already been processed.
-\end{resumeList}
-\end{resumeItem}
-
-\begin{resumeItem}
-\projectHead{\href{https://github.com/arnavcs/cli-chess}{CLI Chess}}{Haskell}{Aug 2022 - Present}
-\begin{resumeList}
-    \item Created a local mulitplayer chess clone in Haskell that can be played in the CLI with the Haskell REPL.
-    \item Developed safe and scalable functions to determine the state of the board and indentify check and checkmate.
-    \item Employed lists as applicative functors and monads to write concise, readable code for determining all valid next moves.
-\end{resumeList}
-\end{resumeItem}
 }{}
+
+% \begin{resumeItem}
+% \projectHead{\href{https://github.com/arnavcs/quack-stack}{Custom Language Interpreter}}{Haskell}{May 2023}
+% \begin{resumeList}
+%     \item Created an expression evaluator for a self-made stack-based language.
+%     \item Implemented zipper traversal to determine which part of the stack has already been processed.
+% \end{resumeList}
+% \end{resumeItem}
+ 
+% \begin{resumeItem}
+% \projectHead{\href{https://github.com/arnavcs/cli-chess}{CLI Chess}}{Haskell}{Aug 2022}
+% \begin{resumeList}
+%     \item Created a local mulitplayer chess clone in Haskell that can be played in the CLI with the Haskell REPL.
+%     \item Developed safe and scalable functions to determine the state of the board and indentify check and checkmate.
+%     \item Employed lists as applicative functors and monads to write concise, readable code for determining all valid next moves.
+% \end{resumeList}
+% \end{resumeItem}
 
 % \begin{resumeItem}
 % \projectHead{\href{https://github.com/arnavcs/flashcards}{CLI Flashcards}}{Bash}{Apr 2022 - Apr 2022}
@@ -87,6 +127,7 @@
 % \end{resumeItem}
 
 \ifthenelse{ \equal{\version}{cv} }{
+\ifthenelse{ \equal{\focus}{general} }{
 \begin{resumeItem}
 \projectHead{\href{https://github.com/arnavcs/black-jack}{Blackjack}}{C++}{Apr 2021 - Jul 2021}
 \begin{resumeList}
@@ -94,6 +135,7 @@
     \item Probabilistically optimized the holding value that the computer house uses.
 \end{resumeList}
 \end{resumeItem}
+}{}
 }{}
 
 % \begin{resumeItem}

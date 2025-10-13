@@ -1,20 +1,20 @@
 \section{Experience}
 
 \begin{resumeItem}
-\experienceHead{Software Engineer (Graphics and Geometry)}{Arcol.io}{Sep 2025 - Dec 2025}{San Francisco, USA}
+\experienceHead{Software Engineer (Graphics, 3D Geometry)}{Arcol.io}{Sep 2025 - Dec 2025}{San Francisco, USA}
 \begin{resumeList}
-    \item Spearheaded Alicloud infrastructure deployment using Terraform, and developed functionality for disk snapshots.
-    \item Engineered utility functions for Alicloud's Object Storage Service and Parameter Store, optimizing cloud workflows and enhancing secure data management.
-    \item Developed serverless functions to send scan metrics and results to the backend, helping identify details about customer errors and cutting customer costs by 50\%.
+    \item Designed and implemented a Rust terrain triangle mesh generation algorithm based on Delaunay triangulation and interpolation between terrain contours.
+    \item Performed prototyping, iteration, and proof-of-concepts to choose and implement the most suitable approach.
+    \item Rendered generated terrain and contour lines, sent over the Wasm ABI to TypeScript, with Three.js and WebGL.
 \end{resumeList}
 \end{resumeItem}
 
 \begin{resumeItem}
 \experienceHead{Software Engineer}{Trend Micro}{Jan 2025 - Apr 2025}{Kanata, ON.}
 \begin{resumeList}
-    \item Spearheaded Alicloud infrastructure deployment using Terraform, and developed functionality for disk snapshots.
+    % \item Spearheaded Alicloud infrastructure deployment using Terraform, and developed functionality for disk snapshots.
     \item Engineered utility functions for Alicloud's Object Storage Service and Parameter Store, optimizing cloud workflows and enhancing secure data management.
-    \item Developed serverless functions to send scan metrics and results to the backend, helping identify details about customer errors and cutting customer costs by 50\%.
+    \item Developed serverless functions to send scan metrics and results to the backend, helping identify details about customer errors and significantly cutting customer costs.
 \end{resumeList}
 \end{resumeItem}
 
@@ -31,6 +31,7 @@
 \end{resumeList}
 \end{resumeItem}
 
+\ifthenelse{ \equal{\focus}{general} }{
 \begin{resumeItem}
 \experienceHead{Blockchain Software Engineer}{Dandelion Networks}{May 2023 - Aug 2023}{Online}
 \begin{resumeList}
@@ -40,6 +41,7 @@
     \item Created Jenkins pipeline which automatically build, test, vet, and format pushed code to catch regressions.
 \end{resumeList}
 \end{resumeItem}
+}{}
 
 \ifthenelse{ \equal{\version}{cv} }{
 \begin{resumeItem}
@@ -49,9 +51,7 @@
     \item Developed an end-to-end data visualization pipeline to ingest data and display trends using Matplotlib and NumPy.
 \end{resumeList}
 \end{resumeItem}
-}{}
 
-\ifthenelse{ \equal{\version}{cv} }{
 \begin{resumeItem}
 \experienceHead{Math Competition Teacher}{Webber Academy}{Aug 2021 - June 2022}{Calgary, AB.}
 \begin{resumeList}
@@ -59,9 +59,7 @@
     \item Covered topics including tricks in algebra, number theory, inequalitites, and some basic combinatorics.
 \end{resumeList}
 \end{resumeItem}
-}{}
 
-\ifthenelse{ \equal{\version}{cv} }{
 \begin{resumeItem}
 \experienceHead{Coding Instructor}{Code Ninjas West Springs}{Mar 2022 - Apr 2022}{Calgary, AB.}
 \begin{resumeList}
@@ -69,9 +67,7 @@
     \item Managed the progress of the students and directly relayed feedback to the manager.
 \end{resumeList}
 \end{resumeItem}
-}{}
 
-\ifthenelse{ \equal{\version}{cv} }{
 \begin{resumeItem}
 \experienceHead{Student Council President}{Webber Academy}{Sep 2021 - Jun 2022}{Calgary, AB.}
 \begin{resumeList}
@@ -80,7 +76,6 @@
     \item Reported all of the student councils activities and event proposals to the prinicpal weekly.
 \end{resumeList}
 \end{resumeItem}
-}{}
 
 \begin{resumeItem}
 \experienceHead{Machine Learning Research Intern}{University of Alberta}{Jul 2021 - Aug 2021}{Online}
@@ -94,3 +89,4 @@
 }
 \end{resumeList}
 \end{resumeItem}
+}{}
