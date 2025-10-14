@@ -1,23 +1,20 @@
 \section{Projects}
 
 \begin{resumeItem}
-\projectHead{\href{https://github.com/arnavcs/4d-raymarching-pathtracer}{4D Raymarching Pathtracer}}{C++}{Jul - Aug 2025}
+\projectHead{\href{https://arnavcs.github.io/projects/4d-raymarching-pathtracer/devlog.html}{4D Raymarching Pathtracer}}{C++}{Jul - Aug 2025}
 \begin{resumeList}
     \item Implemented SDF raymarching in 4D space with CPU pathtracing to contruct GIF renders of the scene.
     \item Encoded the render such that every frame in the GIF, the camera sends out rays into a 3D affine subspace of the 4D space, which are scattered into 4D space upon colliding at a surface.
-    \item Designed and wrote a powerful material system with microfacet BRDFs, glass, volumetric fog, and more with the ability to assign more than one material to a geometry.
+    \item Designed and wrote a powerful material system with microfacet BRDFs, glass, volumetric fog, and more with the ability to assign more than one material to a geometry. to describe infinitely many hyperspheres as one geometry with different materials.
 \end{resumeList}
 \end{resumeItem}
 
-
-\ifthenelse{ \equal{\focus}{general} }{
 \begin{resumeItem}
 \projectHead{Rigid-body Particle Simulation}{C++}{Jul 2025}
 \begin{resumeList}
     \item Simulated gravity, spherical constraints, and collision physics for rigid body particles.
 \end{resumeList}
 \end{resumeItem}
-}{}
 
 \begin{resumeItem}
 \projectHead{Software Rasterizer}{C++}{May 2025}
@@ -45,7 +42,7 @@
 \begin{resumeItem}
 \projectHead{\href{https://arnavcs.itch.io/renovating-the-labyrinth}{Renovating the Labyrinth (Game)}}{JavaScript}{Oct 2024}
 \begin{resumeList}
-    \item Solo submission made in 72 hours with vanilla JavaScript on an HTML canvas for the UW Game Dev Club's fall 2024 game jam; voted winner of the technical achievement award.
+    \item Solo submission for the 72 hours Waterloo game jam; voted winner of the technical achievement award.
     \item Built a real time optimized ray caster with ordered Bayer matrix dithering.
     \item Programmed 2D rigid body collision behaviour and a randomized Prim's algorithm for map generation.
 \end{resumeList}
