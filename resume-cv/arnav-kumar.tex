@@ -112,12 +112,12 @@
 \maketitle
 
 \ifthenelse{ \equal{\version}{cv} }{
-    \input{./achievements.tex}
-    \input{./experience.tex}
     \input{./education.tex}
+    \input{./experience.tex}
+    \input{./projects.tex}
+    \input{./achievements.tex}
     \input{./presentations.tex}
     \input{./programs.tex}
-    \input{./projects.tex}
 }{ \ifthenelse{ \equal{\board}{waterlooworks} }{
     \input{./skills.tex}
     \input{./experience.tex}
