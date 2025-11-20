@@ -4,8 +4,10 @@
 \projectHead{\href{https://arnavcs.github.io/projects/4d-raymarching-pathtracer/devlog.html}{4D Raymarching Pathtracer}}{C++}{Jul - Aug 2025}
 \begin{resumeList}
     \item Implemented SDF raymarching in 4D space with CPU pathtracing to contruct GIF renders of the scene.
+\ifthenelse{ \equal{\focus}{graphics} }{
     \item Encoded the render such that every frame in the GIF, the camera sends out rays into a 3D affine subspace of the 4D space, which are scattered into 4D space upon colliding at a surface.
-    \item Designed and wrote a powerful material system with microfacet BRDFs, glass, volumetric fog, and more with the ability to assign more than one material to a geometry. to describe infinitely many hyperspheres as one geometry with different materials.
+}{}
+    \item Designed and wrote a powerful material system with microfacet BRDFs, glass, volumetric fog, and the ability to assign a geometry more than one material.
 \end{resumeList}
 \end{resumeItem}
 
@@ -16,10 +18,19 @@
 \end{resumeList}
 \end{resumeItem}
 
+\ifthenelse{ \equal{\focus}{general} }{
+\begin{resumeItem}
+\projectHead{Software Rasterizer and Raytracer}{C++}{May 2025}
+\begin{resumeList}
+    \item Recreated the whole rasterization process on the CPU, including perspective correct interpolation for textures.
+    \item Optimized for fast ray-triangle intersection. Supported multiple materials, and spherical environment mapping.
+\end{resumeList}
+\end{resumeItem}
+}{
 \begin{resumeItem}
 \projectHead{Software Rasterizer}{C++}{May 2025}
 \begin{resumeList}
-    \item Recreated the whole rasterization process on the CPU, including perspective transformation, triangle rasterization, depth buffering, and perspective correct interpolation.
+    \item Recreated the whole rasterization process on the CPU, including perspective correct interpolation for textures.
 \end{resumeList}
 \end{resumeItem}
 
@@ -30,6 +41,7 @@
     \item Programmed Lambertian diffuse, specular refraction, and specular reflection behaviour, and support for spherical environment mapping
 \end{resumeList}
 \end{resumeItem}
+}
 
 % \begin{resumeItem}
 % \projectHead{\href{https://github.com/arnavcs/software-rasterizer}{Software Rasterizer}}{Elm}{May 2025}
@@ -43,8 +55,12 @@
 \projectHead{\href{https://arnavcs.itch.io/renovating-the-labyrinth}{Renovating the Labyrinth (Game)}}{JavaScript}{Oct 2024}
 \begin{resumeList}
     \item Solo submission for the 72 hours Waterloo game jam; voted winner of the technical achievement award.
-    \item Built a real time optimized ray caster with ordered Bayer matrix dithering.
+\ifthenelse{ \equal{\focus}{general} }{
+    \item Built a real time CPU ray caster with ordered Bayer matrix dithering, rigid body collision, and random maze generation.
+}{
+    \item Built a real time CPU ray caster with ordered Bayer matrix dithering.
     \item Programmed 2D rigid body collision behaviour and a randomized Prim's algorithm for map generation.
+}
 \end{resumeList}
 \end{resumeItem}
 
@@ -74,7 +90,7 @@
 \begin{resumeItem}
 \projectHead{\href{https://github.com/youssefsoli/IPFE}{InterPlanetary File Explorer (IPFE)}}{Go, Python, Scikit-learn, Estuary, Co:here, Three.js}{Jan 2023}
 \begin{resumeList}
-    \item Created vector embeddings for files with their headers using Co:here's NLP embeddings to facilitate classification of files.
+    \item Created vector embeddings for files with their headers using NLP embeddings to facilitate classification of files.
     \item Performed principal component analysis of the vector embeddings to reduce the dimensionality from 4096 to 3 to be plotted and displayed interactively in 3D space using Three.js.
 \end{resumeList}
 \end{resumeItem}
