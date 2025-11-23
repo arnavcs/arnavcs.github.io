@@ -11,12 +11,14 @@
 \end{resumeList}
 \end{resumeItem}
 
+\ifthenelse{ \equal{\focus}{graphics} }{
 \begin{resumeItem}
 \projectHead{Rigid-body Particle Simulation}{C++}{Jul 2025}
 \begin{resumeList}
     \item Simulated gravity, spherical constraints, and collision physics for rigid body particles.
 \end{resumeList}
 \end{resumeItem}
+}{}
 
 \ifthenelse{ \equal{\focus}{general} }{
 \begin{resumeItem}
@@ -51,18 +53,15 @@
 % \end{resumeList}
 % \end{resumeItem}
 
+\ifthenelse{ \equal{\focus}{graphics} }{
 \begin{resumeItem}
 \projectHead{\href{https://arnavcs.itch.io/renovating-the-labyrinth}{Renovating the Labyrinth (Game)}}{JavaScript}{Oct 2024}
 \begin{resumeList}
     \item Solo submission for the 72 hours Waterloo game jam; voted winner of the technical achievement award.
-\ifthenelse{ \equal{\focus}{general} }{
     \item Built a real time CPU ray caster with ordered Bayer matrix dithering, rigid body collision, and random maze generation.
-}{
-    \item Built a real time CPU ray caster with ordered Bayer matrix dithering.
-    \item Programmed 2D rigid body collision behaviour and a randomized Prim's algorithm for map generation.
-}
 \end{resumeList}
 \end{resumeItem}
+}{}
 
 \ifthenelse{ \equal{\version}{cv} }{
 \ifthenelse{ \equal{\focus}{general} }{
