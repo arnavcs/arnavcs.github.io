@@ -8,12 +8,12 @@
 \end{resumeList}
 \end{resumeItem}
 
-\ifthenelse{ \equal{\version}{cv} }{
-\begin{resumeItem}
-\experienceHead{High School Diploma}{Webber Academy}{2008 - 2022}{Calgary, AB.}
-\begin{resumeList}
-    \item President of the Student Union and annual merit scholarship recipient.
-\end{resumeList}
-\end{resumeItem}
-}{}
+\ifboolexpr{ togl {graphics} or togl {general} }{}{
+ \begin{resumeItem}
+ \experienceHead{High School Diploma}{Webber Academy}{2008 - 2022}{Calgary, AB.}
+ \begin{resumeList}
+     \item President of the Student Union and annual merit scholarship recipient.
+ \end{resumeList}
+ \end{resumeItem}
+}
 

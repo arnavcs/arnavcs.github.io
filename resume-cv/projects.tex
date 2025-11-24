@@ -4,45 +4,45 @@
 \projectHead{\href{https://arnavcs.github.io/projects/4d-raymarching-pathtracer/devlog.html}{4D Raymarching Pathtracer}}{C++}{Jul - Aug 2025}
 \begin{resumeList}
     \item Implemented SDF raymarching in 4D space with CPU pathtracing to contruct GIF renders of the scene.
-\ifthenelse{ \equal{\focus}{graphics} }{
-    \item Encoded the render such that every frame in the GIF, the camera sends out rays into a 3D affine subspace of the 4D space, which are scattered into 4D space upon colliding at a surface.
-}{}
+    \ifboolexpr{ togl {graphics} }{
+     \item Encoded the render such that every frame in the GIF, the camera sends out rays into a 3D affine subspace of the 4D space, which are scattered into 4D space upon colliding at a surface.
+    }{}
     \item Designed and wrote a powerful material system with microfacet BRDFs, glass, volumetric fog, and the ability to assign a geometry more than one material.
 \end{resumeList}
 \end{resumeItem}
 
-\ifthenelse{ \equal{\focus}{graphics} }{
-\begin{resumeItem}
-\projectHead{Rigid-body Particle Simulation}{C++}{Jul 2025}
-\begin{resumeList}
-    \item Simulated gravity, spherical constraints, and collision physics for rigid body particles.
-\end{resumeList}
-\end{resumeItem}
-}{}
+\ifboolexpr{ togl {general} }{}{
+ \begin{resumeItem}
+ \projectHead{Rigid-body Particle Simulation}{C++}{Jul 2025}
+ \begin{resumeList}
+     \item Simulated gravity, spherical constraints, and collision physics for rigid body particles.
+ \end{resumeList}
+ \end{resumeItem}
+}
 
-\ifthenelse{ \equal{\focus}{general} }{
-\begin{resumeItem}
-\projectHead{Software Rasterizer and Raytracer}{C++}{May 2025}
-\begin{resumeList}
-    \item Recreated the whole rasterization process on the CPU, including perspective correct interpolation for textures.
-    \item Optimized for fast ray-triangle intersection. Supported multiple materials, and spherical environment mapping.
-\end{resumeList}
-\end{resumeItem}
+\ifboolexpr{ togl {general} }{
+ \begin{resumeItem}
+ \projectHead{Software Rasterizer and Raytracer}{C++}{May 2025}
+ \begin{resumeList}
+     \item Recreated the whole rasterization process on the CPU, including perspective correct interpolation for textures.
+     \item Optimized for fast ray-triangle intersection. Supported multiple materials, and spherical environment mapping.
+ \end{resumeList}
+ \end{resumeItem}
 }{
-\begin{resumeItem}
-\projectHead{Software Rasterizer}{C++}{May 2025}
-\begin{resumeList}
-    \item Recreated the whole rasterization process on the CPU, including perspective correct interpolation for textures.
-\end{resumeList}
-\end{resumeItem}
+ \begin{resumeItem}
+ \projectHead{Software Rasterizer}{C++}{May 2025}
+ \begin{resumeList}
+     \item Recreated the whole rasterization process on the CPU, including perspective correct interpolation for textures.
+ \end{resumeList}
+ \end{resumeItem}
 
-\begin{resumeItem}
-\projectHead{Software Raytracer}{C++}{May - Jun 2025}
-\begin{resumeList}
-    \item Implemented the Möller–Trumbore algorithm for fast ray-triangle intersection
-    \item Programmed Lambertian diffuse, specular refraction, and specular reflection behaviour, and support for spherical environment mapping
-\end{resumeList}
-\end{resumeItem}
+ \begin{resumeItem}
+ \projectHead{Software Raytracer}{C++}{May - Jun 2025}
+ \begin{resumeList}
+     \item Implemented the Möller–Trumbore algorithm for fast ray-triangle intersection
+     \item Programmed Lambertian diffuse, specular refraction, and specular reflection behaviour, and support for spherical environment mapping
+ \end{resumeList}
+ \end{resumeItem}
 }
 
 % \begin{resumeItem}
@@ -53,57 +53,55 @@
 % \end{resumeList}
 % \end{resumeItem}
 
-\ifthenelse{ \equal{\focus}{graphics} }{
-\begin{resumeItem}
-\projectHead{\href{https://arnavcs.itch.io/renovating-the-labyrinth}{Renovating the Labyrinth (Game)}}{JavaScript}{Oct 2024}
-\begin{resumeList}
-    \item Solo submission for the 72 hours Waterloo game jam; voted winner of the technical achievement award.
-    \item Built a real time CPU ray caster with ordered Bayer matrix dithering, rigid body collision, and random maze generation.
-\end{resumeList}
-\end{resumeItem}
-}{}
+\ifboolexpr{ togl {general} }{}{
+ \begin{resumeItem}
+ \projectHead{\href{https://arnavcs.itch.io/renovating-the-labyrinth}{Renovating the Labyrinth (Game)}}{JavaScript}{Oct 2024}
+ \begin{resumeList}
+     \item Solo submission for the 72 hours Waterloo game jam; voted winner of the technical achievement award.
+     \item Built a real time CPU ray caster with ordered Bayer matrix dithering, rigid body collision, and random maze generation.
+ \end{resumeList}
+ \end{resumeItem}
+}
 
-\ifthenelse{ \equal{\version}{cv} }{
-\ifthenelse{ \equal{\focus}{general} }{
-\begin{resumeItem}
-\projectHead{\href{https://arnavcs.github.io/software-raycaster}{Software Raycaster}}{JavaScript}{Oct 2024}
-\begin{resumeList}
-    \item Built a raycaster that renders a specified scene to a canvas element.
-    \item Enabled options for Bayer matrix dithering, scene customization, and different casting algorithms.
-\end{resumeList}
-\end{resumeItem}
-}{}
+\ifboolexpr{ togl {general} or togl {graphics} }{}{
+ \begin{resumeItem}
+ \projectHead{\href{https://arnavcs.github.io/software-raycaster}{Software Raycaster}}{JavaScript}{Oct 2024}
+ \begin{resumeList}
+     \item Built a raycaster that renders a specified scene to a canvas element.
+     \item Enabled options for Bayer matrix dithering, scene customization, and different casting algorithms.
+ \end{resumeList}
+ \end{resumeItem}
+}
 
-\ifthenelse{ \equal{\focus}{general} }{
-\begin{resumeItem}
-\projectHead{\href{https://kdxiao.itch.io/bloom}{Bloom (Game)}}{Godot, GDScript}{Jun 2024}
-\begin{resumeList}
-    \item Team submission made in 72 hours with Godot for the UW Game Dev Club's spring 2024 game jam.
-    \item Implemented colour mixing, screen wrapping, movement, and flower spawning mechanics.
-\end{resumeList}
-\end{resumeItem}
-}{}
-}{}
+\ifboolexpr{ togl {general} or togl {graphics} }{}{
+ \begin{resumeItem}
+ \projectHead{\href{https://kdxiao.itch.io/bloom}{Bloom (Game)}}{Godot, GDScript}{Jun 2024}
+ \begin{resumeList}
+     \item Team submission made in 72 hours with Godot for the UW Game Dev Club's spring 2024 game jam.
+     \item Implemented colour mixing, screen wrapping, movement, and flower spawning mechanics.
+ \end{resumeList}
+ \end{resumeItem}
+}
 
-\ifthenelse{ \equal{\focus}{general} }{
-\begin{resumeItem}
-\projectHead{\href{https://github.com/youssefsoli/IPFE}{InterPlanetary File Explorer (IPFE)}}{Go, Python, Scikit-learn, Estuary, Co:here, Three.js}{Jan 2023}
-\begin{resumeList}
-    \item Created vector embeddings for files with their headers using NLP embeddings to facilitate classification of files.
-    \item Performed principal component analysis of the vector embeddings to reduce the dimensionality from 4096 to 3 to be plotted and displayed interactively in 3D space using Three.js.
-\end{resumeList}
-\end{resumeItem}
-}{}
+\ifboolexpr{ togl {graphics} }{}{
+ \begin{resumeItem}
+ \projectHead{\href{https://github.com/youssefsoli/IPFE}{InterPlanetary File Explorer (IPFE)}}{Go, Python, Scikit-learn, Estuary, Co:here, Three.js}{Jan 2023}
+ \begin{resumeList}
+     \item Created vector embeddings for files with their headers using NLP embeddings to facilitate classification of files.
+     \item Performed principal component analysis of the vector embeddings to reduce the dimensionality from 4096 to 3 to be plotted and displayed interactively in 3D space using Three.js.
+ \end{resumeList}
+ \end{resumeItem}
+}
 
-\ifthenelse{ \equal{\focus}{general} }{
-\begin{resumeItem}
-\projectHead{\href{https://github.com/arnavcs/OSIC-IPF}{Prognosing Idiopathic Pulmonary Fibrosis (IPF)}}{Python, Tensorflow2, Pandas, Scikit-learn}{Dec 2020 - Jun 2021}
-\begin{resumeList}
-    \item Implemented an auto-encoder, linear regression, dense neural network, and bayesian model in order to accurately predict future lung capacity and give a confidence value using initial lung capacity data, age, sex, smoking status, and more.
-    \item Obtained a Laplace Log Likelihood score of $-6.9$ (much better than the baseline score $-8.1$) with $\sigma \approx 200$mL.
-\end{resumeList}
-\end{resumeItem}
-}{}
+\ifboolexpr{ togl {graphics} }{}{
+ \begin{resumeItem}
+ \projectHead{\href{https://github.com/arnavcs/OSIC-IPF}{Prognosing Idiopathic Pulmonary Fibrosis (IPF)}}{Python, Tensorflow2, Pandas, Scikit-learn}{Dec 2020 - Jun 2021}
+ \begin{resumeList}
+     \item Implemented an auto-encoder, linear regression, dense neural network, and bayesian model in order to accurately predict future lung capacity and give a confidence value using initial lung capacity data, age, sex, smoking status, and more.
+     \item Obtained a Laplace Log Likelihood score of $-6.9$ (much better than the baseline score $-8.1$) with $\sigma \approx 200$mL.
+ \end{resumeList}
+ \end{resumeItem}
+}
 
 % \begin{resumeItem}
 % \projectHead{\href{https://github.com/arnavcs/quack-stack}{Custom Language Interpreter}}{Haskell}{May 2023}

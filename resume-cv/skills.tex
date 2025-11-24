@@ -2,26 +2,28 @@
 
 \begin{resumeItem}
 
-\ifthenelse{ \equal{\version}{cv} }{
+\ifboolexpr{ togl {graphics} or togl {general} }{}{
 \subsubsection{Linguistics}
 English, Hindi, Spanish, Russian, Romanian (read, write, speak), and Japanese (only spoken)
-}{}
+
+\vspace{0.1em}
+}
 
 \subsubsection{Programming}
-\ifthenelse{ \equal{\focus}{graphics} }{
-    C++, C, Python, Rust, TypeScript, GLSL, Go, Haskell, Bash
+\ifboolexpr{ togl {graphics} }{
+ C++, C, Python, Rust, TypeScript, GLSL, Go, Haskell, Bash
 }{
-    Python, C++, Rust, Go, JavaScript, TypeScript, Haskell, Java, Bash, {\LaTeX}\ifthenelse{ \equal{\version}{cv} }{, HTML, CSS, Markdown, RegEx}{}
-}{}
+ Python, C++, Rust, Go, JavaScript, TypeScript, Haskell, Java, Bash, {\LaTeX}\ifthenelse{ \equal{\version}{cv} }{, HTML, CSS, Markdown, RegEx}{}
+}
 
 \vspace{0.1em}
 
 \subsubsection{Tools}
-\ifthenelse{ \equal{\focus}{graphics} }{
-    WebGL, Three.js, Godot, Unity, Unreal Engine, Matplotlib, Pytorch, Scikit-learn, OpenCV, Unix
+\ifboolexpr{ togl {graphics} }{
+ WebGL, Three.js, Godot, Unity, Unreal Engine, Matplotlib, Pytorch, Scikit-learn, OpenCV, Unix
 }{
-    Pytorch, Pandas, Matplotlib, NumPy, Scikit-learn, OpenCV, Unix, WebGL, Three.js, Godot, Protobuf 
-}{}
+ Pytorch, Pandas, Matplotlib, NumPy, Scikit-learn, OpenCV, Unix, WebGL, Three.js, Godot, Protobuf 
+}
 
 \end{resumeItem}
 

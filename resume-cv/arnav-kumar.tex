@@ -3,6 +3,7 @@
 \usepackage{enumitem}
 \usepackage{fontawesome}
 \usepackage[margin = 0.5in, top=0.25in]{geometry}
+\usepackage{etoolbox}
 \usepackage{ifthen}
 \usepackage[utf8]{inputenc}
 \usepackage{marvosym}
@@ -15,20 +16,31 @@
 % DEFINITIONS %
 %%%%%%%%%%%%%%%
 
+\newtoggle{graphics}
+\newtoggle{general}
+
+\newtoggle{waterlooworks}
+
 \ifdefined\version
 \else
-\def\version{resume}
-\fi
-
-\ifdefined\focus
-\else
-\def\focus{general}
+\def\version{general}
 \fi
 
 \ifdefined\board
 \else
 \def\board{external}
 \fi
+
+\ifthenelse{ \equal{\version}{general} }{
+    \toggletrue{general}
+}{}
+\ifthenelse{ \equal{\version}{graphics} }{
+    \toggletrue{graphics}
+}{}
+
+\ifthenelse{ \equal{\board}{waterlooworks} }{
+    \toggletrue{waterlooworks}
+}{}
 
 \definecolor{MyBlue1}{RGB}{25, 25, 150}
 \definecolor{MyBlue2}{RGB}{25, 25, 150} % Headers
@@ -111,25 +123,26 @@
 
 \maketitle
 
-\ifthenelse{ \equal{\version}{cv} }{
+\ifboolexpr{ togl {graphics} or togl {general} }{
+ \iftoggle{waterlooworks}{
+     \input{./skills.tex}
+     \input{./experience.tex}
+     \input{./achievements.tex}
+     \input{./projects.tex}
+     \input{./education.tex}
+ }{
+     \input{./skills.tex}
+     \input{./education.tex}
+     \input{./experience.tex}
+     \input{./projects.tex}
+     \input{./achievements.tex}
+}}{
     \input{./education.tex}
     \input{./experience.tex}
     \input{./projects.tex}
     \input{./achievements.tex}
     \input{./presentations.tex}
     \input{./programs.tex}
-}{ \ifthenelse{ \equal{\board}{waterlooworks} }{
-    \input{./skills.tex}
-    \input{./experience.tex}
-    \input{./achievements.tex}
-    \input{./projects.tex}
-    \input{./education.tex}
-}{
-    \input{./skills.tex}
-    \input{./education.tex}
-    \input{./experience.tex}
-    \input{./projects.tex}
-    \input{./achievements.tex}
-}}
+}
 
 \end{document}
