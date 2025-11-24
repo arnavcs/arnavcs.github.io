@@ -18,6 +18,7 @@
 
 \newtoggle{graphics}
 \newtoggle{general}
+\newtoggle{math}
 
 \newtoggle{waterlooworks}
 
@@ -36,6 +37,9 @@
 }{}
 \ifthenelse{ \equal{\version}{graphics} }{
     \toggletrue{graphics}
+}{}
+\ifthenelse{ \equal{\version}{math} }{
+    \toggletrue{math}
 }{}
 
 \ifthenelse{ \equal{\board}{waterlooworks} }{
@@ -123,7 +127,7 @@
 
 \maketitle
 
-\ifboolexpr{ togl {graphics} or togl {general} }{
+\ifboolexpr{ togl {graphics} or togl {general} or togl{math} }{
  \iftoggle{waterlooworks}{
      \input{./skills.tex}
      \input{./experience.tex}

@@ -11,7 +11,7 @@
 \end{resumeList}
 \end{resumeItem}
 
-\ifboolexpr{ togl {general} }{}{
+\ifboolexpr{ togl {general} or togl {math} }{}{
  \begin{resumeItem}
  \projectHead{Rigid-body Particle Simulation}{C++}{Jul 2025}
  \begin{resumeList}
@@ -20,29 +20,31 @@
  \end{resumeItem}
 }
 
-\ifboolexpr{ togl {general} }{
- \begin{resumeItem}
- \projectHead{Software Rasterizer and Raytracer}{C++}{May 2025}
- \begin{resumeList}
-     \item Recreated the whole rasterization process on the CPU, including perspective correct interpolation for textures.
-     \item Optimized for fast ray-triangle intersection. Supported multiple materials, and spherical environment mapping.
- \end{resumeList}
- \end{resumeItem}
-}{
- \begin{resumeItem}
- \projectHead{Software Rasterizer}{C++}{May 2025}
- \begin{resumeList}
-     \item Recreated the whole rasterization process on the CPU, including perspective correct interpolation for textures.
- \end{resumeList}
- \end{resumeItem}
+\ifboolexpr{ togl {math} }{}{
+ \ifboolexpr{ togl {general} }{
+  \begin{resumeItem}
+  \projectHead{Software Rasterizer and Raytracer}{C++}{May 2025}
+  \begin{resumeList}
+      \item Recreated the whole rasterization process on the CPU, including perspective correct interpolation for textures.
+      \item Optimized for fast ray-triangle intersection. Supported multiple materials, and spherical environment mapping.
+  \end{resumeList}
+  \end{resumeItem}
+ }{
+  \begin{resumeItem}
+  \projectHead{Software Rasterizer}{C++}{May 2025}
+  \begin{resumeList}
+      \item Recreated the whole rasterization process on the CPU, including perspective correct interpolation for textures.
+  \end{resumeList}
+  \end{resumeItem}
 
- \begin{resumeItem}
- \projectHead{Software Raytracer}{C++}{May - Jun 2025}
- \begin{resumeList}
-     \item Implemented the Möller–Trumbore algorithm for fast ray-triangle intersection
-     \item Programmed Lambertian diffuse, specular refraction, and specular reflection behaviour, and support for spherical environment mapping
- \end{resumeList}
- \end{resumeItem}
+  \begin{resumeItem}
+  \projectHead{Software Raytracer}{C++}{May - Jun 2025}
+  \begin{resumeList}
+      \item Implemented the Möller–Trumbore algorithm for fast ray-triangle intersection
+      \item Programmed Lambertian diffuse, specular refraction, and specular reflection behaviour, and support for spherical environment mapping
+  \end{resumeList}
+  \end{resumeItem}
+ }
 }
 
 % \begin{resumeItem}
@@ -53,7 +55,7 @@
 % \end{resumeList}
 % \end{resumeItem}
 
-\ifboolexpr{ togl {general} }{}{
+\ifboolexpr{ togl {general} or togl {math} }{}{
  \begin{resumeItem}
  \projectHead{\href{https://arnavcs.itch.io/renovating-the-labyrinth}{Renovating the Labyrinth (Game)}}{JavaScript}{Oct 2024}
  \begin{resumeList}
@@ -63,7 +65,7 @@
  \end{resumeItem}
 }
 
-\ifboolexpr{ togl {general} or togl {graphics} }{}{
+\ifboolexpr{ togl {general} or togl {graphics} or togl {math} }{}{
  \begin{resumeItem}
  \projectHead{\href{https://arnavcs.github.io/software-raycaster}{Software Raycaster}}{JavaScript}{Oct 2024}
  \begin{resumeList}
@@ -73,7 +75,7 @@
  \end{resumeItem}
 }
 
-\ifboolexpr{ togl {general} or togl {graphics} }{}{
+\ifboolexpr{ togl {general} or togl {graphics} or togl {math} }{}{
  \begin{resumeItem}
  \projectHead{\href{https://kdxiao.itch.io/bloom}{Bloom (Game)}}{Godot, GDScript}{Jun 2024}
  \begin{resumeList}
