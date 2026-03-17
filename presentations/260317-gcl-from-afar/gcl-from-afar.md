@@ -12,12 +12,12 @@ date:
 # What is a non-deterministic language?
 
 - A language with support for various alternatives for program flow in a way that is not specified or chosen by the programmer
-- Some examples are Promela and Problog
-- Other languages can exhibit features of non-determinism from interacting with the world (concurrency, communication, IO, etc.)
+- Some examples are Promela and potentially Prolog (depending on definitions)
+- Other languages can exhibit non-deterministic behaviour from interacting with the world (concurrency, communication, IO, randomness, etc.)
 
 # Intro to the Guarded Command Language (GCL)
 
-- GCL is non-deterministic
+- GCL is a non-deterministic language
 - This talk will cover the syntax and mechanistic semantics
 - Dijkstra of
   - *Dijkstra's Algorithm*
@@ -42,13 +42,32 @@ date:
 - Execute an arbitrary guarded list with a true guard
 - If none of the guards are true, abort
 
+```
+...
+if boolexp → statement
+ □ boolexp → statement; statement; statement
+ □ boolexp → statement; statement
+fi
+...
+```
+
 # Repetitive Statements
 
 ```
 ⟨repetitive construct⟩ ::= do ⟨guarded command set⟩ od
 ```
+
 - Keep executing arbitrary guarded lists with true guards
 - When there are no true guards, skip
+
+```
+...
+do boolexp → statement
+ □ boolexp → statement; statement; statement
+ □ boolexp → statement; statement
+od
+...
+```
 
 # Examples: Sorting 4 numbers
 
@@ -101,8 +120,8 @@ g := x
 
 - Guarded commands are used in Promela, the modelling language for the SPIN concurrency checker
 - The calculus is relevant to structured program composition
-- Hard to think of a use for non-determinism besides modelling and logic: it's neither random nor heuristic
-- Every implementation of non-determinism is either random or heuristic
+- Hard to think of a use for GCL's non-determinism besides modelling and logic: it's not meant to be random or heuristic
+- Every implementation of GCL's non-determinism is either random or heuristic
 
 # Learn More
 

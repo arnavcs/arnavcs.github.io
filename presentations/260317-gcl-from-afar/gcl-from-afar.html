@@ -608,15 +608,17 @@ Language from afar</h1>
 <ul class="incremental">
 <li>A language with support for various alternatives for program flow in
 a way that is not specified or chosen by the programmer</li>
-<li>Some examples are Promela and Problog</li>
-<li>Other languages can exhibit features of non-determinism from
-interacting with the world (concurrency, communication, IO, etc.)</li>
+<li>Some examples are Promela and potentially Prolog (depending on
+definitions)</li>
+<li>Other languages can exhibit non-deterministic behaviour from
+interacting with the world (concurrency, communication, IO, randomness,
+etc.)</li>
 </ul>
 </div>
 <div id="intro-to-the-guarded-command-language-gcl" class="slide section level1">
 <h1>Intro to the Guarded Command Language (GCL)</h1>
 <ul class="incremental">
-<li>GCL is non-deterministic</li>
+<li>GCL is a non-deterministic language</li>
 <li>This talk will cover the syntax and mechanistic semantics</li>
 <li>Dijkstra of
 <ul class="incremental">
@@ -641,6 +643,12 @@ correct programs in GCL</li>
 <li>Execute an arbitrary guarded list with a true guard</li>
 <li>If none of the guards are true, abort</li>
 </ul>
+<pre><code>...
+if boolexp → statement
+ □ boolexp → statement; statement; statement
+ □ boolexp → statement; statement
+fi
+...</code></pre>
 </div>
 <div id="repetitive-statements" class="slide section level1">
 <h1>Repetitive Statements</h1>
@@ -649,6 +657,12 @@ correct programs in GCL</li>
 <li>Keep executing arbitrary guarded lists with true guards</li>
 <li>When there are no true guards, skip</li>
 </ul>
+<pre><code>...
+do boolexp → statement
+ □ boolexp → statement; statement; statement
+ □ boolexp → statement; statement
+od
+...</code></pre>
 </div>
 <div id="examples-sorting-4-numbers" class="slide section level1">
 <h1>Examples: Sorting 4 numbers</h1>
@@ -701,9 +715,9 @@ g := x</code></pre>
 <li>Guarded commands are used in Promela, the modelling language for the
 SPIN concurrency checker</li>
 <li>The calculus is relevant to structured program composition</li>
-<li>Hard to think of a use for non-determinism besides modelling and
-logic: it’s neither random nor heuristic</li>
-<li>Every implementation of non-determinism is either random or
+<li>Hard to think of a use for GCL’s non-determinism besides modelling
+and logic: it’s not meant to be random or heuristic</li>
+<li>Every implementation of GCL’s non-determinism is either random or
 heuristic</li>
 </ul>
 </div>
