@@ -77,9 +77,9 @@ od
 
 a, b, c, d := A, B, C, D;
 
-do (a < b) → a, b := b, a
- □ (b < c) → b, c := c, b
- □ (c < d) → c, d := d, c
+do (b < a) → a, b := b, a
+ □ (c < b) → b, c := c, b
+ □ (d < c) → c, d := d, c
 od
 ```
 

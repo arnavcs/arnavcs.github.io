@@ -671,9 +671,9 @@ od
 
 a, b, c, d := A, B, C, D;
 
-do (a &lt; b) → a, b := b, a
- □ (b &lt; c) → b, c := c, b
- □ (c &lt; d) → c, d := d, c
+do (b &lt; a) → a, b := b, a
+ □ (c &lt; b) → b, c := c, b
+ □ (d &lt; c) → c, d := d, c
 od</code></pre>
 <ul class="incremental">
 <li>Note that we cannot deterministically guarantee the program flow,
