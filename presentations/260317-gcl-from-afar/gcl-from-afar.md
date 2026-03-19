@@ -95,7 +95,7 @@ m := 1;
 i := 1;
 
 do i ≤ k → if f(i) ≤ f(m) → i := i + 1
-            □ f(i) ≥ f(m) → k := i; i := i + 1
+            □ f(i) ≥ f(m) → m := i; i := i + 1
            fi
 od
 ```
